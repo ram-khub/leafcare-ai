@@ -1,0 +1,20 @@
+# Keep tensorflow/keras IDENTICAL to the versions installed by notebooks/train_model.ipynb,
+# otherwise a model trained in Colab may fail to load here.
+tensorflow==2.21.0
+keras==3.15.1
+
+# App
+streamlit==1.64.0
+plotly==7.1.0
+pillow==12.3.0
+opencv-python-headless==5.0.0.93
+numpy==2.4.6
+pandas==3.0.6
+
+# Evaluation / report figures
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Tests
+pytest==9.1.1

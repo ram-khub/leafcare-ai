@@ -1,0 +1,27 @@
+# LeafCare AI theme: deep leaf green, warm off-white, soft amber accent.
+
+[theme]
+base = "light"
+primaryColor = "#2F6B3A"
+backgroundColor = "#FAF7F0"
+secondaryBackgroundColor = "#F1ECE0"
+textColor = "#1E2A22"
+linkColor = "#2F6B3A"
+borderColor = "#E6DFCF"
+baseRadius = "12px"
+buttonRadius = "999px"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Poppins:https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+greenColor = "#2F6B3A"
+orangeColor = "#E0A33B"
+redColor = "#C2412D"
+
+[client]
+toolbarMode = "minimal"   # hide the developer menu / deploy button
+showErrorDetails = false
+
+[server]
+maxUploadSize = 10        # MB
+
+[browser]
+gatherUsageStats = false
