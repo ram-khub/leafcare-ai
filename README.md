@@ -8,6 +8,8 @@ your camera) and the app shows:
 - a **Grad-CAM heatmap** showing which part of the leaf the model based its decision on
 - short, sourced **symptoms / treatment / prevention** advice
 
+The interface and advice are available in **9 languages**: English, Hindi, Bengali, Marathi, Telugu, Tamil, Spanish, French and German (`app/locales/`, `data/i18n/`). The translations are machine-generated, and the app says so next to the advice.
+
 It is built with TensorFlow/Keras (EfficientNetB0, transfer learning) and Streamlit.
 
 ---

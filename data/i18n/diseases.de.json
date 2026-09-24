@@ -1,0 +1,382 @@
+{
+  "Apple___Apple_scab": {
+    "crop": "Apfel",
+    "disease": "Apfelschorf",
+    "description": "Eine häufige Pilzkrankheit an Blättern und Früchten des Apfels, am schlimmsten in kühlen, nassen Frühjahren. Sie tötet Bäume selten, kann sie aber entlauben und die Fruchtqualität ruinieren.",
+    "symptoms": ["Olivgrüne bis braune, samtige Flecken auf den Blättern, oft entlang der Blattadern", "Die Flecken werden dunkel, das Blatt kann sich einrollen, vergilben und früh abfallen", "Dunkle, korkige, manchmal rissige Schorfstellen auf den Früchten"],
+    "causes": "Der Pilz Venturia inaequalis, der im Falllaub überwintert und sich bei Frühjahrsregen über Sporen ausbreitet.",
+    "treatment_organic": ["Falllaub im Herbst zusammenrechen und vernichten oder kompostieren, um den überwinternden Pilz zu entfernen", "Die Krone auslichten, damit die Blätter nach Regen schnell abtrocknen", "Für den Ökolandbau zugelassene Schwefel- oder Kupfermittel schützen den Neuaustrieb, wenn sie vor Infektionsperioden ausgebracht werden"],
+    "treatment_chemical": ["Gegen Apfelschorf zugelassene vorbeugende Fungizide, vom Knospenaufbruch bis zum Frühsommer bei nassem Wetter", "Halte dich immer an das Etikett und den Spritzplan der örtlichen landwirtschaftlichen Beratung"],
+    "prevention": ["Schorfresistente Apfelsorten pflanzen", "Falllaub entfernen und Überkopfbewässerung vermeiden", "Bäume mit Abstand pflanzen und schneiden, damit die Luft gut zirkuliert"]
+  },
+  "Apple___Black_rot": {
+    "crop": "Apfel",
+    "disease": "Schwarzfäule",
+    "description": "Eine Pilzkrankheit, die Blattflecken (Froschaugen-Flecken), Fruchtfäule und Astkrebs verursacht. Sie baut sich auf totem Holz und Fruchtmumien im Obstgarten auf.",
+    "symptoms": ["Kleine violette Flecken auf den Blättern, die zu hellbraunen Zentren mit violettem Rand heranwachsen ('Froschauge')", "Feste braune Fäule an Früchten, oft vom Kelchende ausgehend, mit dunklen Ringen", "Eingesunkene, rotbraune Krebsstellen an Ästen"],
+    "causes": "Der Pilz Botryosphaeria obtusa, der in Krebsstellen, totem Holz und geschrumpften Früchten überdauert und sich bei warmem, feuchtem Wetter ausbreitet.",
+    "treatment_organic": ["Totes oder krebsiges Holz herausschneiden und Fruchtmumien vom Baum und vom Boden entfernen", "Schnittgut vernichten, statt es in der Nähe des Obstgartens liegen zu lassen", "Für den Ökolandbau zugelassene Kupfer- oder Schwefelmittel können die Blätter schützen"],
+    "treatment_chemical": ["Gegen Schwarzfäule / Froschaugen-Flecken zugelassene Fungizide, zeitlich nach Empfehlung der örtlichen Beratung", "Das Produktetikett genau befolgen"],
+    "prevention": ["Bäume mit richtiger Bewässerung und Düngung vital halten", "Jeden Winter totes Holz, Feuerbrand-Befall und Fruchtmumien entfernen", "Verletzungen der Bäume vermeiden, da Wunden dem Pilz den Eintritt ermöglichen"]
+  },
+  "Apple___Cedar_apple_rust": {
+    "crop": "Apfel",
+    "disease": "Wacholder-Apfelrost",
+    "description": "Eine Rostkrankheit, die zwei Wirte braucht: Apfel und Wacholder (Virginischer Wacholder). Im Frühjahr fliegen Sporen von Gallen am Wacholder auf die Apfelblätter.",
+    "symptoms": ["Leuchtend gelb-orange Flecken auf der Blattoberseite im späten Frühjahr", "Die Flecken wachsen und bilden auf der Blattunterseite kleine röhrenförmige Strukturen", "Starker Befall führt zu frühem Blattfall und schwächeren Bäumen"],
+    "causes": "Der Pilz Gymnosporangium juniperi-virginianae, der zwischen Wacholdergallen und Apfelblättern wechselt.",
+    "treatment_organic": ["Im Spätwinter sichtbare Rostgallen an nahen Wacholdern entfernen", "Stark befallene Blätter an jungen Bäumen abzupfen", "Für den Ökolandbau zugelassene Schwefelmittel können einen gewissen Schutz bieten"],
+    "treatment_chemical": ["Gegen Rost an Apfel zugelassene vorbeugende Fungizide, vom Rote-Knospen-Stadium bis zum Frühsommer", "Etikett und Empfehlungen der örtlichen Beratung befolgen"],
+    "prevention": ["Rostresistente Apfelsorten pflanzen", "Wo möglich, Äpfel nicht in der Nähe von Wacholder pflanzen", "Wacholder nach Frühjahrsregen auf orange, gallertartige Gallen kontrollieren"]
+  },
+  "Apple___healthy": {
+    "crop": "Apfel",
+    "disease": "Gesund",
+    "description": "Auf diesem Apfelblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Blätter weiterhin wöchentlich kontrollieren, besonders nach Regenperioden", "Falllaub und abgefallene Früchte beseitigen, um überwinternde Krankheiten zu verringern", "Für gute Belüftung und Lichteinfall schneiden"]
+  },
+  "Blueberry___healthy": {
+    "crop": "Heidelbeere",
+    "disease": "Gesund",
+    "description": "Auf diesem Heidelbeerblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Den Boden sauer und gut durchlässig halten und mulchen, um Feuchtigkeit zu bewahren", "Jeden Winter alte, schwache oder abgestorbene Triebe herausschneiden", "Blätter und Früchte regelmäßig auf Flecken oder Fäule prüfen"]
+  },
+  "Cherry___healthy": {
+    "crop": "Kirsche",
+    "disease": "Gesund",
+    "description": "Auf diesem Kirschblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Die Krone durch Schnitt offen und trocken halten", "Am Stammfuß gießen statt über die Blätter", "Bei warmem, feuchtem Wetter die Blätter auf weißen, mehligen Belag prüfen"]
+  },
+  "Cherry___Powdery_mildew": {
+    "crop": "Kirsche",
+    "disease": "Echter Mehltau",
+    "description": "Eine Pilzkrankheit, die auf der Oberfläche junger Blätter und Früchte wächst. Warme Tage, feuchte Nächte und dichte Kronen begünstigen sie.",
+    "symptoms": ["Weiße, mehlige Flecken auf den Blättern, meist an der Unterseite beginnend", "Blätter können sich einrollen, kräuseln oder brüchig werden", "Mehlige oder berostete Stellen auf den Früchten kurz vor der Ernte"],
+    "causes": "Der Pilz Podosphaera clandestina (Podosphaera cerasi), der am Baum überwintert und sich über windverbreitete Sporen ausbreitet.",
+    "treatment_organic": ["Stark befallene Triebe herausschneiden und die Belüftung verbessern", "Für den Ökolandbau zugelassene Schwefelmittel, Pflanzenöle oder Kaliumbicarbonat können Mehltau unterdrücken", "Zu viel Stickstoff vermeiden, da er weiches, anfälliges Wachstum fördert"],
+    "treatment_chemical": ["Gegen Mehltau an Kirsche zugelassene Fungizide, mit wechselnden Wirkmechanismen, um Resistenzen zu verzögern", "Etikett und Spritztermine der örtlichen Beratung befolgen"],
+    "prevention": ["So bewässern, dass die Krone nicht dauerhaft feucht bleibt", "Wurzelschosser und Wasserschosse entfernen, die oft zuerst befallen werden", "Ab dem Austrieb im Frühjahr mit der Kontrolle beginnen"]
+  },
+  "Corn___Cercospora_leaf_spot Gray_leaf_spot": {
+    "crop": "Mais",
+    "disease": "Graue Blattfleckenkrankheit (Cercospora)",
+    "description": "Eine der ertragsschädlichsten Blattkrankheiten des Maises in warmen, feuchten Regionen. Sie überdauert auf Maisresten an der Bodenoberfläche.",
+    "symptoms": ["Kleine hellbraune Flecken, die zu langen, schmalen, rechteckigen grauen bis hellbraunen Läsionen werden", "Die Läsionen werden von den Blattadern begrenzt und haben daher gerade Ränder", "In schweren Fällen verschmelzen die Läsionen und lassen ganze Blätter absterben"],
+    "causes": "Der Pilz Cercospora zeae-maydis, begünstigt durch lange Phasen hoher Luftfeuchtigkeit, warme Temperaturen und Mais nach Mais.",
+    "treatment_organic": ["Mindestens ein Jahr lang eine Nicht-Wirtspflanze anbauen", "Befallene Ernterückstände einarbeiten oder verrotten lassen, wo der Bodenschutz es erlaubt"],
+    "treatment_chemical": ["Gegen die Graue Blattfleckenkrankheit zugelassene Blattfungizide, wenn die Krankheit um die Blüte die oberen Blätter anfälliger Hybriden erreicht", "Etikett und Schadschwellen der örtlichen Beratung beachten"],
+    "prevention": ["Resistente oder tolerante Hybriden anbauen", "Fruchtfolge einhalten und Ernterückstände managen", "Felder ab Mitte der Saison regelmäßig kontrollieren"]
+  },
+  "Corn___Common_rust": {
+    "crop": "Mais",
+    "disease": "Maisrost",
+    "description": "Eine weit verbreitete Rostkrankheit des Maises. Ihre Sporen werden vom Wind weit getragen, und kühles, feuchtes Wetter begünstigt sie.",
+    "symptoms": ["Kleine, ovale, zimtbraune, pudrige Pusteln auf beiden Blattseiten", "Mit zunehmender Reife werden die Pusteln dunkelbraun bis schwarz", "Stark befallene Blätter können vergilben und früh absterben"],
+    "causes": "Der Pilz Puccinia sorghi, der sich bei kühlem Wetter (16-23 °C) mit starkem Tau über windverbreitete Sporen ausbreitet.",
+    "treatment_organic": ["Bei toleranten Hybriden ist meist kein Eingreifen nötig", "Für ausgewogene Nährstoffversorgung sorgen, damit die Pflanzen vital bleiben"],
+    "treatment_chemical": ["Gegen Maisrost zugelassene Blattfungizide können früh in der Saison bei anfälligem Zucker- oder Saatmais gerechtfertigt sein", "Etikett und Empfehlungen der örtlichen Beratung befolgen"],
+    "prevention": ["Rostresistente Hybriden anbauen", "Früh säen, damit der Bestand reift, bevor sich der Rost aufbaut", "Blätter in kühlen, feuchten Phasen regelmäßig kontrollieren"]
+  },
+  "Corn___healthy": {
+    "crop": "Mais",
+    "disease": "Gesund",
+    "description": "Auf diesem Maisblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Mais in der Fruchtfolge mit anderen Kulturen wechseln, um Krankheitszyklen zu unterbrechen", "Hybriden wählen, die gegen die häufigen örtlichen Krankheiten resistent sind", "Felder regelmäßig kontrollieren, besonders bei feuchtem Wetter"]
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "crop": "Mais",
+    "disease": "Turcicum-Blattdürre",
+    "description": "Eine pilzliche Blattkrankheit des Maises, die erhebliche Ertragsverluste verursachen kann, wenn sie vor der Kornfüllung die oberen Blätter erreicht.",
+    "symptoms": ["Lange, zigarrenförmige, graugrüne bis hellbraune Läsionen, 2,5-15 cm lang", "Die Läsionen beginnen an den unteren Blättern und wandern nach oben", "Dunkle Sporenmassen auf den Läsionen bei feuchtem Wetter"],
+    "causes": "Der Pilz Exserohilum turcicum, der auf befallenen Rückständen überdauert und sich bei mäßigen Temperaturen und langen Taunässe-Phasen ausbreitet.",
+    "treatment_organic": ["Fruchtfolge einhalten und befallene Rückstände managen", "Durchwuchsmais entfernen"],
+    "treatment_chemical": ["Gegen Turcicum-Blattdürre zugelassene Blattfungizide, wenn um die Blüte Läsionen an den oberen Blättern auftreten", "Etikett und Schadschwellen der örtlichen Beratung beachten"],
+    "prevention": ["Gegen Turcicum-Blattdürre resistente Hybriden anbauen", "Mindestens eine Saison lang keinen Mais anbauen", "Ab Kniehöhe der Pflanzen kontrollieren"]
+  },
+  "Grape___Black_rot": {
+    "crop": "Weinrebe",
+    "disease": "Schwarzfäule",
+    "description": "Eine zerstörerische Pilzkrankheit der Rebe in warmem, feuchtem Klima. Ohne frühzeitige Bekämpfung kann sie den Großteil der Ernte vernichten.",
+    "symptoms": ["Kleine rotbraune, runde Flecken auf den Blättern mit dunklerem Rand und winzigen schwarzen Punkten", "Beeren werden braun und schrumpfen zu harten schwarzen 'Mumien'", "Längliche dunkle Läsionen an Trieben und Blattstielen"],
+    "causes": "Der Pilz Guignardia bidwellii (Phyllosticta ampelicida), der in Beerenmumien überwintert und sich bei Regen ausbreitet.",
+    "treatment_organic": ["Beim Winterschnitt alle Beerenmumien von den Stöcken und vom Boden entfernen", "Befallene Blätter und Trauben sofort entfernen", "Für den Ökolandbau zugelassene Kupfer- oder Schwefelmittel können den Neuaustrieb schützen"],
+    "treatment_chemical": ["Gegen Schwarzfäule der Rebe zugelassene vorbeugende Fungizide, vom frühen Austrieb bis die Beeren gut ausgebildet sind", "Etikett und Spritzplan der örtlichen Beratung befolgen"],
+    "prevention": ["Jeden Winter Mumien und befallene Ruten entfernen", "Reben so erziehen und schneiden, dass sie gut belüftet und besonnt sind", "Unkraut unter der Drahtanlage kontrollieren, damit alles schneller abtrocknet"]
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "crop": "Weinrebe",
+    "disease": "Esca",
+    "description": "Eine Holzkrankheit der Rebe, verursacht durch holzbesiedelnde Pilze. Sie schwächt die Reben über Jahre und kann sie bei Hitze plötzlich absterben lassen.",
+    "symptoms": ["'Tigerstreifen'-Blätter: gelbe oder rote Bänder zwischen den Blattadern, die später vertrocknen", "Kleine dunkle Flecken auf den Beeren, die aufplatzen und eintrocknen können", "Dunkle Streifen im Holz, wenn Stamm oder Schenkel angeschnitten werden"],
+    "causes": "Mehrere holzzersetzende Pilze (darunter Phaeomoniella chlamydospora und Phaeoacremonium-Arten), die über Schnittwunden eindringen.",
+    "treatment_organic": ["Totes oder befallenes Holz deutlich unterhalb der sichtbaren Symptome herausschneiden und vernichten", "Bei stark geschädigten Reben einen neuen Stamm aus einem gesunden Stocktrieb aufbauen", "Große Schnittwunden mit Wundverschlussmittel oder einem zugelassenen biologischen Schutzmittel versiegeln"],
+    "treatment_chemical": ["Für befallene Reben gibt es keine heilende chemische Behandlung", "Zugelassene Wundschutzmittel können Neuinfektionen verringern; Etikett und Beratung beachten"],
+    "prevention": ["Bei trockenem Wetter und spät in der Winterruhe schneiden, wenn Wunden schneller heilen", "Große Schnitte vermeiden und Schnittholz aus dem Weinberg entfernen", "Sauberes, zertifiziertes Pflanzgut verwenden"]
+  },
+  "Grape___healthy": {
+    "crop": "Weinrebe",
+    "disease": "Gesund",
+    "description": "Auf diesem Rebenblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Reben für eine offene, luftige Laubwand schneiden und erziehen", "Jeden Winter Beerenmumien und totes Holz entfernen", "Bei warmem, nassem Wetter die Blätter genau beobachten"]
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "crop": "Weinrebe",
+    "disease": "Blattdürre (Isariopsis-Blattflecken)",
+    "description": "Eine pilzliche Blattfleckenkrankheit der Rebe, am häufigsten in warmen, feuchten Regionen und spät in der Saison. In schweren Fällen führt sie zu frühem Blattfall und schwächeren Reben.",
+    "symptoms": ["Unregelmäßige dunkel rotbraune bis schwarze Flecken auf den Blättern", "Die Flecken verschmelzen zu großen abgestorbenen (nekrotischen) Bereichen, oft mit gelbem Rand", "Dunkler Pilzrasen auf der Blattunterseite; früher Blattfall"],
+    "causes": "Der Pilz Pseudocercospora vitis (früher Isariopsis clavispora), der auf Falllaub überdauert und sich bei feuchtem Wetter ausbreitet.",
+    "treatment_organic": ["Abgefallene befallene Blätter einsammeln und vernichten", "Laubwand durch Ausgeizen und Entblättern besser belüften", "Für den Ökolandbau zugelassene Kupfermittel können die Blätter schützen"],
+    "treatment_chemical": ["Gegen Blattflecken der Rebe zugelassene vorbeugende Fungizide, nach Empfehlung der örtlichen Beratung", "Das Produktetikett befolgen"],
+    "prevention": ["Falllaub nach der Lese entfernen", "Überkopfbewässerung vermeiden", "Ausgewogene Ernährung und Wüchsigkeit der Reben erhalten"]
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "crop": "Orange (Zitrus)",
+    "disease": "Huanglongbing (Citrus Greening)",
+    "description": "Die weltweit schwerste Krankheit der Zitruspflanzen. Sie wird vom Asiatischen Zitrusblattfloh übertragen, ist unheilbar, und befallene Bäume siechen dahin und sterben schließlich.",
+    "symptoms": ["Fleckige, asymmetrische Gelbscheckung der Blätter (anders als das symmetrische Muster eines Nährstoffmangels)", "Gelbe Triebe, kleine aufrechte Blätter und absterbende Zweige", "Kleine, schiefe, bittere Früchte, die teilweise grün bleiben"],
+    "causes": "Das Bakterium Candidatus Liberibacter asiaticus, übertragen durch den Asiatischen Zitrusblattfloh und durch Veredelung mit infiziertem Pflanzenmaterial.",
+    "treatment_organic": ["Es gibt keine Heilung; befallene Bäume sollten entfernt werden, um benachbarte Bäume zu schützen", "Verdachtsfälle der örtlichen Landwirtschafts- oder Pflanzenschutzbehörde melden (in vielen Ländern eine meldepflichtige Krankheit)"],
+    "treatment_chemical": ["Kein chemisches Mittel heilt die Krankheit", "Flächendeckende Bekämpfung des Blattflohs mit zugelassenen Insektiziden, koordiniert von Behörden und Beratung vor Ort"],
+    "prevention": ["Nur zertifiziert krankheitsfreie Zitrusjungpflanzen kaufen", "Neuaustrieb regelmäßig auf Blattflöhe kontrollieren", "Keine Zitruspflanzen oder Pflanzenteile zwischen Regionen transportieren"]
+  },
+  "Peach___Bacterial_spot": {
+    "crop": "Pfirsich",
+    "disease": "Bakterielle Fleckenkrankheit",
+    "description": "Eine Bakterienkrankheit an Pfirsich und anderem Steinobst, am schlimmsten auf Sandböden bei warmem, nassem und windigem Wetter.",
+    "symptoms": ["Kleine, eckige, wässrige Flecken auf den Blättern, die violettbraun werden", "Die Fleckenmitte fällt heraus und es entsteht ein 'Schrotschuss'-Bild; Blätter vergilben und fallen ab", "Eingesunkene, rissige Flecken auf den Früchten"],
+    "causes": "Das Bakterium Xanthomonas arboricola pv. pruni, das in Zweigkrebsen überwintert und sich durch windgetriebenen Regen ausbreitet.",
+    "treatment_organic": ["Krebsige Zweige bei trockenem Wetter herausschneiden", "Für den Ökolandbau zugelassene Kupfermittel, zu den von der Beratung empfohlenen Terminen ausgebracht, können die Ausbreitung verringern (Kupfer kann Pfirsichblätter schädigen, daher Empfehlungen genau befolgen)"],
+    "treatment_chemical": ["Gegen die Bakterielle Fleckenkrankheit an Steinobst zugelassene Bakterizide, nach den Spritzplänen der örtlichen Beratung", "Das Etikett befolgen, um Blattschäden zu vermeiden"],
+    "prevention": ["Resistente oder weniger anfällige Sorten pflanzen", "Bäume mit ausreichend (nicht zu viel) Stickstoff vital halten", "Windschutz nutzen, um Schäden durch windgetriebenen Regen zu verringern"]
+  },
+  "Peach___healthy": {
+    "crop": "Pfirsich",
+    "disease": "Gesund",
+    "description": "Auf diesem Pfirsichblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Als Hohlkrone mit guter Belüftung schneiden", "Im Winter krebsige Zweige und Fruchtmumien entfernen", "Blätter nach nassen, windigen Wetterphasen kontrollieren"]
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "crop": "Paprika",
+    "disease": "Bakterielle Fleckenkrankheit",
+    "description": "Eine Bakterienkrankheit an Paprika und Tomate, die bei warmem, nassem Wetter gedeiht und sich durch Spritzwasser und Berühren nasser Pflanzen schnell ausbreitet.",
+    "symptoms": ["Kleine, wässrige Flecken auf den Blättern, die mit gelbem Hof braun werden", "Befallene Blätter vergilben und fallen ab, sodass die Früchte Sonnenbrand bekommen", "Erhabene, schorfige Flecken auf den Früchten"],
+    "causes": "Xanthomonas-Bakterien, die mit Saatgut und Jungpflanzen eingeschleppt und durch Regenspritzer, Überkopfbewässerung und Berühren verbreitet werden.",
+    "treatment_organic": ["Stark befallene Pflanzen und Blätter entfernen und vernichten", "Nicht zwischen nassen Pflanzen arbeiten", "Für den Ökolandbau zugelassene Kupfermittel können die Ausbreitung bremsen, wenn sie früh eingesetzt werden"],
+    "treatment_chemical": ["Gegen die Bakterielle Fleckenkrankheit an Paprika zugelassene Bakterizide, nach Empfehlung der örtlichen Beratung", "Das Etikett befolgen; in manchen Regionen gibt es Kupferresistenz"],
+    "prevention": ["Zertifiziert gesundes Saatgut und Jungpflanzen sowie resistente Sorten verwenden", "Tropfbewässerung statt Überkopfbewässerung nutzen", "2-3 Jahre lang keine Paprika oder Tomaten an derselben Stelle anbauen"]
+  },
+  "Pepper,_bell___healthy": {
+    "crop": "Paprika",
+    "disease": "Gesund",
+    "description": "Auf diesem Paprikablatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Am Pflanzenfuß gießen und die Blätter nicht benetzen", "Paprika mit nicht verwandten Kulturen im Wechsel anbauen", "Blätter regelmäßig auf Flecken prüfen, besonders bei warmem, nassem Wetter"]
+  },
+  "Potato___Early_blight": {
+    "crop": "Kartoffel",
+    "disease": "Dürrfleckenkrankheit (Alternaria)",
+    "description": "Eine häufige Pilzkrankheit an Kartoffel und Tomate, die meist an älteren, unteren Blättern beginnt, besonders bei gestressten Pflanzen.",
+    "symptoms": ["Dunkelbraune Flecken mit konzentrischen Ringen ('Zielscheiben'-Muster) auf älteren Blättern", "Vergilbung um die Flecken; befallene Blätter sterben ab und fallen", "Dunkle, eingesunkene, trockene Stellen an den Knollen"],
+    "causes": "Der Pilz Alternaria solani, der im Boden und in Ernteresten überdauert und sich bei wechselnd nassem und trockenem Wetter ausbreitet.",
+    "treatment_organic": ["Befallene untere Blätter entfernen und vernichten", "Pflanzen gut versorgen und bewässern, um Stress zu verringern", "Für den Ökolandbau zugelassene Kupfermittel können die Ausbreitung bremsen"],
+    "treatment_chemical": ["Gegen Dürrfleckenkrankheit zugelassene vorbeugende Fungizide, ab dem Auftreten der ersten Flecken", "Etikett und Empfehlungen der örtlichen Beratung befolgen"],
+    "prevention": ["Kartoffeln 2-3 Jahre im Wechsel mit Nicht-Nachtschattengewächsen anbauen", "Zertifiziertes Pflanzgut verwenden und Erntereste nach der Ernte vernichten", "Überkopfbewässerung am späten Tag vermeiden"]
+  },
+  "Potato___healthy": {
+    "crop": "Kartoffel",
+    "disease": "Gesund",
+    "description": "Auf diesem Kartoffelblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Zertifiziert krankheitsfreies Pflanzgut legen", "Kartoffeln mit nicht verwandten Kulturen im Wechsel anbauen", "Blätter bei kühlem, nassem Wetter häufig kontrollieren, wenn sich die Kraut- und Knollenfäule schnell ausbreiten kann"]
+  },
+  "Potato___Late_blight": {
+    "crop": "Kartoffel",
+    "disease": "Kraut- und Knollenfäule",
+    "description": "Die Krankheit hinter der Großen Hungersnot in Irland. Bei kühlem, nassem Wetter kann sie einen Kartoffel- oder Tomatenbestand in wenigen Tagen vernichten – handle schnell.",
+    "symptoms": ["Große, dunkle, wässrige Flecken auf den Blättern, die sich schnell ausbreiten", "Weißer, flaumiger Belag auf der Blattunterseite bei Feuchtigkeit", "Feste rotbraune Fäule an den Knollen"],
+    "causes": "Der Eipilz Phytophthora infestans, verbreitet durch luftgetragene Sporen von befallenen Pflanzen, Abfallhaufen und infiziertem Pflanzgut.",
+    "treatment_organic": ["Befallene Pflanzen sofort entfernen und vernichten (nicht kompostieren)", "Für den Ökolandbau zugelassene Kupfermittel können gesundes Laub schützen", "Benachbarte Betriebe warnen, da die Sporen weit fliegen"],
+    "treatment_chemical": ["Gegen Kraut- und Knollenfäule zugelassene Fungizide, vorbeugend eingesetzt, wenn örtliche Prognosemodelle vor Risiko warnen", "Wende dich umgehend an die örtliche landwirtschaftliche Beratung, um regionsspezifischen Rat zu erhalten"],
+    "prevention": ["Zertifiziertes Pflanzgut und resistente Sorten verwenden", "Durchwuchskartoffeln und Abfallhaufen vernichten", "Knollen gut anhäufeln und erst ernten, wenn das Kraut vollständig abgestorben ist"]
+  },
+  "Raspberry___healthy": {
+    "crop": "Himbeere",
+    "disease": "Gesund",
+    "description": "Auf diesem Himbeerblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Abgetragene Ruten nach der Ernte entfernen", "Reihen schmal halten, damit sie gut belüftet sind", "Zertifiziert gesunde Ruten in gut durchlässigen Boden pflanzen"]
+  },
+  "Soybean___healthy": {
+    "crop": "Sojabohne",
+    "disease": "Gesund",
+    "description": "Auf diesem Sojablatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Soja im Wechsel mit Getreide wie Mais anbauen", "Sorten wählen, die gegen die häufigen örtlichen Krankheiten resistent sind", "Felder die ganze Saison über regelmäßig kontrollieren"]
+  },
+  "Squash___Powdery_mildew": {
+    "crop": "Kürbis",
+    "disease": "Echter Mehltau",
+    "description": "Eine sehr häufige Pilzkrankheit an Kürbis, Zucchini, Melone und Gurke. Sie mindert Ertrag und Fruchtqualität, weil die Blätter früh absterben.",
+    "symptoms": ["Weiße, talkartige, mehlige Flecken auf Blättern und Stängeln", "Die Flecken breiten sich über ganze Blätter aus, die vergilben und vertrocknen", "Früchte können klein bleiben, wenig Geschmack haben oder Sonnenbrand bekommen"],
+    "causes": "Pilze wie Podosphaera xanthii, deren windverbreitete Sporen in dichten Beständen, im Schatten und bei hoher Luftfeuchtigkeit gedeihen (ohne freies Wasser).",
+    "treatment_organic": ["Stark befallene Blätter entfernen", "Für den Ökolandbau zugelassener Schwefel, Pflanzenöle, Kaliumbicarbonat oder biologische Fungizide können Mehltau unterdrücken", "Öle und Schwefel nicht kurz nacheinander oder bei Hitze ausbringen, da die Blätter verbrennen können"],
+    "treatment_chemical": ["Gegen Echten Mehltau an Kürbisgewächsen zugelassene Fungizide, mit wechselnden Wirkmechanismen gegen Resistenzen", "Das Produktetikett befolgen"],
+    "prevention": ["Resistente Sorten pflanzen", "Pflanzen mit Abstand setzen, damit sie belüftet sind und volle Sonne bekommen", "Zu viel Stickstoffdünger vermeiden"]
+  },
+  "Strawberry___healthy": {
+    "crop": "Erdbeere",
+    "disease": "Gesund",
+    "description": "Auf diesem Erdbeerblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Zertifiziert gesunde Pflanzen in gut durchlässige Beete setzen", "Alte, abgestorbene Blätter nach der Ernte entfernen", "Tropfbewässerung und Mulch nutzen, damit Blätter und Früchte trocken bleiben"]
+  },
+  "Strawberry___Leaf_scorch": {
+    "crop": "Erdbeere",
+    "disease": "Rotfleckenkrankheit (Blattbrand)",
+    "description": "Eine pilzliche Blattkrankheit der Erdbeere. Starker Befall schwächt die Pflanzen und verringert ihre Wüchsigkeit und den Ertrag im nächsten Jahr.",
+    "symptoms": ["Viele kleine, unregelmäßige violette Flecken auf der Blattoberseite", "Die Flecken verschmelzen, und das Blatt wirkt dazwischen verbrannt oder 'versengt'", "Blätter vertrocknen und rollen sich nach oben; auch an Stielen und Kelchen können Läsionen auftreten"],
+    "causes": "Der Pilz Diplocarpon earlianum, der auf befallenen Blättern überdauert und sich durch Spritzwasser verbreitet.",
+    "treatment_organic": ["Befallene Blätter entfernen und vernichten und die Beete nach der Ernte erneuern", "Nicht von oben gießen", "Für den Ökolandbau zugelassene Kupfermittel können einen gewissen Schutz bieten"],
+    "treatment_chemical": ["Gegen die Rotfleckenkrankheit der Erdbeere zugelassene Fungizide, nach Empfehlung der örtlichen Beratung", "Das Produktetikett befolgen"],
+    "prevention": ["Resistente Sorten und zertifizierte Pflanzen setzen", "Pflanzen mit Abstand setzen und Unkraut bekämpfen", "Erdbeerbeete alle paar Jahre an einen neuen Standort verlegen"]
+  },
+  "Tomato___Bacterial_spot": {
+    "crop": "Tomate",
+    "disease": "Bakterielle Fleckenkrankheit",
+    "description": "Eine Bakterienkrankheit an Tomate und Paprika, die bei warmem, regnerischem Wetter kaum noch zu bekämpfen ist, wenn sie sich einmal festgesetzt hat.",
+    "symptoms": ["Kleine, dunkle, fettig wirkende Flecken auf den Blättern, manchmal mit gelbem Hof", "Die Flecken verschmelzen, die Blätter werden gelb und dann braun", "Erhabene, schorfige braune Flecken auf grünen Früchten"],
+    "causes": "Xanthomonas-Bakterien, die mit Saatgut oder Jungpflanzen eingeschleppt und durch Regenspritzer, Überkopfbewässerung und Berühren nasser Pflanzen verbreitet werden.",
+    "treatment_organic": ["Befallene Blätter und stark geschädigte Pflanzen entfernen", "Pflanzen nicht anfassen, wenn sie nass sind", "Für den Ökolandbau zugelassene Kupfermittel können die Ausbreitung bremsen, wenn sie früh eingesetzt werden"],
+    "treatment_chemical": ["Gegen die Bakterielle Fleckenkrankheit an Tomate zugelassene Bakterizide, nach Empfehlung der örtlichen Beratung", "Das Etikett befolgen; in manchen Regionen gibt es kupferresistente Stämme"],
+    "prevention": ["Gesundes Saatgut und gesunde Jungpflanzen verwenden", "Tropfbewässerung nutzen und Pflanzen aufbinden, damit die Blätter trocken bleiben", "2-3 Jahre lang keine Tomaten oder Paprika an derselben Stelle anbauen"]
+  },
+  "Tomato___Early_blight": {
+    "crop": "Tomate",
+    "disease": "Dürrfleckenkrankheit (Alternaria)",
+    "description": "Eine der häufigsten Tomatenkrankheiten. Sie beginnt an den unteren Blättern und wandert nach oben, schwächt die Pflanzen und setzt die Früchte Sonnenbrand aus.",
+    "symptoms": ["Braune Flecken mit konzentrischen 'Zielscheiben'-Ringen auf älteren Blättern", "Gelbes Gewebe um die Flecken; untere Blätter fallen ab", "Dunkle, eingesunkene Läsionen an Stängeln und am Stielansatz der Früchte"],
+    "causes": "Der Pilz Alternaria (A. solani / A. linariae), der auf Pflanzenresten und im Boden überdauert.",
+    "treatment_organic": ["Befallene untere Blätter entfernen und den Boden mulchen, damit Sporen nicht hochspritzen", "Pflanzen gut versorgen und bewässern, um Stress zu verringern", "Für den Ökolandbau zugelassene Kupfermittel können die Ausbreitung bremsen"],
+    "treatment_chemical": ["Gegen Dürrfleckenkrankheit an Tomate zugelassene vorbeugende Fungizide, ab den ersten Symptomen", "Etikett und Empfehlungen der örtlichen Beratung befolgen"],
+    "prevention": ["2-3 Jahre im Wechsel mit Nicht-Nachtschattengewächsen anbauen", "Pflanzen an Stäben oder in Käfigen ziehen und untere Blätter für die Belüftung entfernen", "Pflanzenreste am Saisonende entfernen und vernichten"]
+  },
+  "Tomato___healthy": {
+    "crop": "Tomate",
+    "disease": "Gesund",
+    "description": "Auf diesem Tomatenblatt wurden keine Krankheitsanzeichen gefunden.",
+    "symptoms": [],
+    "causes": "Nicht zutreffend.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Am Pflanzenfuß gießen und den Boden mulchen", "Pflanzen aufbinden und für Belüftung ausgeizen", "Tomaten jedes Jahr im Wechsel mit nicht verwandten Kulturen anbauen"]
+  },
+  "Tomato___Late_blight": {
+    "crop": "Tomate",
+    "disease": "Kraut- und Braunfäule",
+    "description": "Eine sich schnell ausbreitende, zerstörerische Krankheit an Tomate und Kartoffel. Bei kühlem, nassem Wetter kann sie Pflanzen in wenigen Tagen töten.",
+    "symptoms": ["Große, unregelmäßige, fettig graugrüne Flecken auf den Blättern, die schnell braun werden", "Weißer, flaumiger Belag auf der Blattunterseite bei feuchtem Wetter", "Feste, fettig braune Flecken auf den Früchten"],
+    "causes": "Der Eipilz Phytophthora infestans, der vom Wind über weite Strecken von befallenen Tomaten- oder Kartoffelpflanzen herangetragen wird.",
+    "treatment_organic": ["Befallene Pflanzen sofort entfernen und in Säcken entsorgen oder vernichten (nicht kompostieren)", "Für den Ökolandbau zugelassene Kupfermittel können gesunde Pflanzen schützen"],
+    "treatment_chemical": ["Gegen Kraut- und Braunfäule zugelassene Fungizide, vorbeugend eingesetzt, wenn Befall in der Nähe gemeldet wird", "Wende dich umgehend an die örtliche landwirtschaftliche Beratung, um regionsspezifischen Rat zu erhalten"],
+    "prevention": ["Resistente Sorten und gesunde Jungpflanzen pflanzen", "Tomaten nicht neben Kartoffeln anbauen und Durchwuchskartoffeln vernichten", "Blätter mit Tropfbewässerung und gutem Pflanzabstand trocken halten"]
+  },
+  "Tomato___Leaf_Mold": {
+    "crop": "Tomate",
+    "disease": "Samtfleckenkrankheit (Blattschimmel)",
+    "description": "Eine Pilzkrankheit, die vor allem in Gewächshäusern und Folientunneln auftritt, wo die Luftfeuchtigkeit hoch bleibt.",
+    "symptoms": ["Blassgrüne bis gelbe Flecken auf der Blattoberseite", "Olivgrüner bis graubrauner, samtiger Schimmel direkt darunter auf der Blattunterseite", "Blätter welken und fallen ab; Früchte sind selten betroffen"],
+    "causes": "Der Pilz Passalora fulva (Cladosporium fulvum), begünstigt durch relative Luftfeuchtigkeit über 85 %.",
+    "treatment_organic": ["Befallene Blätter entfernen und vernichten", "Im Gewächshaus die Lüftung erhöhen und die Luftfeuchtigkeit senken", "Für den Ökolandbau zugelassene Kupfermittel können die verbleibenden Blätter schützen"],
+    "treatment_chemical": ["Gegen die Samtfleckenkrankheit an Tomate zugelassene Fungizide, nach Empfehlung der örtlichen Beratung", "Das Produktetikett befolgen"],
+    "prevention": ["Luftfeuchtigkeit im Gewächshaus unter 85 % halten und gut lüften", "Pflanzen mit Abstand setzen und für Belüftung ausgeizen", "Resistente Sorten pflanzen und das Gewächshaus zwischen den Kulturen reinigen"]
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "crop": "Tomate",
+    "disease": "Septoria-Blattfleckenkrankheit",
+    "description": "Eine sehr häufige Pilzkrankheit, die Tomatenpflanzen bei nassem, warmem Wetter von unten nach oben entlaubt.",
+    "symptoms": ["Viele kleine runde Flecken mit dunklem Rand und grauweißer Mitte auf den unteren Blättern", "Winzige schwarze Punkte (Fruchtkörper des Pilzes) in der Fleckenmitte", "Blätter vergilben, welken und fallen ab, sodass die Früchte Sonnenbrand bekommen"],
+    "causes": "Der Pilz Septoria lycopersici, der auf Pflanzenresten überdauert und sich durch Spritzwasser verbreitet.",
+    "treatment_organic": ["Befallene untere Blätter umgehend entfernen", "Rund um die Pflanzen mulchen, um Erdspritzer zu verringern", "Für den Ökolandbau zugelassene Kupfermittel können die Ausbreitung bremsen"],
+    "treatment_chemical": ["Gegen Septoria-Blattflecken an Tomate zugelassene vorbeugende Fungizide", "Etikett und Empfehlungen der örtlichen Beratung befolgen"],
+    "prevention": ["Mindestens ein Jahr lang keine Tomaten an derselben Stelle anbauen", "Pflanzenreste nach der Ernte entfernen und vernichten", "Bodennah gießen und nicht zwischen nassen Pflanzen arbeiten"]
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "crop": "Tomate",
+    "disease": "Spinnmilben (Gemeine Spinnmilbe)",
+    "description": "Keine Krankheit, sondern ein Schädling: winzige Milben, die Pflanzensaft aus den Blättern saugen. Bei heißem, trockenem, staubigem Wetter explodieren ihre Populationen.",
+    "symptoms": ["Feine gelbe oder weiße Sprenkelung auf den Blättern", "Blätter werden bronzefarben oder gelb und vertrocknen", "Feine Gespinste auf der Blattunterseite und zwischen den Blättern bei starkem Befall"],
+    "causes": "Die Gemeine Spinnmilbe (Tetranychus urticae), begünstigt durch Hitze, Trockenstress, Staub und Spritzungen, die ihre natürlichen Feinde töten.",
+    "treatment_organic": ["Die Blattunterseiten mit einem kräftigen Wasserstrahl abspritzen, um die Milben abzuspülen", "Für den Ökolandbau zugelassene Kaliseife oder Pflanzenöle, dabei die Blattunterseiten gut benetzen", "Natürliche Feinde wie Raubmilben fördern oder aussetzen"],
+    "treatment_chemical": ["Gegen Spinnmilben an Tomate zugelassene Akarizide, nur wenn die Kontrolle zeigt, dass sie nötig sind", "Breitbandinsektizide vermeiden, die Nützlinge töten; das Etikett befolgen"],
+    "prevention": ["Pflanzen gut wässern, um Trockenstress zu vermeiden", "Staub auf und um die Pflanzen verringern", "Bei heißem, trockenem Wetter regelmäßig die Blattunterseiten kontrollieren"]
+  },
+  "Tomato___Target_Spot": {
+    "crop": "Tomate",
+    "disease": "Corynespora-Blattflecken (Zielscheibenflecken)",
+    "description": "Eine Pilzkrankheit der Tomate in warmen, feuchten Regionen. Sie befällt Blätter, Stängel und Früchte und kann starken Blattverlust verursachen.",
+    "symptoms": ["Kleine braune Flecken auf den Blättern, die zu Läsionen mit hellbrauner Mitte und konzentrischen Ringen heranwachsen", "Die Läsionen haben oft einen gelben Hof; Blätter können abfallen", "Eingesunkene, narbige Flecken auf den Früchten"],
+    "causes": "Der Pilz Corynespora cassiicola, der auf Ernteresten und anderen Wirtspflanzen überdauert und sich bei feuchtem Wetter ausbreitet.",
+    "treatment_organic": ["Befallene untere Blätter und Erntereste entfernen", "Durch Ausgeizen und Aufbinden für bessere Belüftung sorgen", "Für den Ökolandbau zugelassene Kupfermittel können die Ausbreitung bremsen"],
+    "treatment_chemical": ["Gegen Corynespora-Blattflecken an Tomate zugelassene Fungizide, nach Empfehlung der örtlichen Beratung", "Das Etikett befolgen und Wirkmechanismen wechseln"],
+    "prevention": ["Fruchtfolge einhalten und Pflanzenreste nach der Ernte vernichten", "Überkopfbewässerung und zu viel Stickstoff vermeiden", "Unkräuter bekämpfen, die den Pilz beherbergen können"]
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "crop": "Tomate",
+    "disease": "Tomatenmosaikvirus",
+    "description": "Ein sehr stabiles, hoch ansteckendes Virus. Es wird leicht über Hände, Werkzeuge und Kleidung übertragen, und befallene Pflanzen sind nicht heilbar.",
+    "symptoms": ["Hell- und dunkelgrüne Scheckung oder Mosaikmuster auf den Blättern", "Blätter können eingerollt, verformt oder farnartig sein", "Gestauchte Pflanzen, geringerer Ertrag und ungleichmäßig reifende Früchte"],
+    "causes": "Das Tomatenmosaikvirus (ToMV), mechanisch übertragen durch Berührung, verunreinigte Werkzeuge und infiziertes Saatgut; es kann in Pflanzenresten überdauern.",
+    "treatment_organic": ["Es gibt keine Heilung: befallene Pflanzen entfernen und vernichten", "Nach dem Berühren verdächtiger Pflanzen Hände waschen und Werkzeuge desinfizieren"],
+    "treatment_chemical": ["Keine chemische Behandlung heilt Virusinfektionen", "Auf Hygiene und resistente Sorten setzen"],
+    "prevention": ["Resistente Sorten und zertifiziert virusfreies Saatgut verwenden", "Werkzeuge, Stäbe und Hände regelmäßig desinfizieren", "In der Nähe der Pflanzen keine Tabakprodukte verwenden"]
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "crop": "Tomate",
+    "disease": "Tomatengelbblattrollvirus",
+    "description": "Ein verheerendes, von der Weißen Fliege übertragenes Tomatenvirus in warmen Regionen. Früh infizierte Pflanzen tragen fast keine Früchte.",
+    "symptoms": ["Blätter rollen sich nach oben und bilden Löffel", "Gelbe Blattränder und kleine, zerknitterte Blätter", "Gestauchte, buschige Pflanzen mit Blütenfall und schlechtem Fruchtansatz"],
+    "causes": "Das Tomatengelbblattrollvirus (TYLCV), übertragen durch die Weiße Fliege Bemisia tabaci.",
+    "treatment_organic": ["Es gibt keine Heilung: befallene Pflanzen schnell entfernen und vernichten, um die Ausbreitung zu verringern", "Insektenschutznetze, reflektierenden Mulch und Gelbtafeln gegen Weiße Fliegen einsetzen"],
+    "treatment_chemical": ["Kein chemisches Mittel heilt das Virus", "Bekämpfung der Weißen Fliege mit zugelassenen Insektiziden im Rahmen eines integrierten Plans, begleitet von der örtlichen Beratung"],
+    "prevention": ["TYLCV-resistente Sorten und fliegenfreie Jungpflanzen pflanzen", "Unkräuter und Erntereste entfernen, die Weiße Fliegen beherbergen", "Wo möglich, eine wirtspflanzenfreie Pause zwischen Tomatenkulturen einlegen"]
+  }
+}

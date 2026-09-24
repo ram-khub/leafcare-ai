@@ -1,0 +1,382 @@
+{
+  "Apple___Apple_scab": {
+    "crop": "Pommier",
+    "disease": "Tavelure du pommier",
+    "description": "Maladie fongique courante des feuilles et des fruits du pommier, plus grave lors de printemps frais et humides. Elle tue rarement l'arbre, mais peut le défolier et abîmer la qualité des fruits.",
+    "symptoms": ["Taches veloutées vert olive à brunes sur les feuilles, souvent le long des nervures", "Les taches foncent et la feuille peut s'enrouler, jaunir et tomber précocement", "Croûtes sombres, liégeuses, parfois craquelées sur les fruits"],
+    "causes": "Le champignon Venturia inaequalis, qui hiverne dans les feuilles tombées et se propage par spores lors des pluies de printemps.",
+    "treatment_organic": ["Ratisser puis détruire ou composter les feuilles tombées à l'automne pour éliminer le champignon hivernant", "Tailler pour aérer la ramure afin que les feuilles sèchent vite après la pluie", "Des produits à base de soufre ou de cuivre autorisés en agriculture biologique protègent les jeunes pousses s'ils sont appliqués avant les périodes de contamination"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre la tavelure, du débourrement au début de l'été par temps humide", "Respectez toujours l'étiquette du produit et le calendrier de traitement du service de conseil agricole local"],
+    "prevention": ["Plantez des variétés de pommier résistantes à la tavelure", "Ramassez les feuilles tombées et évitez l'arrosage par aspersion", "Espacez et taillez les arbres pour une bonne circulation de l'air"]
+  },
+  "Apple___Black_rot": {
+    "crop": "Pommier",
+    "disease": "Pourriture noire",
+    "description": "Maladie fongique qui provoque des taches foliaires (tache œil-de-grenouille), une pourriture des fruits et des chancres sur les branches. Elle se développe sur le bois mort et les fruits momifiés laissés dans le verger.",
+    "symptoms": ["Petites taches violettes sur les feuilles qui s'agrandissent en centres brun clair bordés de violet ('œil-de-grenouille')", "Pourriture brune et ferme des fruits, souvent à partir de l'œil, avec des anneaux sombres", "Chancres enfoncés brun rougeâtre sur les branches"],
+    "causes": "Le champignon Botryosphaeria obtusa, qui survit dans les chancres, le bois mort et les fruits ridés et se propage par temps chaud et humide.",
+    "treatment_organic": ["Supprimez le bois mort ou chancreux et retirez les fruits momifiés de l'arbre et du sol", "Détruisez les bois de taille plutôt que de les laisser près du verger", "Des produits à base de cuivre ou de soufre autorisés en agriculture biologique peuvent aider à protéger les feuilles"],
+    "treatment_chemical": ["Fongicides homologués contre la pourriture noire / l'œil-de-grenouille, au moment conseillé par le service de conseil local", "Respectez exactement l'étiquette du produit"],
+    "prevention": ["Gardez les arbres vigoureux grâce à un arrosage et une fertilisation adaptés", "Retirez chaque hiver le bois mort, les dégâts de feu bactérien et les fruits momifiés", "Évitez de blesser les arbres : les plaies sont une porte d'entrée pour le champignon"]
+  },
+  "Apple___Cedar_apple_rust": {
+    "crop": "Pommier",
+    "disease": "Rouille du genévrier et du pommier",
+    "description": "Une rouille qui a besoin de deux hôtes : le pommier et le genévrier (cèdre rouge de Virginie). Au printemps, les spores s'envolent des galles du genévrier vers les feuilles du pommier.",
+    "symptoms": ["Taches jaune orangé vif sur la face supérieure des feuilles à la fin du printemps", "Les taches grandissent et forment de petites structures en tube sous la feuille", "Une forte infection provoque une chute précoce des feuilles et affaiblit l'arbre"],
+    "causes": "Le champignon Gymnosporangium juniperi-virginianae, qui alterne entre les galles du genévrier et les feuilles du pommier.",
+    "treatment_organic": ["À la fin de l'hiver, retirez les galles de rouille visibles sur les genévriers voisins", "Enlevez les feuilles très atteintes sur les jeunes arbres", "Des produits à base de soufre autorisés en agriculture biologique peuvent offrir une certaine protection"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre la rouille du pommier, du stade bouton rose au début de l'été", "Suivez l'étiquette et les conseils du service de conseil local"],
+    "prevention": ["Plantez des variétés de pommier résistantes à la rouille", "Si possible, évitez de planter des pommiers près de genévriers ou de cèdres rouges", "Surveillez les genévriers après les pluies de printemps pour repérer les galles gélatineuses orange"]
+  },
+  "Apple___healthy": {
+    "crop": "Pommier",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de pommier.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Continuez à inspecter les feuilles chaque semaine, surtout après des périodes de pluie", "Ramassez les feuilles et fruits tombés pour limiter les maladies hivernantes", "Taillez pour une bonne aération et une bonne pénétration de la lumière"]
+  },
+  "Blueberry___healthy": {
+    "crop": "Myrtille",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de myrtille.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Gardez un sol acide et bien drainé, et paillez pour conserver l'humidité", "Supprimez chaque hiver les vieilles tiges, faibles ou mortes", "Inspectez régulièrement feuilles et fruits pour repérer taches ou pourritures"]
+  },
+  "Cherry___healthy": {
+    "crop": "Cerisier",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de cerisier.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Taillez pour garder la ramure aérée et sèche", "Arrosez au pied de l'arbre plutôt que sur les feuilles", "Par temps chaud et humide, vérifiez l'absence de feutrage blanc poudreux sur les feuilles"]
+  },
+  "Cherry___Powdery_mildew": {
+    "crop": "Cerisier",
+    "disease": "Oïdium",
+    "description": "Maladie fongique qui se développe à la surface des jeunes feuilles et des fruits. Elle est favorisée par des journées chaudes, des nuits humides et une ramure dense.",
+    "symptoms": ["Plaques blanches et poudreuses sur les feuilles, commençant souvent par la face inférieure", "Les feuilles peuvent s'enrouler, se gaufrer ou devenir cassantes", "Plaques poudreuses ou liégeuses sur les fruits à l'approche de la récolte"],
+    "causes": "Le champignon Podosphaera clandestina (Podosphaera cerasi), qui hiverne sur l'arbre et se propage par des spores portées par le vent.",
+    "treatment_organic": ["Supprimez les pousses très atteintes et améliorez l'aération", "Le soufre, les huiles horticoles ou le bicarbonate de potassium autorisés en agriculture biologique peuvent freiner l'oïdium", "Évitez l'excès d'azote, qui favorise une croissance tendre et sensible"],
+    "treatment_chemical": ["Fongicides homologués contre l'oïdium du cerisier, en alternant les modes d'action pour retarder les résistances", "Respectez l'étiquette et le calendrier de traitement du service de conseil local"],
+    "prevention": ["Gérez l'irrigation pour que la ramure ne reste pas humide", "Supprimez les drageons et gourmands, souvent infectés en premier", "Commencez la surveillance dès la pousse des rameaux au printemps"]
+  },
+  "Corn___Cercospora_leaf_spot Gray_leaf_spot": {
+    "crop": "Maïs",
+    "disease": "Tache grise (cercosporiose)",
+    "description": "L'une des maladies foliaires les plus pénalisantes pour le rendement du maïs dans les régions chaudes et humides. Elle survit sur les résidus de maïs laissés en surface.",
+    "symptoms": ["Petites taches beige qui deviennent des lésions longues, étroites et rectangulaires, grises à beiges", "Les lésions sont délimitées par les nervures, ce qui leur donne des bords droits", "Dans les cas graves, les lésions fusionnent et dessèchent des feuilles entières"],
+    "causes": "Le champignon Cercospora zeae-maydis, favorisé par de longues périodes d'humidité élevée, des températures chaudes et la monoculture de maïs.",
+    "treatment_organic": ["Faites une rotation vers une culture non hôte pendant au moins un an", "Enfouissez ou laissez se décomposer les résidus infectés si la conservation des sols le permet"],
+    "treatment_chemical": ["Fongicides foliaires homologués contre la tache grise, lorsque la maladie atteint les feuilles supérieures vers la floraison sur des hybrides sensibles", "Respectez l'étiquette et les seuils du service de conseil local"],
+    "prevention": ["Semez des hybrides résistants ou tolérants", "Pratiquez la rotation et gérez les résidus", "Inspectez régulièrement les parcelles à partir de la mi-saison"]
+  },
+  "Corn___Common_rust": {
+    "crop": "Maïs",
+    "disease": "Rouille commune",
+    "description": "Rouille très répandue du maïs. Ses spores sont transportées très loin par le vent et elle est favorisée par un temps frais et humide.",
+    "symptoms": ["Petites pustules ovales et poudreuses brun cannelle sur les deux faces de la feuille", "Les pustules deviennent brun foncé à noires à mesure que la plante mûrit", "Les feuilles très atteintes peuvent jaunir et mourir précocement"],
+    "causes": "Le champignon Puccinia sorghi, propagé par des spores portées par le vent par temps frais (16-23 °C) avec de fortes rosées.",
+    "treatment_organic": ["Sur les hybrides tolérants, aucune intervention n'est généralement nécessaire", "Assurez une nutrition équilibrée pour garder des plantes vigoureuses"],
+    "treatment_chemical": ["Des fongicides foliaires homologués contre la rouille commune peuvent se justifier en début de saison sur maïs doux ou maïs semence sensible", "Respectez l'étiquette et les conseils du service de conseil local"],
+    "prevention": ["Semez des hybrides résistants à la rouille", "Semez tôt pour que la culture mûrisse avant que la rouille ne se développe", "Inspectez régulièrement les feuilles pendant les périodes fraîches et humides"]
+  },
+  "Corn___healthy": {
+    "crop": "Maïs",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de maïs.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Alternez le maïs avec d'autres cultures pour casser les cycles de maladie", "Choisissez des hybrides résistants aux maladies locales courantes", "Inspectez régulièrement les parcelles, surtout par temps humide"]
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "crop": "Maïs",
+    "disease": "Helminthosporiose du Nord",
+    "description": "Maladie fongique des feuilles du maïs qui peut causer d'importantes pertes si elle atteint les feuilles supérieures avant le remplissage du grain.",
+    "symptoms": ["Longues lésions en forme de cigare, vert-gris à beige, de 2,5 à 15 cm", "Les lésions apparaissent d'abord sur les feuilles basses puis remontent", "Masses sombres de spores sur les lésions par temps humide"],
+    "causes": "Le champignon Exserohilum turcicum, qui survit sur les résidus infectés et se propage par températures modérées et longues périodes de rosée.",
+    "treatment_organic": ["Pratiquez la rotation et gérez les résidus infectés", "Éliminez les repousses de maïs"],
+    "treatment_chemical": ["Fongicides foliaires homologués contre l'helminthosporiose, si des lésions apparaissent sur les feuilles supérieures vers la floraison", "Respectez l'étiquette et les seuils du service de conseil local"],
+    "prevention": ["Semez des hybrides résistants à l'helminthosporiose", "Ne cultivez pas de maïs pendant au moins une saison", "Inspectez les parcelles dès que le maïs atteint hauteur de genou"]
+  },
+  "Grape___Black_rot": {
+    "crop": "Vigne",
+    "disease": "Black-rot",
+    "description": "Maladie fongique destructrice de la vigne en climat chaud et humide. Mal maîtrisée en début de saison, elle peut détruire l'essentiel de la récolte.",
+    "symptoms": ["Petites taches rondes brun rougeâtre sur les feuilles, au bord plus foncé et ponctuées de minuscules points noirs", "Les baies brunissent puis se ratatinent en 'momies' noires et dures", "Lésions sombres allongées sur les rameaux et les pétioles"],
+    "causes": "Le champignon Guignardia bidwellii (Phyllosticta ampelicida), qui hiverne dans les baies momifiées et se propage par la pluie.",
+    "treatment_organic": ["Retirez toutes les baies momifiées des ceps et du sol lors de la taille d'hiver", "Supprimez les feuilles et grappes atteintes dès leur apparition", "Des produits à base de cuivre ou de soufre autorisés en agriculture biologique peuvent protéger les jeunes pousses"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre le black-rot, du début de la pousse jusqu'à la bonne formation des baies", "Respectez l'étiquette et le programme de traitement du service de conseil local"],
+    "prevention": ["Retirez chaque hiver les momies et les sarments atteints", "Palissez et taillez les ceps pour une bonne aération et exposition au soleil", "Maîtrisez l'herbe sous le rang pour accélérer le séchage"]
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "crop": "Vigne",
+    "disease": "Esca",
+    "description": "Maladie du bois de la vigne causée par des champignons qui colonisent le tronc. Elle affaiblit les ceps pendant des années et peut les tuer brutalement par forte chaleur.",
+    "symptoms": ["Feuilles 'tigrées' : bandes jaunes ou rouges entre les nervures qui se dessèchent ensuite", "Petites taches sombres sur les baies, qui peuvent se fendre et se dessécher", "Stries sombres dans le bois à la coupe du tronc ou des bras"],
+    "causes": "Plusieurs champignons lignivores (dont Phaeomoniella chlamydospora et des espèces de Phaeoacremonium) qui pénètrent par les plaies de taille.",
+    "treatment_organic": ["Coupez et détruisez le bois mort ou atteint bien en dessous des symptômes visibles", "Sur les ceps très atteints, reformez un tronc à partir d'un rejet sain", "Protégez les grosses plaies de taille avec un mastic cicatrisant ou un protecteur biologique autorisé"],
+    "treatment_chemical": ["Il n'existe pas de traitement chimique curatif pour les ceps atteints", "Les protecteurs de plaies de taille homologués peuvent limiter les nouvelles infections ; suivez l'étiquette et les conseils techniques"],
+    "prevention": ["Taillez par temps sec et en fin de repos végétatif, quand les plaies cicatrisent plus vite", "Évitez les grosses plaies et sortez les bois de taille de la vigne", "Plantez des plants sains et certifiés"]
+  },
+  "Grape___healthy": {
+    "crop": "Vigne",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de vigne.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Taillez et palissez les ceps pour un feuillage ouvert et aéré", "Retirez chaque hiver les baies momifiées et le bois mort", "Surveillez de près les feuilles par temps chaud et humide"]
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "crop": "Vigne",
+    "disease": "Brûlure des feuilles (tache foliaire à Isariopsis)",
+    "description": "Tache foliaire fongique de la vigne, plus fréquente dans les régions chaudes et humides et en fin de saison. Dans les cas graves, elle provoque une chute précoce des feuilles et affaiblit les ceps.",
+    "symptoms": ["Taches irrégulières rouge-brun foncé à noires sur les feuilles", "Les taches fusionnent en grandes zones mortes (nécrosées), souvent bordées de jaune", "Feutrage fongique sombre sous la feuille ; chute précoce des feuilles"],
+    "causes": "Le champignon Pseudocercospora vitis (anciennement Isariopsis clavispora), qui survit sur les feuilles tombées et se propage par temps humide.",
+    "treatment_organic": ["Ramassez et détruisez les feuilles atteintes tombées au sol", "Aérez le feuillage par l'ébourgeonnage et l'effeuillage", "Des produits à base de cuivre autorisés en agriculture biologique peuvent protéger les feuilles"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre les taches foliaires de la vigne, selon les conseils du service de conseil local", "Respectez l'étiquette du produit"],
+    "prevention": ["Retirez les feuilles mortes après les vendanges", "Évitez l'arrosage par aspersion", "Maintenez une nutrition équilibrée et la vigueur des ceps"]
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "crop": "Oranger (agrumes)",
+    "disease": "Huanglongbing (greening des agrumes)",
+    "description": "La maladie la plus grave des agrumes dans le monde. Transmise par le psylle asiatique des agrumes, elle est incurable : les arbres atteints dépérissent puis meurent.",
+    "symptoms": ["Marbrure jaune irrégulière et asymétrique des feuilles (contrairement au motif symétrique d'une carence)", "Pousses jaunes, petites feuilles dressées et dessèchement des rameaux", "Petits fruits déformés et amers qui restent en partie verts"],
+    "causes": "La bactérie Candidatus Liberibacter asiaticus, transmise par le psylle asiatique des agrumes et par greffage de matériel infecté.",
+    "treatment_organic": ["Il n'existe pas de remède ; il faut arracher les arbres atteints pour protéger les arbres voisins", "Signalez tout cas suspect à l'autorité agricole ou phytosanitaire locale (maladie réglementée dans de nombreux pays)"],
+    "treatment_chemical": ["Aucun produit chimique ne guérit la maladie", "Lutte collective contre le psylle avec des insecticides homologués, coordonnée par les autorités et les services de conseil locaux"],
+    "prevention": ["N'achetez que des plants d'agrumes certifiés indemnes de maladie", "Inspectez régulièrement les jeunes pousses pour repérer les psylles", "Ne transportez pas de plants ou de matériel végétal d'agrumes d'une région à l'autre"]
+  },
+  "Peach___Bacterial_spot": {
+    "crop": "Pêcher",
+    "disease": "Tache bactérienne",
+    "description": "Maladie bactérienne du pêcher et d'autres fruits à noyau, plus grave sur sols sableux par temps chaud, humide et venteux.",
+    "symptoms": ["Petites taches anguleuses, d'aspect huileux, sur les feuilles, qui virent au brun violacé", "Le centre des taches tombe, donnant un aspect 'criblé' ; les feuilles jaunissent et tombent", "Taches creusées et craquelées sur les fruits"],
+    "causes": "La bactérie Xanthomonas arboricola pv. pruni, qui hiverne dans les chancres des rameaux et se propage par la pluie poussée par le vent.",
+    "treatment_organic": ["Supprimez les rameaux chancreux par temps sec", "Des produits à base de cuivre autorisés en agriculture biologique, appliqués aux moments conseillés par le service technique, peuvent limiter la propagation (le cuivre peut brûler les feuilles du pêcher : suivez les conseils de près)"],
+    "treatment_chemical": ["Bactéricides homologués contre la tache bactérienne des fruits à noyau, selon les programmes du service de conseil local", "Respectez l'étiquette pour éviter de brûler les feuilles"],
+    "prevention": ["Plantez des variétés résistantes ou moins sensibles", "Gardez des arbres vigoureux avec un apport d'azote suffisant (sans excès)", "Installez des brise-vent pour limiter les dégâts de la pluie poussée par le vent"]
+  },
+  "Peach___healthy": {
+    "crop": "Pêcher",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de pêcher.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Taillez en gobelet pour une ramure ouverte et bien aérée", "Retirez en hiver les rameaux chancreux et les fruits momifiés", "Inspectez les feuilles après des épisodes de temps humide et venteux"]
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "crop": "Poivron",
+    "disease": "Tache bactérienne",
+    "description": "Maladie bactérienne du poivron et de la tomate, favorisée par le temps chaud et humide et propagée rapidement par les éclaboussures d'eau et la manipulation des plantes mouillées.",
+    "symptoms": ["Petites taches d'aspect huileux sur les feuilles, qui brunissent avec un halo jaune", "Les feuilles atteintes jaunissent et tombent, exposant les fruits aux coups de soleil", "Taches en relief et croûteuses sur les fruits"],
+    "causes": "Des bactéries Xanthomonas, apportées par les semences et les plants et propagées par les éclaboussures de pluie, l'aspersion et les manipulations.",
+    "treatment_organic": ["Arrachez et détruisez les plantes et feuilles très atteintes", "Ne travaillez pas dans les plantes quand elles sont mouillées", "Des produits à base de cuivre autorisés en agriculture biologique peuvent freiner la propagation s'ils sont appliqués tôt"],
+    "treatment_chemical": ["Bactéricides homologués contre la tache bactérienne du poivron, selon les recommandations du service de conseil local", "Respectez l'étiquette ; dans certaines régions, il existe des résistances au cuivre"],
+    "prevention": ["Utilisez des semences et plants certifiés sains et des variétés résistantes", "Préférez l'irrigation au goutte-à-goutte à l'aspersion", "Ne replantez ni poivron ni tomate au même endroit pendant 2-3 ans"]
+  },
+  "Pepper,_bell___healthy": {
+    "crop": "Poivron",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de poivron.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Arrosez au pied de la plante sans mouiller les feuilles", "Faites alterner les poivrons avec des cultures non apparentées", "Inspectez régulièrement les feuilles pour repérer des taches, surtout par temps chaud et humide"]
+  },
+  "Potato___Early_blight": {
+    "crop": "Pomme de terre",
+    "disease": "Alternariose",
+    "description": "Maladie fongique courante de la pomme de terre et de la tomate, qui commence en général sur les feuilles basses et âgées, surtout sur des plantes stressées.",
+    "symptoms": ["Taches brun foncé à anneaux concentriques (motif en 'cible') sur les vieilles feuilles", "Jaunissement autour des taches ; les feuilles atteintes meurent et tombent", "Lésions sombres, enfoncées et sèches sur les tubercules"],
+    "causes": "Le champignon Alternaria solani, qui survit dans le sol et les résidus de culture et se propage lors d'alternances de temps humide et sec.",
+    "treatment_organic": ["Retirez et détruisez les feuilles basses atteintes", "Gardez les plantes bien nourries et arrosées pour limiter le stress", "Des produits à base de cuivre autorisés en agriculture biologique peuvent freiner la propagation"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre l'alternariose, dès l'apparition des premières taches", "Respectez l'étiquette et les conseils du service de conseil local"],
+    "prevention": ["Faites une rotation de 2-3 ans avec des cultures autres que des solanacées", "Utilisez des plants certifiés et détruisez les résidus après la récolte", "Évitez l'aspersion en fin de journée"]
+  },
+  "Potato___healthy": {
+    "crop": "Pomme de terre",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de pomme de terre.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Plantez des plants certifiés indemnes de maladie", "Faites alterner la pomme de terre avec des cultures non apparentées", "Inspectez souvent les feuilles par temps frais et humide, quand le mildiou peut se propager vite"]
+  },
+  "Potato___Late_blight": {
+    "crop": "Pomme de terre",
+    "disease": "Mildiou",
+    "description": "La maladie à l'origine de la Grande Famine irlandaise. Par temps frais et humide, elle peut détruire une culture de pommes de terre ou de tomates en quelques jours : agissez vite.",
+    "symptoms": ["Grandes taches sombres, d'aspect détrempé, sur les feuilles, qui s'étendent rapidement", "Duvet blanc sous la feuille par temps humide", "Pourriture ferme brun rougeâtre sur les tubercules"],
+    "causes": "L'oomycète Phytophthora infestans, propagé par des spores aériennes depuis des plantes infectées, des tas de déchets et des plants contaminés.",
+    "treatment_organic": ["Arrachez et détruisez immédiatement les plantes atteintes (ne les compostez pas)", "Des produits à base de cuivre autorisés en agriculture biologique peuvent protéger le feuillage sain", "Prévenez les producteurs voisins, car les spores voyagent loin"],
+    "treatment_chemical": ["Fongicides homologués contre le mildiou, appliqués en préventif quand les modèles de prévision locaux signalent un risque", "Contactez rapidement votre conseiller agricole local pour un avis adapté à votre région"],
+    "prevention": ["Plantez des plants certifiés et des variétés résistantes", "Détruisez les repousses et les tas de déchets de pommes de terre", "Buttez bien les tubercules et ne récoltez que lorsque les fanes sont complètement mortes"]
+  },
+  "Raspberry___healthy": {
+    "crop": "Framboisier",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de framboisier.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Supprimez les vieilles cannes qui ont fructifié après la récolte", "Gardez des rangs étroits pour une bonne aération", "Plantez des cannes certifiées saines dans un sol bien drainé"]
+  },
+  "Soybean___healthy": {
+    "crop": "Soja",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de soja.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Faites alterner le soja avec des céréales comme le maïs", "Choisissez des variétés résistantes aux maladies locales courantes", "Inspectez régulièrement les parcelles pendant toute la saison"]
+  },
+  "Squash___Powdery_mildew": {
+    "crop": "Courge",
+    "disease": "Oïdium",
+    "description": "Maladie fongique très courante des courges, potirons, melons et concombres. Elle réduit le rendement et la qualité des fruits en tuant les feuilles précocement.",
+    "symptoms": ["Taches blanches et poudreuses, comme du talc, sur les feuilles et les tiges", "Les taches s'étendent jusqu'à couvrir la feuille, qui jaunit et se dessèche", "Les fruits peuvent être petits, peu savoureux ou brûlés par le soleil"],
+    "causes": "Des champignons comme Podosphaera xanthii, dont les spores portées par le vent prospèrent dans les plantations denses, à l'ombre et en forte humidité (sans besoin d'eau libre).",
+    "treatment_organic": ["Retirez les feuilles très atteintes", "Le soufre, les huiles horticoles, le bicarbonate de potassium ou des fongicides biologiques autorisés en agriculture biologique peuvent freiner l'oïdium", "N'appliquez pas huiles et soufre à peu d'intervalle ni par forte chaleur : les feuilles peuvent brûler"],
+    "treatment_chemical": ["Fongicides homologués contre l'oïdium des cucurbitacées, en alternant les modes d'action pour éviter les résistances", "Respectez l'étiquette du produit"],
+    "prevention": ["Plantez des variétés résistantes", "Espacez les plantes pour l'aération et le plein soleil", "Évitez l'excès d'engrais azoté"]
+  },
+  "Strawberry___healthy": {
+    "crop": "Fraisier",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de fraisier.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Plantez des plants certifiés sains sur des buttes bien drainées", "Retirez les vieilles feuilles mortes après la récolte", "Utilisez le goutte-à-goutte et un paillage pour garder feuilles et fruits au sec"]
+  },
+  "Strawberry___Leaf_scorch": {
+    "crop": "Fraisier",
+    "disease": "Brûlure des feuilles",
+    "description": "Maladie fongique des feuilles du fraisier. Une forte infection affaiblit les plantes et réduit leur vigueur et la récolte de l'année suivante.",
+    "symptoms": ["Nombreuses petites taches violettes irrégulières sur la face supérieure", "Les taches fusionnent et la feuille paraît brûlée ou 'grillée' entre elles", "Les feuilles se dessèchent et s'enroulent vers le haut ; des lésions peuvent aussi apparaître sur les tiges et les calices"],
+    "causes": "Le champignon Diplocarpon earlianum, qui survit sur les feuilles atteintes et se propage par les éclaboussures d'eau.",
+    "treatment_organic": ["Retirez et détruisez les feuilles atteintes et rénovez les planches après la récolte", "Évitez l'arrosage par le dessus", "Des produits à base de cuivre autorisés en agriculture biologique peuvent offrir une certaine protection"],
+    "treatment_chemical": ["Fongicides homologués contre la brûlure des feuilles du fraisier, selon les conseils du service de conseil local", "Respectez l'étiquette du produit"],
+    "prevention": ["Plantez des variétés résistantes et des plants certifiés", "Espacez les plants pour l'aération et maîtrisez les mauvaises herbes", "Déplacez les fraisiers tous les quelques ans"]
+  },
+  "Tomato___Bacterial_spot": {
+    "crop": "Tomate",
+    "disease": "Tache bactérienne",
+    "description": "Maladie bactérienne de la tomate et du poivron, difficile à maîtriser une fois installée par temps chaud et pluvieux.",
+    "symptoms": ["Petites taches sombres d'aspect graisseux sur les feuilles, parfois avec un halo jaune", "Les taches fusionnent et les feuilles jaunissent puis brunissent", "Taches brunes en relief et croûteuses sur les fruits verts"],
+    "causes": "Des bactéries Xanthomonas, introduites par les semences ou les plants et propagées par les éclaboussures de pluie, l'aspersion et la manipulation des plantes mouillées.",
+    "treatment_organic": ["Retirez les feuilles atteintes et les plantes très touchées", "Évitez de manipuler les plantes quand elles sont mouillées", "Des produits à base de cuivre autorisés en agriculture biologique peuvent freiner la propagation s'ils sont appliqués tôt"],
+    "treatment_chemical": ["Bactéricides homologués contre la tache bactérienne de la tomate, selon les recommandations du service de conseil local", "Respectez l'étiquette ; des souches résistantes au cuivre existent dans certaines régions"],
+    "prevention": ["Utilisez des semences et des plants sains", "Arrosez au goutte-à-goutte et tuteurez les plantes pour garder les feuilles sèches", "Ne replantez ni tomate ni poivron au même endroit pendant 2-3 ans"]
+  },
+  "Tomato___Early_blight": {
+    "crop": "Tomate",
+    "disease": "Alternariose",
+    "description": "L'une des maladies les plus courantes de la tomate. Elle commence sur les feuilles basses et remonte, affaiblit les plantes et expose les fruits aux coups de soleil.",
+    "symptoms": ["Taches brunes à anneaux concentriques en 'cible' sur les vieilles feuilles", "Tissu jaune autour des taches ; les feuilles basses tombent", "Lésions sombres et enfoncées sur les tiges et au point d'attache du fruit"],
+    "causes": "Le champignon Alternaria (A. solani / A. linariae), qui survit sur les débris de culture et dans le sol.",
+    "treatment_organic": ["Retirez les feuilles basses atteintes et paillez le sol pour éviter que les spores ne remontent par éclaboussure", "Gardez les plantes bien nourries et arrosées pour limiter le stress", "Des produits à base de cuivre autorisés en agriculture biologique peuvent freiner la propagation"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre l'alternariose de la tomate, dès les premiers symptômes", "Respectez l'étiquette et les conseils du service de conseil local"],
+    "prevention": ["Faites une rotation de 2-3 ans avec des cultures autres que des solanacées", "Tuteurez ou mettez en cage les plantes et retirez les feuilles basses pour l'aération", "Retirez et détruisez les débris végétaux en fin de saison"]
+  },
+  "Tomato___healthy": {
+    "crop": "Tomate",
+    "disease": "Saine",
+    "description": "Aucun signe de maladie n'a été détecté sur cette feuille de tomate.",
+    "symptoms": [],
+    "causes": "Sans objet.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Arrosez au pied des plantes et paillez le sol", "Tuteurez et taillez les plantes pour l'aération", "Faites alterner chaque année les tomates avec des cultures non apparentées"]
+  },
+  "Tomato___Late_blight": {
+    "crop": "Tomate",
+    "disease": "Mildiou",
+    "description": "Maladie destructrice à propagation rapide de la tomate et de la pomme de terre. Par temps frais et humide, elle peut tuer les plantes en quelques jours.",
+    "symptoms": ["Grandes taches irrégulières vert-gris d'aspect graisseux sur les feuilles, qui brunissent vite", "Duvet blanc sous les feuilles par temps humide", "Plages brunes, fermes et graisseuses sur les fruits"],
+    "causes": "L'oomycète Phytophthora infestans, transporté très loin par le vent depuis des tomates ou pommes de terre infectées.",
+    "treatment_organic": ["Arrachez immédiatement les plantes atteintes et mettez-les en sac ou détruisez-les (ne les compostez pas)", "Des produits à base de cuivre autorisés en agriculture biologique peuvent protéger les plantes saines"],
+    "treatment_chemical": ["Fongicides homologués contre le mildiou, appliqués en préventif quand la maladie est signalée à proximité", "Contactez rapidement votre conseiller agricole local pour un avis adapté à votre région"],
+    "prevention": ["Plantez des variétés résistantes et des plants sains", "Ne cultivez pas de tomates près des pommes de terre et détruisez les repousses de pommes de terre", "Gardez les feuilles sèches grâce au goutte-à-goutte et à un bon espacement"]
+  },
+  "Tomato___Leaf_Mold": {
+    "crop": "Tomate",
+    "disease": "Cladosporiose",
+    "description": "Maladie fongique surtout présente en serre et sous tunnel, où l'humidité reste élevée.",
+    "symptoms": ["Taches vert pâle à jaunes sur la face supérieure des feuilles", "Feutrage velouté vert olive à brun-gris sur la face inférieure, juste en dessous", "Les feuilles flétrissent et tombent ; les fruits sont rarement touchés"],
+    "causes": "Le champignon Passalora fulva (Cladosporium fulvum), favorisé par une humidité relative supérieure à 85 %.",
+    "treatment_organic": ["Retirez et détruisez les feuilles atteintes", "Augmentez l'aération et réduisez l'humidité dans la serre", "Des produits à base de cuivre autorisés en agriculture biologique peuvent protéger les feuilles restantes"],
+    "treatment_chemical": ["Fongicides homologués contre la cladosporiose de la tomate, selon les recommandations du service de conseil local", "Respectez l'étiquette du produit"],
+    "prevention": ["Maintenez l'humidité de la serre sous 85 % et aérez bien", "Espacez et taillez les plantes pour l'aération", "Plantez des variétés résistantes et nettoyez la serre entre deux cultures"]
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "crop": "Tomate",
+    "disease": "Septoriose",
+    "description": "Maladie fongique très courante qui défeuille les tomates du bas vers le haut par temps chaud et humide.",
+    "symptoms": ["Nombreuses petites taches rondes à bord sombre et centre gris-blanc sur les feuilles basses", "Minuscules points noirs (fructifications du champignon) au centre des taches", "Les feuilles jaunissent, flétrissent et tombent, exposant les fruits aux coups de soleil"],
+    "causes": "Le champignon Septoria lycopersici, qui survit sur les débris végétaux et se propage par les éclaboussures d'eau.",
+    "treatment_organic": ["Retirez rapidement les feuilles basses atteintes", "Paillez autour des plantes pour limiter les éclaboussures de terre", "Des produits à base de cuivre autorisés en agriculture biologique peuvent freiner la propagation"],
+    "treatment_chemical": ["Fongicides préventifs homologués contre la septoriose de la tomate", "Respectez l'étiquette et les conseils du service de conseil local"],
+    "prevention": ["Ne replantez pas de tomates au même endroit pendant au moins un an", "Retirez et détruisez les débris végétaux après la récolte", "Arrosez au ras du sol et évitez de travailler dans les plantes mouillées"]
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "crop": "Tomate",
+    "disease": "Acariens (tétranyque tisserand)",
+    "description": "Ce n'est pas une maladie mais un ravageur : de minuscules acariens qui aspirent la sève des feuilles. Leurs populations explosent par temps chaud, sec et poussiéreux.",
+    "symptoms": ["Fines ponctuations jaunes ou blanches sur les feuilles", "Les feuilles prennent une teinte bronzée ou jaune et se dessèchent", "Fines toiles sous les feuilles et entre elles en cas de forte infestation"],
+    "causes": "Le tétranyque tisserand (Tetranychus urticae), favorisé par la chaleur, le stress hydrique, la poussière et les traitements qui tuent ses ennemis naturels.",
+    "treatment_organic": ["Pulvérisez un jet d'eau puissant sous les feuilles pour déloger les acariens", "Savons insecticides ou huiles horticoles autorisés en agriculture biologique, en couvrant bien le dessous des feuilles", "Favorisez ou lâchez des auxiliaires comme les acariens prédateurs"],
+    "treatment_chemical": ["Acaricides homologués contre les tétranyques sur tomate, uniquement quand la surveillance montre qu'ils sont nécessaires", "Évitez les insecticides à large spectre qui tuent les auxiliaires ; respectez l'étiquette"],
+    "prevention": ["Arrosez bien les plantes pour éviter le stress hydrique", "Limitez la poussière sur et autour des plantes", "Inspectez régulièrement le dessous des feuilles par temps chaud et sec"]
+  },
+  "Tomato___Target_Spot": {
+    "crop": "Tomate",
+    "disease": "Corynesporiose (tache cible)",
+    "description": "Maladie fongique de la tomate dans les régions chaudes et humides. Elle touche feuilles, tiges et fruits et peut provoquer une forte défoliation.",
+    "symptoms": ["Petites taches brunes sur les feuilles qui deviennent des lésions à centre brun clair et anneaux concentriques", "Les lésions ont souvent un halo jaune ; les feuilles peuvent tomber", "Taches creusées et piquées sur les fruits"],
+    "causes": "Le champignon Corynespora cassiicola, qui survit sur les débris de culture et d'autres plantes hôtes et se propage par temps humide.",
+    "treatment_organic": ["Retirez les feuilles basses atteintes et les débris de culture", "Améliorez l'aération par la taille et le tuteurage", "Des produits à base de cuivre autorisés en agriculture biologique peuvent freiner la propagation"],
+    "treatment_chemical": ["Fongicides homologués contre la corynesporiose de la tomate, selon les recommandations du service de conseil local", "Respectez l'étiquette et alternez les modes d'action"],
+    "prevention": ["Pratiquez la rotation et détruisez les débris végétaux après la récolte", "Évitez l'aspersion et l'excès d'azote", "Maîtrisez les mauvaises herbes pouvant héberger le champignon"]
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "crop": "Tomate",
+    "disease": "Virus de la mosaïque de la tomate",
+    "description": "Un virus très stable et très contagieux. Il se transmet facilement par les mains, les outils et les vêtements, et les plantes infectées sont incurables.",
+    "symptoms": ["Marbrure ou mosaïque vert clair et vert foncé sur les feuilles", "Les feuilles peuvent être enroulées, déformées ou filiformes", "Plantes naines, rendement réduit et fruits qui mûrissent de façon irrégulière"],
+    "causes": "Le virus de la mosaïque de la tomate (ToMV), transmis mécaniquement par contact, outils contaminés et semences infectées, et capable de survivre dans les débris végétaux.",
+    "treatment_organic": ["Il n'existe pas de remède : arrachez et détruisez les plantes atteintes", "Lavez-vous les mains et désinfectez les outils après avoir touché des plantes suspectes"],
+    "treatment_chemical": ["Aucun traitement chimique ne guérit les infections virales", "Misez sur l'hygiène et les variétés résistantes"],
+    "prevention": ["Plantez des variétés résistantes et des semences certifiées indemnes de virus", "Désinfectez régulièrement outils, tuteurs et mains", "Évitez d'utiliser des produits du tabac près des plantes"]
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "crop": "Tomate",
+    "disease": "Virus des feuilles jaunes en cuillère de la tomate",
+    "description": "Un virus dévastateur de la tomate dans les régions chaudes, transmis par l'aleurode. Les plantes infectées tôt ne produisent presque aucun fruit.",
+    "symptoms": ["Feuilles qui s'enroulent vers le haut en forme de cuillère", "Bords des feuilles jaunes et petites feuilles froissées", "Plantes naines et buissonnantes, chute des fleurs et mauvaise nouaison"],
+    "causes": "Le virus TYLCV, transmis par l'aleurode du tabac (Bemisia tabaci).",
+    "treatment_organic": ["Il n'existe pas de remède : arrachez et détruisez rapidement les plantes atteintes pour limiter la propagation", "Utilisez des filets anti-insectes, des paillages réfléchissants et des pièges jaunes englués contre les aleurodes"],
+    "treatment_chemical": ["Aucun produit chimique ne guérit le virus", "Lutte contre les aleurodes avec des insecticides homologués, dans le cadre d'un plan intégré guidé par le service de conseil local"],
+    "prevention": ["Plantez des variétés résistantes au TYLCV et des plants exempts d'aleurodes", "Éliminez les mauvaises herbes et les résidus de culture qui hébergent les aleurodes", "Si possible, laissez une période sans plante hôte entre deux cultures de tomate"]
+  }
+}

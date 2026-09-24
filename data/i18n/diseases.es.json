@@ -1,0 +1,382 @@
+{
+  "Apple___Apple_scab": {
+    "crop": "Manzano",
+    "disease": "Moteado del manzano",
+    "description": "Enfermedad fúngica común de las hojas y frutos del manzano, peor en primaveras frescas y húmedas. Rara vez mata el árbol, pero puede defoliarlo y arruinar la calidad de la fruta.",
+    "symptoms": ["Manchas aterciopeladas de verde oliva a marrón en las hojas, a menudo a lo largo de los nervios", "Las manchas se oscurecen y la hoja puede enrollarse, amarillear y caer antes de tiempo", "Costras oscuras, corchosas y a veces agrietadas en la fruta"],
+    "causes": "El hongo Venturia inaequalis, que pasa el invierno en las hojas caídas y se propaga por esporas con las lluvias de primavera.",
+    "treatment_organic": ["Rastrillar y destruir o compostar las hojas caídas en otoño para eliminar el hongo invernante", "Podar para abrir la copa y que las hojas se sequen rápido tras la lluvia", "Los productos a base de azufre o cobre aprobados para agricultura ecológica protegen los brotes nuevos si se aplican antes de los periodos de infección"],
+    "treatment_chemical": ["Fungicidas protectores registrados para el moteado del manzano, desde la brotación hasta principios del verano con tiempo húmedo", "Sigue siempre la etiqueta del producto y el calendario de tratamientos del servicio de extensión agraria local"],
+    "prevention": ["Planta variedades de manzano resistentes al moteado", "Retira las hojas caídas y evita el riego por aspersión", "Espacia y poda los árboles para una buena ventilación"]
+  },
+  "Apple___Black_rot": {
+    "crop": "Manzano",
+    "disease": "Podredumbre negra",
+    "description": "Enfermedad fúngica que causa manchas foliares (mancha ojo de rana), podredumbre del fruto y chancros en las ramas. Se acumula en la madera muerta y los frutos momificados que quedan en el huerto.",
+    "symptoms": ["Pequeñas manchas moradas en las hojas que se agrandan con centro pardo claro y borde morado ('ojo de rana')", "Podredumbre marrón y firme en la fruta, a menudo desde el extremo del cáliz, con anillos oscuros", "Chancros hundidos de color marrón rojizo en las ramas"],
+    "causes": "El hongo Botryosphaeria obtusa, que sobrevive en chancros, madera muerta y frutos arrugados y se propaga con tiempo cálido y húmedo.",
+    "treatment_organic": ["Poda la madera muerta o con chancros y retira los frutos momificados del árbol y del suelo", "Destruye los restos de poda en lugar de dejarlos cerca del huerto", "Los productos a base de cobre o azufre aprobados para agricultura ecológica pueden ayudar a proteger las hojas"],
+    "treatment_chemical": ["Fungicidas registrados para podredumbre negra / ojo de rana, aplicados en el momento que indique el servicio de extensión local", "Sigue exactamente la etiqueta del producto"],
+    "prevention": ["Mantén los árboles vigorosos con riego y abonado adecuados", "Retira cada invierno la madera muerta, los daños de fuego bacteriano y los frutos momificados", "Evita herir los árboles, porque las heridas son una vía de entrada para el hongo"]
+  },
+  "Apple___Cedar_apple_rust": {
+    "crop": "Manzano",
+    "disease": "Roya del cedro y el manzano",
+    "description": "Roya que necesita dos huéspedes: el manzano y el enebro (cedro rojo de Virginia). En primavera las esporas vuelan desde las agallas del enebro hasta las hojas del manzano.",
+    "symptoms": ["Manchas amarillo-anaranjadas brillantes en el haz de la hoja a finales de primavera", "Las manchas crecen y forman pequeñas estructuras tubulares en el envés", "Una infección fuerte provoca caída temprana de hojas y árboles más débiles"],
+    "causes": "El hongo Gymnosporangium juniperi-virginianae, que alterna entre las agallas del enebro y las hojas del manzano.",
+    "treatment_organic": ["Retira a finales del invierno las agallas de roya visibles en los enebros cercanos", "Arranca las hojas muy infectadas en árboles jóvenes", "Los productos a base de azufre aprobados para agricultura ecológica pueden dar cierta protección"],
+    "treatment_chemical": ["Fungicidas protectores registrados para roya en manzano, desde botón rosa hasta principios del verano", "Sigue las instrucciones de la etiqueta y el consejo del servicio de extensión local"],
+    "prevention": ["Planta variedades de manzano resistentes a la roya", "Cuando sea posible, no plantes manzanos cerca de enebros o cedros rojos", "Vigila los enebros tras las lluvias de primavera por si aparecen agallas gelatinosas naranjas"]
+  },
+  "Apple___healthy": {
+    "crop": "Manzano",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de manzano.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Sigue revisando las hojas cada semana, sobre todo después de periodos de lluvia", "Limpia las hojas y frutos caídos para reducir las enfermedades invernantes", "Poda para una buena ventilación y entrada de luz"]
+  },
+  "Blueberry___healthy": {
+    "crop": "Arándano",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de arándano.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Mantén el suelo ácido y bien drenado, y acolcha para conservar la humedad", "Poda cada invierno las cañas viejas, débiles o muertas", "Revisa con regularidad hojas y frutos en busca de manchas o podredumbre"]
+  },
+  "Cherry___healthy": {
+    "crop": "Cerezo",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de cerezo.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Poda para mantener la copa abierta y seca", "Riega en la base del árbol y no sobre las hojas", "Con tiempo cálido y húmedo, revisa si hay un crecimiento blanco y polvoriento en las hojas"]
+  },
+  "Cherry___Powdery_mildew": {
+    "crop": "Cerezo",
+    "disease": "Oídio",
+    "description": "Enfermedad fúngica que crece sobre la superficie de hojas y frutos jóvenes. La favorecen los días cálidos, las noches húmedas y las copas densas.",
+    "symptoms": ["Manchas blancas y polvorientas en las hojas, que suelen empezar por el envés", "Las hojas pueden enrollarse, arrugarse o volverse quebradizas", "Manchas polvorientas o con russeting en la fruta cerca de la cosecha"],
+    "causes": "El hongo Podosphaera clandestina (Podosphaera cerasi), que pasa el invierno en el árbol y se propaga por esporas transportadas por el viento.",
+    "treatment_organic": ["Poda los brotes muy infectados y mejora la ventilación", "Los productos a base de azufre, aceites hortícolas o bicarbonato potásico aprobados para agricultura ecológica pueden frenar el oídio", "Evita el exceso de nitrógeno, que favorece un crecimiento tierno y sensible"],
+    "treatment_chemical": ["Fungicidas registrados para oídio del cerezo, alternando modos de acción para retrasar resistencias", "Sigue la etiqueta del producto y el calendario de tratamientos del servicio de extensión local"],
+    "prevention": ["Gestiona el riego para que la copa no permanezca húmeda", "Elimina chupones y brotes de agua, que suelen infectarse primero", "Empieza a vigilar desde la brotación en primavera"]
+  },
+  "Corn___Cercospora_leaf_spot Gray_leaf_spot": {
+    "crop": "Maíz",
+    "disease": "Mancha gris de la hoja (cercosporiosis)",
+    "description": "Una de las enfermedades foliares que más limitan el rendimiento del maíz en regiones cálidas y húmedas. Sobrevive en los restos de maíz que quedan en la superficie del suelo.",
+    "symptoms": ["Pequeñas manchas pardas que se convierten en lesiones largas, estrechas y rectangulares de gris a pardo", "Las lesiones quedan limitadas por los nervios de la hoja y tienen bordes rectos", "En casos graves las lesiones se unen y secan hojas enteras"],
+    "causes": "El hongo Cercospora zeae-maydis, favorecido por largos periodos de humedad alta, temperaturas cálidas y maíz sobre maíz.",
+    "treatment_organic": ["Rota al menos un año a un cultivo que no sea huésped", "Entierra o deja descomponer los restos infectados donde la conservación del suelo lo permita"],
+    "treatment_chemical": ["Fungicidas foliares registrados para mancha gris, cuando la enfermedad llega a las hojas superiores hacia la floración en híbridos sensibles", "Sigue la etiqueta y los umbrales del servicio de extensión local"],
+    "prevention": ["Siembra híbridos resistentes o tolerantes", "Rota cultivos y gestiona los restos", "Inspecciona los campos con regularidad desde mitad de campaña"]
+  },
+  "Corn___Common_rust": {
+    "crop": "Maíz",
+    "disease": "Roya común",
+    "description": "Roya muy extendida del maíz. El viento lleva sus esporas a grandes distancias y la favorece el tiempo fresco y húmedo.",
+    "symptoms": ["Pústulas pequeñas, ovaladas y polvorientas de color canela en ambas caras de la hoja", "Las pústulas se vuelven de marrón oscuro a negro a medida que la planta madura", "Las hojas muy infectadas pueden amarillear y morir antes de tiempo"],
+    "causes": "El hongo Puccinia sorghi, propagado por esporas en el viento con tiempo fresco (16-23 °C) y mucho rocío.",
+    "treatment_organic": ["En híbridos tolerantes normalmente no hace falta intervenir", "Mantén una nutrición equilibrada para que las plantas sean vigorosas"],
+    "treatment_chemical": ["Los fungicidas foliares registrados para roya común pueden justificarse al principio de la campaña en maíz dulce o de semilla sensible", "Sigue la etiqueta y el consejo del servicio de extensión local"],
+    "prevention": ["Siembra híbridos resistentes a la roya", "Siembra temprano para que el cultivo madure antes de que la roya aumente", "Revisa las hojas con regularidad en periodos frescos y húmedos"]
+  },
+  "Corn___healthy": {
+    "crop": "Maíz",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de maíz.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Rota el maíz con otros cultivos para romper los ciclos de enfermedad", "Elige híbridos resistentes a las enfermedades locales más comunes", "Inspecciona los campos con regularidad, sobre todo con tiempo húmedo"]
+  },
+  "Corn___Northern_Leaf_Blight": {
+    "crop": "Maíz",
+    "disease": "Tizón foliar del norte",
+    "description": "Enfermedad fúngica de la hoja del maíz que puede causar pérdidas importantes si alcanza las hojas superiores antes del llenado del grano.",
+    "symptoms": ["Lesiones largas en forma de puro, de gris verdoso a pardo, de 2,5-15 cm", "Las lesiones empiezan en las hojas bajas y suben", "Masas oscuras de esporas sobre las lesiones con tiempo húmedo"],
+    "causes": "El hongo Exserohilum turcicum, que sobrevive en restos infectados y se propaga con temperaturas moderadas y largos periodos de rocío.",
+    "treatment_organic": ["Rota cultivos y gestiona los restos infectados", "Elimina las plantas de maíz espontáneas"],
+    "treatment_chemical": ["Fungicidas foliares registrados para tizón del norte, si aparecen lesiones en las hojas superiores hacia la floración", "Sigue la etiqueta y los umbrales del servicio de extensión local"],
+    "prevention": ["Siembra híbridos resistentes al tizón del norte", "No siembres maíz durante al menos una campaña", "Inspecciona desde que las plantas llegan a la altura de la rodilla"]
+  },
+  "Grape___Black_rot": {
+    "crop": "Vid",
+    "disease": "Podredumbre negra",
+    "description": "Enfermedad fúngica destructiva de la vid en climas cálidos y húmedos. Puede destruir gran parte de la cosecha si no se controla al principio de la temporada.",
+    "symptoms": ["Pequeñas manchas circulares de color marrón rojizo en las hojas, con borde más oscuro y diminutos puntos negros", "Las bayas se vuelven marrones y se arrugan hasta formar 'momias' negras y duras", "Lesiones oscuras alargadas en brotes y peciolos"],
+    "causes": "El hongo Guignardia bidwellii (Phyllosticta ampelicida), que pasa el invierno en las bayas momificadas y se propaga con la lluvia.",
+    "treatment_organic": ["Retira todas las bayas momificadas de las cepas y del suelo durante la poda de invierno", "Elimina las hojas y racimos infectados en cuanto aparezcan", "Los productos a base de cobre o azufre aprobados para agricultura ecológica pueden proteger los brotes nuevos"],
+    "treatment_chemical": ["Fungicidas protectores registrados para podredumbre negra de la vid, desde la brotación hasta que las bayas estén bien formadas", "Sigue la etiqueta del producto y el programa de tratamientos del servicio de extensión local"],
+    "prevention": ["Retira cada invierno las momias y los sarmientos infectados", "Conduce y poda las cepas para una buena ventilación y exposición al sol", "Controla las malas hierbas bajo la espaldera para que todo se seque antes"]
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "crop": "Vid",
+    "disease": "Yesca (sarampión negro)",
+    "description": "Enfermedad de la madera de la vid causada por hongos que infectan el tronco. Debilita las cepas durante años y puede matarlas de golpe con calor.",
+    "symptoms": ["Hojas 'atigradas': bandas amarillas o rojas entre los nervios que luego se secan", "Pequeñas manchas oscuras ('sarampión') en las bayas, que pueden agrietarse y secarse", "Vetas oscuras en la madera al cortar troncos o brazos"],
+    "causes": "Varios hongos de la madera (entre ellos Phaeomoniella chlamydospora y especies de Phaeoacremonium) que entran por las heridas de poda.",
+    "treatment_organic": ["Corta y destruye la madera muerta o infectada bastante por debajo de los síntomas visibles", "Donde las cepas estén muy afectadas, forma un tronco nuevo a partir de un chupón sano", "Protege las heridas de poda grandes con un cicatrizante o un protector biológico aprobado"],
+    "treatment_chemical": ["No existe tratamiento químico curativo para las cepas infectadas", "Los protectores de heridas de poda registrados pueden reducir nuevas infecciones; sigue la etiqueta y el consejo de extensión"],
+    "prevention": ["Poda con tiempo seco y al final del reposo invernal, cuando las heridas cicatrizan más rápido", "Evita los cortes grandes y saca los restos de poda del viñedo", "Planta material de vivero limpio y certificado"]
+  },
+  "Grape___healthy": {
+    "crop": "Vid",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de vid.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Poda y conduce las cepas para una vegetación abierta y aireada", "Retira cada invierno las bayas momificadas y la madera muerta", "Vigila de cerca las hojas con tiempo cálido y húmedo"]
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "crop": "Vid",
+    "disease": "Tizón de la hoja (mancha foliar por Isariopsis)",
+    "description": "Mancha foliar fúngica de la vid, más frecuente en regiones cálidas y húmedas y al final de la temporada. En casos graves causa caída temprana de hojas y cepas más débiles.",
+    "symptoms": ["Manchas irregulares de rojo pardo oscuro a negro en las hojas", "Las manchas se unen en grandes zonas muertas (necróticas), a menudo con borde amarillo", "Crecimiento fúngico oscuro en el envés; caída temprana de hojas"],
+    "causes": "El hongo Pseudocercospora vitis (antes Isariopsis clavispora), que sobrevive en las hojas caídas y se propaga con tiempo húmedo.",
+    "treatment_organic": ["Recoge y destruye las hojas infectadas caídas", "Mejora la ventilación con despuntes y deshojado", "Los productos a base de cobre aprobados para agricultura ecológica pueden proteger las hojas"],
+    "treatment_chemical": ["Fungicidas protectores registrados para manchas foliares de la vid, según indique el servicio de extensión local", "Sigue la etiqueta del producto"],
+    "prevention": ["Retira la hojarasca después de la vendimia", "Evita el riego por aspersión", "Mantén una nutrición equilibrada y el vigor de la cepa"]
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "crop": "Naranjo (cítricos)",
+    "disease": "Huanglongbing (enverdecimiento de los cítricos)",
+    "description": "La enfermedad más grave de los cítricos en el mundo. La transmite el psílido asiático de los cítricos, no tiene cura y los árboles infectados decaen y acaban muriendo.",
+    "symptoms": ["Moteado amarillo irregular y asimétrico en las hojas (a diferencia del patrón simétrico de una carencia nutricional)", "Brotes amarillos, hojas pequeñas y erguidas y muerte de ramillas", "Frutos pequeños, deformes y amargos que se quedan en parte verdes"],
+    "causes": "La bacteria Candidatus Liberibacter asiaticus, transmitida por el psílido asiático de los cítricos y por injertos con material infectado.",
+    "treatment_organic": ["No tiene cura; hay que arrancar los árboles infectados para proteger los cercanos", "Comunica los casos sospechosos a la autoridad agrícola o de sanidad vegetal local (es una enfermedad regulada en muchos países)"],
+    "treatment_chemical": ["Ningún producto químico cura la enfermedad", "Control del psílido en toda la zona con insecticidas registrados, coordinado por las autoridades y los servicios de extensión locales"],
+    "prevention": ["Compra solo plantas de vivero de cítricos certificadas libres de enfermedad", "Revisa con regularidad los brotes nuevos por si hay psílidos", "No traslades plantas ni material de cítricos entre regiones"]
+  },
+  "Peach___Bacterial_spot": {
+    "crop": "Melocotonero",
+    "disease": "Mancha bacteriana",
+    "description": "Enfermedad bacteriana del melocotonero y otros frutales de hueso, peor en suelos arenosos con tiempo cálido, húmedo y ventoso.",
+    "symptoms": ["Manchas pequeñas, angulosas y de aspecto aceitoso en las hojas que se vuelven de color pardo púrpura", "El centro de las manchas se cae y deja un aspecto 'perdigonado'; las hojas amarillean y caen", "Manchas hundidas y agrietadas en la fruta"],
+    "causes": "La bacteria Xanthomonas arboricola pv. pruni, que pasa el invierno en chancros de las ramillas y se propaga con la lluvia arrastrada por el viento.",
+    "treatment_organic": ["Poda las ramillas con chancros en tiempo seco", "Los productos a base de cobre aprobados para agricultura ecológica, aplicados en los momentos que recomiende el servicio de extensión, pueden reducir la propagación (el cobre puede dañar las hojas del melocotonero, así que sigue las indicaciones con cuidado)"],
+    "treatment_chemical": ["Bactericidas registrados para mancha bacteriana en frutales de hueso, según los programas de tratamiento del servicio de extensión local", "Sigue la etiqueta del producto para evitar daños en las hojas"],
+    "prevention": ["Planta variedades resistentes o menos sensibles", "Mantén los árboles vigorosos con nitrógeno suficiente (no excesivo)", "Usa cortavientos para reducir los daños de la lluvia con viento"]
+  },
+  "Peach___healthy": {
+    "crop": "Melocotonero",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de melocotonero.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Poda en vaso abierto para una buena ventilación", "Retira en invierno las ramillas con chancros y los frutos momificados", "Revisa las hojas después de rachas de tiempo húmedo y ventoso"]
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "crop": "Pimiento",
+    "disease": "Mancha bacteriana",
+    "description": "Enfermedad bacteriana del pimiento y el tomate que prospera con tiempo cálido y húmedo y se propaga rápido con las salpicaduras de agua y al manipular plantas mojadas.",
+    "symptoms": ["Pequeñas manchas de aspecto aceitoso en las hojas que se vuelven marrones con un halo amarillo", "Las hojas infectadas amarillean y caen, dejando la fruta expuesta a quemaduras de sol", "Manchas elevadas y costrosas en la fruta"],
+    "causes": "Bacterias Xanthomonas, que llegan con la semilla y los plantones y se propagan con las salpicaduras de lluvia, el riego por aspersión y la manipulación.",
+    "treatment_organic": ["Arranca y destruye las plantas y hojas muy infectadas", "No trabajes entre las plantas cuando estén mojadas", "Los productos a base de cobre aprobados para agricultura ecológica pueden frenar la propagación si se aplican pronto"],
+    "treatment_chemical": ["Bactericidas registrados para mancha bacteriana en pimiento, según recomiende el servicio de extensión local", "Sigue la etiqueta del producto; en algunas regiones hay resistencia al cobre"],
+    "prevention": ["Usa semillas y plantones certificados libres de enfermedad y variedades resistentes", "Usa riego por goteo en lugar de aspersión", "No plantes pimiento ni tomate en el mismo sitio durante 2-3 años"]
+  },
+  "Pepper,_bell___healthy": {
+    "crop": "Pimiento",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de pimiento.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Riega en la base de la planta y evita mojar las hojas", "Rota los pimientos con cultivos no emparentados", "Revisa las hojas con regularidad en busca de manchas, sobre todo con tiempo cálido y húmedo"]
+  },
+  "Potato___Early_blight": {
+    "crop": "Patata",
+    "disease": "Tizón temprano (alternariosis)",
+    "description": "Enfermedad fúngica común de la patata y el tomate que suele empezar en las hojas bajas y viejas, sobre todo en plantas estresadas.",
+    "symptoms": ["Manchas marrón oscuro con anillos concéntricos (patrón de 'diana') en las hojas viejas", "Amarilleo alrededor de las manchas; las hojas afectadas mueren y caen", "Lesiones oscuras, hundidas y secas en los tubérculos"],
+    "causes": "El hongo Alternaria solani, que sobrevive en el suelo y en los restos de cultivo y se propaga con alternancia de tiempo húmedo y seco.",
+    "treatment_organic": ["Retira y destruye las hojas bajas infectadas", "Mantén las plantas bien nutridas y regadas para reducir el estrés", "Los productos a base de cobre aprobados para agricultura ecológica pueden frenar la propagación"],
+    "treatment_chemical": ["Fungicidas protectores registrados para tizón temprano, empezando al aparecer las primeras manchas", "Sigue la etiqueta del producto y el consejo del servicio de extensión local"],
+    "prevention": ["Rota la patata con cultivos que no sean solanáceas durante 2-3 años", "Usa patata de siembra certificada y destruye los restos tras la cosecha", "Evita el riego por aspersión al final del día"]
+  },
+  "Potato___healthy": {
+    "crop": "Patata",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de patata.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Planta patata de siembra certificada libre de enfermedad", "Rota la patata con cultivos no emparentados", "Revisa las hojas a menudo con tiempo fresco y húmedo, cuando el mildiu puede extenderse rápido"]
+  },
+  "Potato___Late_blight": {
+    "crop": "Patata",
+    "disease": "Mildiu (tizón tardío)",
+    "description": "La enfermedad que causó la Gran Hambruna irlandesa. Con tiempo fresco y húmedo puede destruir un cultivo de patata o tomate en pocos días, así que actúa rápido.",
+    "symptoms": ["Grandes manchas oscuras de aspecto empapado en las hojas que se extienden rápido", "Pelusa blanca en el envés de la hoja con humedad", "Podredumbre firme de color marrón rojizo en los tubérculos"],
+    "causes": "El oomiceto Phytophthora infestans, propagado por esporas en el aire desde plantas infectadas, montones de descarte y tubérculos de siembra infectados.",
+    "treatment_organic": ["Arranca y destruye de inmediato las plantas infectadas (no las compostes)", "Los productos a base de cobre aprobados para agricultura ecológica pueden proteger el follaje sano", "Avisa a los agricultores vecinos, porque las esporas viajan lejos"],
+    "treatment_chemical": ["Fungicidas registrados para mildiu, aplicados de forma preventiva cuando las previsiones locales avisen de riesgo", "Contacta enseguida con tu técnico agrícola local para recibir consejo adaptado a tu región"],
+    "prevention": ["Planta patata de siembra certificada y variedades resistentes", "Destruye las patatas espontáneas y los montones de descarte", "Aporca bien los tubérculos y cosecha solo cuando las matas estén completamente secas"]
+  },
+  "Raspberry___healthy": {
+    "crop": "Frambueso",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de frambueso.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Retira las cañas viejas que ya dieron fruto después de la cosecha", "Mantén las hileras estrechas para una buena ventilación", "Planta cañas certificadas libres de enfermedad en suelo bien drenado"]
+  },
+  "Soybean___healthy": {
+    "crop": "Soja",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de soja.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Rota la soja con cereales como el maíz", "Elige variedades resistentes a las enfermedades locales más comunes", "Inspecciona los campos con regularidad durante toda la campaña"]
+  },
+  "Squash___Powdery_mildew": {
+    "crop": "Calabaza",
+    "disease": "Oídio",
+    "description": "Enfermedad fúngica muy común de la calabaza, el melón y el pepino. Reduce el rendimiento y la calidad de la fruta al matar las hojas antes de tiempo.",
+    "symptoms": ["Manchas blancas y polvorientas, como de talco, en hojas y tallos", "Las manchas se extienden hasta cubrir hojas enteras, que amarillean y se secan", "La fruta puede quedar pequeña, con poco sabor o quemada por el sol"],
+    "causes": "Hongos como Podosphaera xanthii, cuyas esporas llevadas por el viento prosperan en plantaciones densas, con sombra y humedad alta (no necesitan agua libre).",
+    "treatment_organic": ["Retira las hojas muy infectadas", "El azufre, los aceites hortícolas, el bicarbonato potásico o los fungicidas biológicos aprobados para agricultura ecológica pueden frenar el oídio", "No apliques aceites y azufre con poco tiempo de diferencia ni con calor, porque pueden quemar las hojas"],
+    "treatment_chemical": ["Fungicidas registrados para oídio de cucurbitáceas, alternando modos de acción para evitar resistencias", "Sigue la etiqueta del producto"],
+    "prevention": ["Planta variedades resistentes", "Espacia las plantas para que tengan ventilación y sol pleno", "Evita el exceso de abono nitrogenado"]
+  },
+  "Strawberry___healthy": {
+    "crop": "Fresa",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de fresa.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Planta plantas certificadas libres de enfermedad en caballones bien drenados", "Retira las hojas viejas y muertas después de la cosecha", "Usa riego por goteo y acolchado para mantener secas hojas y frutos"]
+  },
+  "Strawberry___Leaf_scorch": {
+    "crop": "Fresa",
+    "disease": "Quemadura de la hoja",
+    "description": "Enfermedad fúngica de la hoja de la fresa. Una infección fuerte debilita las plantas y reduce su vigor y la cosecha del año siguiente.",
+    "symptoms": ["Muchas manchas moradas pequeñas e irregulares en el haz de la hoja", "Las manchas se unen y la hoja parece quemada o 'chamuscada' entre ellas", "Las hojas se secan y se enrollan hacia arriba; también puede haber lesiones en tallos y cálices"],
+    "causes": "El hongo Diplocarpon earlianum, que sobrevive en hojas infectadas y se propaga con las salpicaduras de agua.",
+    "treatment_organic": ["Retira y destruye las hojas infectadas y renueva las plantaciones después de la cosecha", "Evita regar por encima", "Los productos a base de cobre aprobados para agricultura ecológica pueden dar cierta protección"],
+    "treatment_chemical": ["Fungicidas registrados para quemadura de la hoja de la fresa, según indique el servicio de extensión local", "Sigue la etiqueta del producto"],
+    "prevention": ["Planta variedades resistentes y plantas certificadas", "Espacia las plantas para que se aireen y controla las malas hierbas", "Cambia de sitio las fresas cada pocos años"]
+  },
+  "Tomato___Bacterial_spot": {
+    "crop": "Tomate",
+    "disease": "Mancha bacteriana",
+    "description": "Enfermedad bacteriana del tomate y el pimiento difícil de controlar una vez establecida con tiempo cálido y lluvioso.",
+    "symptoms": ["Pequeñas manchas oscuras de aspecto grasiento en las hojas, a veces con halo amarillo", "Las manchas se unen y las hojas amarillean y luego se vuelven marrones", "Manchas marrones elevadas y costrosas en los frutos verdes"],
+    "causes": "Bacterias Xanthomonas, que llegan con la semilla o los plantones y se propagan con las salpicaduras de lluvia, el riego por aspersión y al manipular plantas mojadas.",
+    "treatment_organic": ["Retira las hojas infectadas y las plantas muy afectadas", "Evita manipular las plantas cuando estén mojadas", "Los productos a base de cobre aprobados para agricultura ecológica pueden frenar la propagación si se aplican pronto"],
+    "treatment_chemical": ["Bactericidas registrados para mancha bacteriana en tomate, según las recomendaciones del servicio de extensión local", "Sigue la etiqueta del producto; en algunas regiones hay cepas resistentes al cobre"],
+    "prevention": ["Usa semillas y plantones libres de enfermedad", "Usa riego por goteo y entutora las plantas para mantener las hojas secas", "No plantes tomate ni pimiento en el mismo sitio durante 2-3 años"]
+  },
+  "Tomato___Early_blight": {
+    "crop": "Tomate",
+    "disease": "Tizón temprano (alternariosis)",
+    "description": "Una de las enfermedades más comunes del tomate. Empieza en las hojas bajas y sube, debilita las plantas y deja la fruta expuesta a quemaduras de sol.",
+    "symptoms": ["Manchas marrones con anillos concéntricos de 'diana' en las hojas viejas", "Tejido amarillo alrededor de las manchas; las hojas bajas caen", "Lesiones oscuras y hundidas en los tallos y en la zona del pedúnculo del fruto"],
+    "causes": "El hongo Alternaria (A. solani / A. linariae), que sobrevive en los restos de cultivo y en el suelo.",
+    "treatment_organic": ["Retira las hojas bajas infectadas y acolcha el suelo para que las esporas no salpiquen hacia arriba", "Mantén las plantas bien nutridas y regadas para reducir el estrés", "Los productos a base de cobre aprobados para agricultura ecológica pueden frenar la propagación"],
+    "treatment_chemical": ["Fungicidas protectores registrados para tizón temprano en tomate, empezando al aparecer los primeros síntomas", "Sigue la etiqueta del producto y el consejo del servicio de extensión local"],
+    "prevention": ["Rota con cultivos que no sean solanáceas durante 2-3 años", "Entutora o enjaula las plantas y quita las hojas bajas para airearlas", "Retira y destruye los restos de plantas al final de la temporada"]
+  },
+  "Tomato___healthy": {
+    "crop": "Tomate",
+    "disease": "Sana",
+    "description": "No se detectaron signos de enfermedad en esta hoja de tomate.",
+    "symptoms": [],
+    "causes": "No aplica.",
+    "treatment_organic": [],
+    "treatment_chemical": [],
+    "prevention": ["Riega en la base de las plantas y acolcha el suelo", "Entutora las plantas y pódalas para airearlas", "Rota cada año los tomates con cultivos no emparentados"]
+  },
+  "Tomato___Late_blight": {
+    "crop": "Tomate",
+    "disease": "Mildiu (tizón tardío)",
+    "description": "Enfermedad destructiva y de rápida propagación del tomate y la patata. Con tiempo fresco y húmedo puede matar las plantas en pocos días.",
+    "symptoms": ["Grandes manchas irregulares de color gris verdoso y aspecto grasiento en las hojas que pronto se vuelven marrones", "Pelusa blanca en el envés de las hojas con tiempo húmedo", "Manchas marrones firmes y grasientas en los frutos"],
+    "causes": "El oomiceto Phytophthora infestans, que el viento lleva a grandes distancias desde tomates o patatas infectados.",
+    "treatment_organic": ["Arranca de inmediato las plantas infectadas y mételas en bolsas o destrúyelas (no las compostes)", "Los productos a base de cobre aprobados para agricultura ecológica pueden proteger las plantas sanas"],
+    "treatment_chemical": ["Fungicidas registrados para mildiu, aplicados de forma preventiva cuando se detecten casos cerca", "Contacta enseguida con tu técnico agrícola local para recibir consejo adaptado a tu región"],
+    "prevention": ["Planta variedades resistentes y plantones sanos", "No cultives tomates cerca de patatas y destruye las patatas espontáneas", "Mantén las hojas secas con riego por goteo y buen marco de plantación"]
+  },
+  "Tomato___Leaf_Mold": {
+    "crop": "Tomate",
+    "disease": "Moho de la hoja (cladosporiosis)",
+    "description": "Enfermedad fúngica más frecuente en invernaderos y túneles, donde la humedad se mantiene alta.",
+    "symptoms": ["Manchas de verde pálido a amarillo en el haz de la hoja", "Moho aterciopelado de verde oliva a pardo grisáceo en el envés, justo debajo", "Las hojas se marchitan y caen; la fruta rara vez se ve afectada"],
+    "causes": "El hongo Passalora fulva (Cladosporium fulvum), favorecido por una humedad relativa superior al 85 %.",
+    "treatment_organic": ["Retira y destruye las hojas infectadas", "Aumenta la ventilación y reduce la humedad en el invernadero", "Los productos a base de cobre aprobados para agricultura ecológica pueden proteger las hojas restantes"],
+    "treatment_chemical": ["Fungicidas registrados para moho de la hoja en tomate, según recomiende el servicio de extensión local", "Sigue la etiqueta del producto"],
+    "prevention": ["Mantén la humedad del invernadero por debajo del 85 % y ventila bien", "Espacia y poda las plantas para que se aireen", "Planta variedades resistentes y limpia el invernadero entre cultivos"]
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "crop": "Tomate",
+    "disease": "Septoriosis",
+    "description": "Enfermedad fúngica muy común que deja sin hojas las tomateras de abajo arriba con tiempo húmedo y cálido.",
+    "symptoms": ["Muchas manchas circulares pequeñas con borde oscuro y centro gris blanquecino en las hojas bajas", "Diminutos puntos negros (cuerpos fructíferos del hongo) en el centro de las manchas", "Las hojas amarillean, se marchitan y caen, dejando la fruta expuesta a quemaduras de sol"],
+    "causes": "El hongo Septoria lycopersici, que sobrevive en los restos de plantas y se propaga con las salpicaduras de agua.",
+    "treatment_organic": ["Retira enseguida las hojas bajas infectadas", "Acolcha alrededor de las plantas para reducir las salpicaduras de tierra", "Los productos a base de cobre aprobados para agricultura ecológica pueden frenar la propagación"],
+    "treatment_chemical": ["Fungicidas protectores registrados para septoriosis en tomate", "Sigue la etiqueta del producto y el consejo del servicio de extensión local"],
+    "prevention": ["No plantes tomate en el mismo sitio durante al menos un año", "Retira y destruye los restos de plantas después de la cosecha", "Riega a ras de suelo y evita trabajar entre las plantas mojadas"]
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "crop": "Tomate",
+    "disease": "Araña roja (ácaro de dos manchas)",
+    "description": "No es una enfermedad sino una plaga: ácaros diminutos que chupan la savia de las hojas. Sus poblaciones se disparan con calor, sequedad y polvo.",
+    "symptoms": ["Punteado fino amarillo o blanco en las hojas", "Las hojas se vuelven bronceadas o amarillas y se secan", "Telarañas finas en el envés y entre las hojas en infestaciones fuertes"],
+    "causes": "El ácaro de dos manchas (Tetranychus urticae), favorecido por el calor, el estrés hídrico, el polvo y los tratamientos que matan a sus enemigos naturales.",
+    "treatment_organic": ["Pulveriza el envés de las hojas con un chorro fuerte de agua para desalojar los ácaros", "Jabones insecticidas o aceites hortícolas aprobados para agricultura ecológica, cubriendo bien el envés", "Favorece o suelta enemigos naturales como los ácaros depredadores"],
+    "treatment_chemical": ["Acaricidas registrados para araña roja en tomate, solo cuando el seguimiento muestre que hacen falta", "Evita los insecticidas de amplio espectro que matan a los enemigos naturales; sigue la etiqueta del producto"],
+    "prevention": ["Riega bien las plantas para evitar el estrés hídrico", "Reduce el polvo sobre y alrededor de las plantas", "Revisa el envés de las hojas con regularidad cuando haga calor y tiempo seco"]
+  },
+  "Tomato___Target_Spot": {
+    "crop": "Tomate",
+    "disease": "Mancha diana",
+    "description": "Enfermedad fúngica del tomate en regiones cálidas y húmedas. Afecta a hojas, tallos y frutos y puede causar una fuerte defoliación.",
+    "symptoms": ["Pequeñas manchas marrones en las hojas que crecen hasta lesiones con centro pardo claro y anillos concéntricos", "Las lesiones suelen tener un halo amarillo; las hojas pueden caer", "Manchas hundidas y picadas en los frutos"],
+    "causes": "El hongo Corynespora cassiicola, que sobrevive en restos de cultivo y otras plantas huésped y se propaga con tiempo húmedo.",
+    "treatment_organic": ["Retira las hojas bajas infectadas y los restos de cultivo", "Mejora la ventilación podando y entutorando", "Los productos a base de cobre aprobados para agricultura ecológica pueden frenar la propagación"],
+    "treatment_chemical": ["Fungicidas registrados para mancha diana en tomate, según recomiende el servicio de extensión local", "Sigue la etiqueta del producto y alterna modos de acción"],
+    "prevention": ["Rota cultivos y destruye los restos de plantas después de la cosecha", "Evita el riego por aspersión y el exceso de nitrógeno", "Controla las malas hierbas que puedan albergar el hongo"]
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "crop": "Tomate",
+    "disease": "Virus del mosaico del tomate",
+    "description": "Un virus muy estable y muy contagioso. Se transmite con facilidad por manos, herramientas y ropa, y las plantas infectadas no tienen cura.",
+    "symptoms": ["Moteado o patrón de mosaico verde claro y oscuro en las hojas", "Las hojas pueden estar enrolladas, deformadas o con aspecto de helecho", "Plantas enanas, menos cosecha y frutos que maduran de forma irregular"],
+    "causes": "El virus del mosaico del tomate (ToMV), transmitido mecánicamente por contacto, herramientas contaminadas y semilla infectada; puede sobrevivir en los restos de plantas.",
+    "treatment_organic": ["No tiene cura: arranca y destruye las plantas infectadas", "Lávate las manos y desinfecta las herramientas después de tocar plantas sospechosas"],
+    "treatment_chemical": ["Ningún tratamiento químico cura las infecciones víricas", "Céntrate en la higiene y en variedades resistentes"],
+    "prevention": ["Planta variedades resistentes y semilla certificada libre de virus", "Desinfecta a menudo herramientas, tutores y manos", "No uses productos de tabaco cerca de las plantas"]
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "crop": "Tomate",
+    "disease": "Virus del rizado amarillo del tomate",
+    "description": "Un virus devastador del tomate en zonas cálidas, transmitido por la mosca blanca. Las plantas infectadas pronto pueden no dar casi ningún fruto.",
+    "symptoms": ["Hojas que se enrollan hacia arriba en forma de cuchara", "Bordes de las hojas amarillos y hojas pequeñas y arrugadas", "Plantas enanas y achaparradas, caída de flores y mal cuajado"],
+    "causes": "El virus del rizado amarillo del tomate (TYLCV), transmitido por la mosca blanca Bemisia tabaci.",
+    "treatment_organic": ["No tiene cura: arranca y destruye pronto las plantas infectadas para reducir la propagación", "Usa mallas antiinsectos, acolchados reflectantes y trampas cromáticas amarillas contra la mosca blanca"],
+    "treatment_chemical": ["Ningún producto químico cura el virus", "Control de la mosca blanca con insecticidas registrados dentro de un plan integrado guiado por el servicio de extensión local"],
+    "prevention": ["Planta variedades resistentes al TYLCV y plantones libres de mosca blanca", "Elimina las malas hierbas y los restos de cultivo que alberguen mosca blanca", "Cuando sea posible, deja un periodo sin plantas huésped entre cultivos de tomate"]
+  }
+}

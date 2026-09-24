@@ -243,6 +243,15 @@ a { color: var(--leaf) !important; }
 [data-testid="stImage"] img { border-radius: 14px; }
 .st-key-samples [data-testid="stImageCaption"] { height: 2.9em; line-height: 1.45; overflow: hidden; }  /* 2 lines, buttons stay aligned */
 
+/* ---------- Language picker (utils/i18n.py), in the header left of the theme switch ---------- */
+.st-key-lang_picker { position: fixed; top: 0.85rem; right: 5.4rem; width: 8.5rem; z-index: 999991; }
+[data-testid="stLayoutWrapper"]:has(> .st-key-lang_picker) { position: absolute; }  /* no empty row in the page */
+.st-key-lang_picker [data-testid="stSelectbox"] > div > div {
+  height: 34px; min-height: 0; border-radius: 999px; border: 1px solid var(--line); background: var(--leaf-soft);
+}
+.st-key-lang_picker [data-testid="stSelectbox"] input,
+.st-key-lang_picker [data-testid="stSelectbox"] button { height: 32px; font-size: 0.88rem; font-weight: 600; }
+
 /* ---------- Light/dark switch (theme_switch.js) ---------- */
 /* The st.html block that runs the script would otherwise leave an empty row at the top. */
 [data-testid="stElementContainer"]:has(> [data-testid="stHtml"] > script:only-child) { display: none; }
@@ -299,4 +308,5 @@ a { color: var(--leaf) !important; }
   [class*="st-key-card"], .lc-card, .lc-result { padding: 1.1rem 1.1rem; }
   .lc-result { min-height: 0; }
   .lc-theme-switch { right: 0.75rem; }
+  .st-key-lang_picker { right: 5.1rem; width: 7.5rem; }
 }

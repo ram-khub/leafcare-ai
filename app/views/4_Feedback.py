@@ -3,22 +3,21 @@
 import streamlit as st
 
 from utils import ui
+from utils.i18n import t
 
-ui.page_header(
-    "Tell us",
-    "Feedback",
-    "Spotted a wrong diagnosis, or have an idea to make LeafCare AI more useful? Let us know.",
-)
+TOPICS = ["general", "wrong", "bug", "idea"]
+
+ui.page_header(t("feedback.eyebrow"), t("feedback.title"), t("feedback.subtitle"))
 
 with st.container(key="card_feedback"):
     with st.form("feedback", clear_on_submit=True, border=False):
         name_col, email_col = st.columns(2)
-        name_col.text_input("Name (optional)", placeholder="Your name")
-        email_col.text_input("Email (optional)", placeholder="you@example.com",
-                             help="Only if you'd like a reply.")
-        st.selectbox("Topic", ["General feedback", "Wrong diagnosis", "Bug or problem", "Feature idea"])
-        st.text_area("Your feedback", placeholder="What worked, what didn't, what you'd like to see…", height=160)
-        sent = st.form_submit_button("Send feedback", type="primary", icon=":material/send:")
+        name_col.text_input(t("feedback.name"), placeholder=t("feedback.name_placeholder"))
+        email_col.text_input(t("feedback.email"), placeholder=t("feedback.email_placeholder"),
+                             help=t("feedback.email_help"))
+        st.selectbox(t("feedback.topic"), TOPICS, format_func=lambda topic: t(f"feedback.topic_{topic}"))
+        st.text_area(t("feedback.message"), placeholder=t("feedback.message_placeholder"), height=160)
+        sent = st.form_submit_button(t("feedback.send"), type="primary", icon=":material/send:")
 
 if sent:
-    ui.callout("info", "✅", "Feedback received", "Thanks for taking the time to help improve LeafCare AI.")
+    ui.callout("info", "✅", t("feedback.received_title"), t("feedback.received_body"))

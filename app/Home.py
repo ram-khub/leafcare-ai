@@ -6,16 +6,17 @@ Run from the project root:
 
 import hashlib
 import io
-import json
 from datetime import datetime
+from html import escape
 from pathlib import Path
 from urllib.parse import urlparse
 
 import streamlit as st
 from PIL import Image, ImageOps
 
-from utils import ui
+from utils import i18n, ui
 from utils.gradcam import make_gradcam_heatmap, overlay_heatmap
+from utils.i18n import t
 from utils.predict import (
     PROJECT_ROOT, Prediction, is_placeholder, load_class_names, load_leaf_centroids, load_model, predict,
     split_class_name,
@@ -24,11 +25,12 @@ from utils.preprocessing import ImageError, image_to_model_input, load_image
 
 APP_DIR = Path(__file__).parent
 SAMPLES_DIR = APP_DIR / "assets" / "sample_images"
-DISEASES_PATH = PROJECT_ROOT / "data" / "diseases.json"
 
 CONFIDENCE_THRESHOLD = 0.60  # below this we ask for a better photo instead of trusting the result
-DISCLAIMER = "Informational only — consult a local agricultural officer before applying any chemicals."
+# Values of the input-mode control (stable across languages); labels come from INPUT_LABELS.
 UPLOAD, CAMERA, SAMPLE = ":material/upload: Upload", ":material/photo_camera: Camera", ":material/eco: Try a sample"
+INPUT_LABELS = {UPLOAD: (":material/upload:", "input.upload"), CAMERA: (":material/photo_camera:", "input.camera"),
+                SAMPLE: (":material/eco:", "input.sample")}
 
 
 # ---------------------------------------------------------------- cached resources
@@ -48,9 +50,9 @@ def get_leaf_centroids():
     return None if is_placeholder(get_model()) else load_leaf_centroids()
 
 
-@st.cache_data
 def get_knowledge_base() -> dict:
-    return json.loads(DISEASES_PATH.read_text())
+    """The disease knowledge base in the visitor's language."""
+    return i18n.knowledge_base(i18n.current())
 
 
 @st.cache_data(max_entries=50, show_spinner=False)
@@ -86,7 +88,7 @@ def sample_caption(path: Path) -> str:
 def pick_sample() -> tuple[bytes, str] | None:
     samples = sorted(p for p in SAMPLES_DIR.iterdir() if p.suffix.lower() in {".jpg", ".jpeg", ".png"})[:6]
     if not samples:
-        st.caption("No sample images found in app/assets/sample_images/.")
+        st.caption(t("input.no_samples"))
         return None
     selected = st.session_state.get("sample")
     columns = st.container(key="samples").columns(len(samples))
@@ -94,7 +96,7 @@ def pick_sample() -> tuple[bytes, str] | None:
         with column:
             st.image(square_thumbnail(str(path)), caption=sample_caption(path), width="stretch")
             is_selected = path.name == selected
-            if st.button("Selected" if is_selected else "Use this", key=f"sample_{path.name}",
+            if st.button(t("input.selected") if is_selected else t("input.use_this"), key=f"sample_{path.name}",
                          type="primary" if is_selected else "secondary", width="stretch"):
                 st.session_state.sample = path.name
                 st.rerun()
@@ -106,18 +108,19 @@ def pick_sample() -> tuple[bytes, str] | None:
 def get_input_image() -> tuple[bytes, str] | None:
     """Show the three input options and return (image bytes, source label) if one was provided."""
     mode = st.segmented_control(
-        "How would you like to add a photo?", [UPLOAD, CAMERA, SAMPLE],
+        t("input.mode_label"), [UPLOAD, CAMERA, SAMPLE],
+        format_func=lambda mode: f"{INPUT_LABELS[mode][0]} {t(INPUT_LABELS[mode][1])}",
         default=UPLOAD, required=True, key="input_mode", label_visibility="collapsed",
     )
     if mode == UPLOAD:
         file = st.file_uploader(
-            "Upload a leaf photo", type=["jpg", "jpeg", "png", "webp"], label_visibility="collapsed",
-            help="A close-up of a single leaf on a plain background works best.",
+            t("input.upload_label"), type=["jpg", "jpeg", "png", "webp"], label_visibility="collapsed",
+            help=t("input.upload_help"), key="upload",  # a key keeps the file when the language changes
         )
         return (file.getvalue(), file.name) if file else None
     if mode == CAMERA:
-        shot = st.camera_input("Take a photo of a single leaf", label_visibility="collapsed")
-        return (shot.getvalue(), "Camera photo") if shot else None
+        shot = st.camera_input(t("input.camera_label"), label_visibility="collapsed", key="camera")
+        return (shot.getvalue(), t("input.camera_source")) if shot else None
     return pick_sample()
 
 
@@ -130,12 +133,10 @@ def record_scan(image: Image.Image, image_bytes: bytes, prediction: Prediction, 
     thumb = ImageOps.fit(image, (160, 160))
     buffer = io.BytesIO()
     thumb.save(buffer, format="JPEG", quality=85)
-    crop, disease = display_names(prediction.class_name)
     history.insert(0, {
         "id": digest,
         "thumbnail": buffer.getvalue(),
-        "crop": crop,
-        "disease": disease,
+        "class_name": prediction.class_name,  # names are looked up at display time, in the current language
         "severity": get_knowledge_base().get(prediction.class_name, {}).get("severity", "moderate"),
         "confidence": prediction.confidence,
         "uncertain": uncertain,
@@ -150,34 +151,35 @@ def bullet_list(items: list[str]) -> None:
 def show_advice(entry: dict) -> None:
     """Symptoms / Treatment / Prevention tabs plus source and disclaimer."""
     symptoms_tab, treatment_tab, prevention_tab = st.tabs(
-        [":material/search: Symptoms", ":material/medication: Treatment", ":material/shield: Prevention"]
+        [f":material/search: {t('advice.symptoms')}", f":material/medication: {t('advice.treatment')}",
+         f":material/shield: {t('advice.prevention')}"]
     )
     with symptoms_tab:
         if entry["is_healthy"]:
-            st.markdown("No disease symptoms detected. Healthy leaves are evenly coloured, "
-                        "without spots, mould, holes or curling.")
+            st.markdown(t("advice.healthy_symptoms"))
         else:
             bullet_list(entry["symptoms"])
-            st.markdown(f"**Cause:** {entry['causes']}")
+            st.markdown(f"**{t('advice.cause')}:** {entry['causes']}")
     with treatment_tab:
         if entry["is_healthy"]:
-            st.markdown("No treatment needed. Keep monitoring the plant regularly.")
+            st.markdown(t("advice.healthy_treatment"))
         else:
             organic, chemical = st.columns(2, gap="large")
             with organic:
-                st.markdown("##### :material/eco: Organic & cultural")
+                st.markdown(f"##### :material/eco: {t('advice.organic')}")
                 bullet_list(entry["treatment_organic"])
             with chemical:
-                st.markdown("##### :material/science: Chemical")
+                st.markdown(f"##### :material/science: {t('advice.chemical')}")
                 bullet_list(entry["treatment_chemical"])
     with prevention_tab:
         bullet_list(entry["prevention"])
 
     domain = urlparse(entry["source"]).netloc.removeprefix("www.")
+    translated = f"<br>{escape(t('advice.translated'))}" if i18n.current() != "en" else ""
     st.html(f"""
     <div class="lc-disclaimer">
-      Source: <a href="{entry['source']}" target="_blank" rel="noopener">{domain}</a><br>
-      <b>{DISCLAIMER}</b>
+      {escape(t("advice.source"))}: <a href="{entry['source']}" target="_blank" rel="noopener">{domain}</a><br>
+      <b>{escape(t("advice.disclaimer"))}</b>{translated}
     </div>
     """)
 
@@ -185,52 +187,47 @@ def show_advice(entry: dict) -> None:
 # ---------------------------------------------------------------- the Diagnose page
 
 def diagnose_page() -> None:
-    ui.hero("LeafCare AI", "Snap a leaf, spot crop disease early, and protect your harvest.")
+    ui.hero("LeafCare AI", t("hero.tagline"))
 
     try:
         model = get_model()
     except FileNotFoundError as err:
-        ui.callout("error", "⚠️", "Model not found", str(err))
+        ui.callout("error", "⚠️", t("home.model_missing"), str(err))
         return
     if is_placeholder(model):
-        ui.callout("info", "🧪", "Demo mode",
-                   "The app is running an untrained placeholder model, so results are random. "
-                   "Copy leaf_model.keras from the Colab notebook into models/ for real diagnoses.")
+        ui.callout("info", "🧪", t("home.demo_title"), t("home.demo_body"))
 
     with st.container(key="card_input"):
-        ui.section_label("Step 1 · Add a leaf photo")
+        ui.section_label(t("home.step1"))
         picked = get_input_image()
 
     if picked is None:
         st.write("")
         ui.steps([
-            ("Add a photo", "Upload, snap with your camera, or try one of the samples."),
-            ("AI analyses it", "A deep-learning model checks the leaf against 38 crop conditions."),
-            ("Get advice", "See the likely disease, where the model looked, and what to do next."),
+            (t("steps.add_title"), t("steps.add_body")),
+            (t("steps.analyse_title"), t("steps.analyse_body")),
+            (t("steps.advice_title"), t("steps.advice_body")),
         ])
-        ui.callout("info", "💡", "Tips for a good photo",
-                   "Photograph one leaf, fill the frame, use natural light, and place it on a plain background.")
+        ui.callout("info", "💡", t("tips.title"), t("tips.body"))
         return
 
     image_bytes, source = picked
     try:
         image = load_image(image_bytes)
-        with st.spinner("Analysing leaf…"):
+        with st.spinner(t("home.analysing")):
             prediction, overlay = analyse(image_bytes)
     except ImageError as err:
-        ui.callout("error", "⚠️", "We couldn't use that image", str(err))
+        ui.callout("error", "⚠️", t("error.bad_image"), str(err))
         return
     except ValueError as err:  # e.g. model and class list don't match
-        ui.callout("error", "⚠️", "Model problem", str(err))
+        ui.callout("error", "⚠️", t("error.model"), str(err))
         return
 
     digest = hashlib.md5(image_bytes).hexdigest()
     if not prediction.looks_like_leaf and st.session_state.get("leaf_override") != digest:
         st.write("")
-        ui.callout("warn", "🍃", "This doesn't look like a leaf",
-                   "LeafCare AI only recognises leaves of 14 crops, so other photos give meaningless results. "
-                   "Please use a close-up of a single leaf. If this is a leaf, you can still run the diagnosis.")
-        if st.button("It's a leaf, analyse anyway", icon=":material/eco:"):
+        ui.callout("warn", "🍃", t("leafcheck.title"), t("leafcheck.body"))
+        if st.button(t("leafcheck.button"), icon=":material/eco:"):
             st.session_state.leaf_override = digest
             st.rerun()
         return
@@ -241,17 +238,15 @@ def diagnose_page() -> None:
     crop, disease = display_names(prediction.class_name)
 
     st.write("")
-    ui.section_label("Step 2 · Results")
+    ui.section_label(t("home.step2"))
     if uncertain:
-        ui.callout("warn", "📸", "We're not sure about this one",
-                   f"The model is only {prediction.confidence:.0%} confident, so treat this result as a guess. "
-                   "Please try a clearer, closer photo of a single leaf on a plain background, in good light.")
+        ui.callout("warn", "📸", t("uncertain.title"), t("uncertain.body", confidence=f"{prediction.confidence:.0%}"))
 
     result_col, chart_col = st.columns([1.35, 1], gap="medium")
     with result_col:
         ui.result_card(crop, disease, entry["severity"], prediction.confidence, entry["description"], uncertain)
     with chart_col, st.container(key="card_top3"):
-        ui.section_label("Top 3 predictions")
+        ui.section_label(t("home.top3"))
         labels = [" · ".join(display_names(name)) for name, _ in prediction.top_k]
         st.plotly_chart(ui.top_k_chart(labels, [p for _, p in prediction.top_k], uncertain),
                         config={"displayModeBar": False}, theme=None)
@@ -260,22 +255,20 @@ def diagnose_page() -> None:
     with st.container(key="card_images"):
         original_col, heatmap_col = st.columns(2, gap="medium")
         with original_col:
-            ui.section_label(f"Your photo · {source}")
+            ui.section_label(t("home.your_photo", source=source))
             st.image(image, width="stretch")
         with heatmap_col:
-            ui.section_label("Where the model looked (Grad-CAM)")
+            ui.section_label(t("home.gradcam"))
             st.image(overlay, width="stretch")
-        st.html('<p class="lc-caption">Red and yellow areas influenced the prediction most; '
-                'blue areas mattered least. If the hot spots sit on the background rather than the leaf, '
-                'try a new photo.</p>')
+        st.html(f'<p class="lc-caption">{escape(t("home.gradcam_caption"))}</p>')
 
     st.write("")
     if uncertain:
-        with st.expander(f"Information about the closest match: {crop} · {disease} (unconfirmed)"):
+        with st.expander(t("home.closest_match", name=f"{crop} · {disease}")):
             show_advice(entry)
     else:
         with st.container(key="card_advice"):
-            ui.section_label("What to do next")
+            ui.section_label(t("home.next"))
             show_advice(entry)
 
 
@@ -284,16 +277,17 @@ def diagnose_page() -> None:
 st.set_page_config(page_title="LeafCare AI", page_icon="🌿", layout="wide")
 ui.inject_css()
 ui.theme_switch()
+i18n.language_picker()
 st.logo(str(ui.LOGO_PATH), size="large")
 st.session_state.setdefault("history", [])
 
 navigation = st.navigation(
     [
-        st.Page(diagnose_page, title="Diagnose", icon=":material/eco:", default=True),
-        st.Page("views/1_Scan_History.py", title="Scan History", icon=":material/history:"),
-        st.Page("views/2_About_the_Model.py", title="About the Model", icon=":material/neurology:"),
-        st.Page("views/3_SDG_Impact.py", title="SDG Impact", icon=":material/public:"),
-        st.Page("views/4_Feedback.py", title="Feedback", icon=":material/feedback:"),
+        st.Page(diagnose_page, title=t("nav.diagnose"), icon=":material/eco:", default=True),
+        st.Page("views/1_Scan_History.py", title=t("nav.history"), icon=":material/history:"),
+        st.Page("views/2_About_the_Model.py", title=t("nav.about"), icon=":material/neurology:"),
+        st.Page("views/3_SDG_Impact.py", title=t("nav.sdg"), icon=":material/public:"),
+        st.Page("views/4_Feedback.py", title=t("nav.feedback"), icon=":material/feedback:"),
     ],
     position="top",
 )

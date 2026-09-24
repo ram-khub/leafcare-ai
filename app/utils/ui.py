@@ -11,12 +11,13 @@ from pathlib import Path
 import plotly.graph_objects as go
 import streamlit as st
 
+from utils.i18n import t
+
 ASSETS = Path(__file__).resolve().parents[1] / "assets"
 LOGO_PATH = ASSETS / "logo.svg"
 
 # Colours match assets/styles.css and .streamlit/config.toml.
 LEAF, AMBER, RED, GREY, TRACK = "#2F6B3A", "#E0A33B", "#C2412D", "#9AA39C", "#D9D2C1"
-SEVERITY_LABELS = {"none": "Healthy", "moderate": "Moderate risk", "severe": "Severe risk"}
 # CSS variables (not hex) so the result card follows light/dark mode.
 SEVERITY_COLORS = {"none": "var(--leaf)", "moderate": "var(--amber)", "severe": "var(--red)"}
 
@@ -45,7 +46,7 @@ def hero(title: str, tagline: str) -> None:
         <h1>{escape(title)}</h1>
         <p>{escape(tagline)}</p>
       </div>
-      <span class="lc-sdg-badge"><b>SDG 2</b> Zero Hunger</span>
+      <span class="lc-sdg-badge"><b>SDG 2</b> {escape(t("sdg2.name"))}</span>
     </div>
     """)
 
@@ -63,15 +64,15 @@ def page_header(eyebrow: str, title: str, subtitle: str) -> None:
 def chip(severity: str, uncertain: bool = False) -> str:
     """HTML for a coloured status chip: healthy (green), moderate (amber), severe (red)."""
     if uncertain:
-        return '<span class="lc-chip lc-chip-uncertain">Uncertain</span>'
-    return f'<span class="lc-chip lc-chip-{severity}">{SEVERITY_LABELS[severity]}</span>'
+        return f'<span class="lc-chip lc-chip-uncertain">{escape(t("severity.uncertain"))}</span>'
+    return f'<span class="lc-chip lc-chip-{severity}">{escape(t("severity." + severity))}</span>'
 
 
 def result_card(crop: str, disease: str, severity: str, confidence: float,
                 description: str, uncertain: bool) -> None:
     """The main diagnosis card: crop, disease, status chip and confidence bar."""
     accent = GREY if uncertain else SEVERITY_COLORS[severity]
-    label = "Possible match" if uncertain else "Diagnosis"
+    label = escape(t("result.possible" if uncertain else "result.diagnosis"))
     pct = confidence * 100
     st.html(f"""
     <div class="lc-result" style="--accent: {accent}">
@@ -81,7 +82,7 @@ def result_card(crop: str, disease: str, severity: str, confidence: float,
       </div>
       <div class="lc-disease">{escape(disease)}</div>
       <p class="lc-desc">{escape(description)}</p>
-      <div class="lc-conf-row"><span>Model confidence</span><b>{pct:.1f}%</b></div>
+      <div class="lc-conf-row"><span>{escape(t("result.confidence"))}</span><b>{pct:.1f}%</b></div>
       <div class="lc-bar"><span style="width: {pct:.1f}%"></span></div>
     </div>
     """)
