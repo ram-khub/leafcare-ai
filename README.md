@@ -70,7 +70,12 @@ Hardest classes (lowest F1): corn Cercospora / grey leaf spot (0.84), tomato ear
 target spot (0.90). See `reports/figures/confusion_matrix.png` for which classes they are confused with.
 
 Figures saved by the notebook in `reports/figures/`: `training_curves.png`, `confusion_matrix.png`,
-`sample_predictions.png`, `gradcam_examples.png`, and `classification_report.csv`.
+`sample_predictions.png`, `gradcam_examples.png`, and `classification_report.csv`. The Grad-CAM figure can also be
+redrawn from the trained model alone, without re-running the notebook:
+
+```bash
+python scripts/make_gradcam_figure.py       # uses models/leaf_model.keras + app/assets/sample_images/
+```
 
 ## Screenshots
 
@@ -109,7 +114,8 @@ leafcare-ai/
 ├── models/                      # leaf_model.keras, class_names.json, metrics.json, leaf_centroids.npy
 ├── notebooks/train_model.ipynb  # Colab training + evaluation + export
 ├── reports/figures/             # evaluation figures from the notebook
-├── scripts/                     # make_placeholder_model.py, validate_knowledge_base.py, build_leaf_centroids.py
+├── scripts/                     # make_placeholder_model.py, validate_knowledge_base.py, build_leaf_centroids.py,
+│                                #   make_gradcam_figure.py
 ├── tests/                       # pytest tests
 └── requirements.txt
 ```
