@@ -173,6 +173,10 @@
   "listen.button": "Écouter",
   "listen.stop": "Arrêter",
   "listen.no_voice": "Aucune voix pour cette langue sur cet appareil",
+  "listen.speed": "Vitesse",
+  "listen.slow": "Lente",
+  "listen.normal": "Normale",
+  "listen.fast": "Rapide",
 
   "helpline.title": "Besoin d'aide ? Appelez gratuitement un expert agricole",
   "helpline.body": "Kisan Call Centre (gouvernement indien) : tous les jours de 6 h à 22 h, dans votre langue.",

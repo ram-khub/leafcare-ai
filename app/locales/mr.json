@@ -173,6 +173,10 @@
   "listen.button": "ऐका",
   "listen.stop": "थांबवा",
   "listen.no_voice": "या डिव्हाइसवर या भाषेचा आवाज नाही",
+  "listen.speed": "वेग",
+  "listen.slow": "हळू",
+  "listen.normal": "सामान्य",
+  "listen.fast": "जलद",
 
   "helpline.title": "मदत हवी आहे? कृषी तज्ज्ञांना मोफत कॉल करा",
   "helpline.body": "किसान कॉल सेंटर (भारत सरकार): दररोज सकाळी 6 ते रात्री 10, तुमच्या भाषेत.",

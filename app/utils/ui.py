@@ -80,14 +80,28 @@ def chip(severity: str, uncertain: bool = False) -> str:
     return f'<span class="lc-chip lc-chip-{severity}">{escape(t("severity." + severity))}</span>'
 
 
-def listen_button(parts: list[str]) -> str:
-    """HTML for the Listen button: read_aloud.js speaks `parts` in the current language when it is clicked."""
+def listen_box(parts: list[str]) -> str:
+    """HTML for the Listen button, its Slow / Normal / Fast choice and the caption that follows along.
+
+    read_aloud.js does the rest: it speaks `parts` in the current language and fills the caption.
+    """
+    speeds = "".join(
+        f'<button type="button" data-speed="{speed}" aria-pressed="{str(speed == "normal").lower()}">'
+        f'{escape(t("listen." + speed))}</button>'
+        for speed in ("slow", "normal", "fast")
+    )
     return f"""
-      <button type="button" class="lc-listen" data-lang="{SPEECH_TAGS[current()]}"
-              data-parts="{escape(json.dumps(parts, ensure_ascii=False))}" data-listen="{escape(t('listen.button'))}"
-              data-stop="{escape(t('listen.stop'))}" data-no-voice="{escape(t('listen.no_voice'))}">
-        <span class="lc-listen-icon"></span><span class="lc-listen-label">{escape(t('listen.button'))}</span>
-      </button>"""
+      <div class="lc-listen-box">
+        <div class="lc-listen-row">
+          <button type="button" class="lc-listen" data-lang="{SPEECH_TAGS[current()]}"
+                  data-parts="{escape(json.dumps(parts, ensure_ascii=False))}" data-listen="{escape(t('listen.button'))}"
+                  data-stop="{escape(t('listen.stop'))}" data-no-voice="{escape(t('listen.no_voice'))}">
+            <span class="lc-listen-icon"></span><span class="lc-listen-label">{escape(t('listen.button'))}</span>
+          </button>
+          <div class="lc-speed" role="group" aria-label="{escape(t('listen.speed'))}">{speeds}</div>
+        </div>
+        <p class="lc-listen-caption"></p>
+      </div>"""
 
 
 def result_card(crop: str, disease: str, severity: str, confidence: float,
@@ -106,7 +120,7 @@ def result_card(crop: str, disease: str, severity: str, confidence: float,
       <p class="lc-desc">{escape(description)}</p>
       <div class="lc-conf-row"><span>{escape(t("result.confidence"))}</span><b>{escape(format_confidence(confidence))}</b></div>
       <div class="lc-bar"><span style="width: {pct:.1f}%"></span></div>
-      {listen_button(spoken)}
+      {listen_box(spoken)}
     </div>
     """)
 
