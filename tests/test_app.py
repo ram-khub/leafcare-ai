@@ -21,3 +21,13 @@ def test_other_pages_render(page):
     app = AppTest.from_file("../app/Home.py", default_timeout=60).run()
     app.switch_page(page).run()
     assert not app.exception
+
+
+@pytest.mark.parametrize("asset", ["styles.css", "theme_switch.js"])
+def test_injected_assets_survive_sanitiser(asset):
+    """st.html sanitises with DOMPurify, which silently drops a style/script block containing tag-like text."""
+    import re
+
+    from utils.ui import ASSETS
+
+    assert not re.search(r"<[/\w!]", (ASSETS / asset).read_text())

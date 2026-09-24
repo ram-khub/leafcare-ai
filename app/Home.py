@@ -283,6 +283,7 @@ def diagnose_page() -> None:
 
 st.set_page_config(page_title="LeafCare AI", page_icon="🌿", layout="wide")
 ui.inject_css()
+ui.theme_switch()
 st.logo(str(ui.LOGO_PATH), size="large")
 st.session_state.setdefault("history", [])
 

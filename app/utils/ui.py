@@ -17,12 +17,18 @@ LOGO_PATH = ASSETS / "logo.svg"
 # Colours match assets/styles.css and .streamlit/config.toml.
 LEAF, AMBER, RED, GREY, TRACK = "#2F6B3A", "#E0A33B", "#C2412D", "#9AA39C", "#D9D2C1"
 SEVERITY_LABELS = {"none": "Healthy", "moderate": "Moderate risk", "severe": "Severe risk"}
-SEVERITY_COLORS = {"none": LEAF, "moderate": AMBER, "severe": RED}
+# CSS variables (not hex) so the result card follows light/dark mode.
+SEVERITY_COLORS = {"none": "var(--leaf)", "moderate": "var(--amber)", "severe": "var(--red)"}
 
 
 def inject_css() -> None:
     """Load the custom stylesheet into the page (call once per run, from Home.py)."""
     st.html(f"<style>{(ASSETS / 'styles.css').read_text()}</style>")
+
+
+def theme_switch() -> None:
+    """Add the animated light/dark switch to the top-right corner (call once per run, from Home.py)."""
+    st.html(f"<script>{(ASSETS / 'theme_switch.js').read_text()}</script>", unsafe_allow_javascript=True)
 
 
 @st.cache_data

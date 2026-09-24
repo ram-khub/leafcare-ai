@@ -1,22 +1,54 @@
 /* LeafCare AI custom styles. Injected once per page by utils/ui.py:inject_css(). */
 
+/* Colours come in light/dark pairs via light-dark(), which follows `color-scheme`.
+   By default that tracks the visitor's system setting; the theme switch (theme_switch.js)
+   pins it by setting data-lc-theme on the html element, and moves Streamlit's own theme with it. */
+:root { color-scheme: light dark; }
+:root[data-lc-theme="light"] { color-scheme: light; }
+:root[data-lc-theme="dark"] { color-scheme: dark; }
+
 :root {
-  --leaf: #2F6B3A;
-  --leaf-dark: #1F4D2A;
-  --leaf-soft: #E4F0E3;
-  --amber: #E0A33B;
-  --amber-soft: #FBEFD6;
-  --amber-text: #8A5A0B;
-  --red: #C2412D;
-  --red-soft: #F8E1DB;
-  --ink: #1E2A22;
-  --muted: #5E6B62;
-  --line: #E6DFCF;
-  --surface: #FFFFFF;
-  --cream: #FAF7F0;
-  --shadow: 0 1px 2px rgba(30, 42, 34, 0.04), 0 8px 24px rgba(30, 42, 34, 0.06);
+  --leaf: light-dark(#2F6B3A, #7CC68A);
+  --leaf-dark: light-dark(#1F4D2A, #A9DDB2);
+  --leaf-soft: light-dark(#E4F0E3, #1D3524);
+  --amber: light-dark(#E0A33B, #E8B155);
+  --amber-soft: light-dark(#FBEFD6, #352A16);
+  --amber-text: light-dark(#8A5A0B, #F0C274);
+  --red: light-dark(#C2412D, #EE8B78);
+  --red-soft: light-dark(#F8E1DB, #3A211C);
+  --ink: light-dark(#1E2A22, #E6ECE5);
+  --muted: light-dark(#5E6B62, #A1ADA4);
+  --line: light-dark(#E6DFCF, #2C3830);
+  --surface: light-dark(#FFFFFF, #18211B);
+  --cream: light-dark(#FAF7F0, #0F1612);
   --radius: 18px;
+  --body: light-dark(#4A554E, #C3CCC5);
+  --header-bg: light-dark(rgba(250, 247, 240, 0.92), rgba(15, 22, 18, 0.88));
+  --btn: light-dark(#2F6B3A, #3F8A4D);
+  --btn-hover: light-dark(#1F4D2A, #4E9A5C);
+  --grey-soft: light-dark(#ECE8DE, #28302B);
+  --grey-text: light-dark(#56605A, #B5BEB7);
+  --track: light-dark(#EFEADF, #26302A);
+  --warn-line: light-dark(#F1D9A6, #5A4722);
+  --error-line: light-dark(#EFC2B8, #5C3128);
+  --info-bg: light-dark(#EEF3EA, #182A1E);
+  --info-line: light-dark(#D5E3D1, #2C4332);
+  --drop-bg: light-dark(#FDFBF6, #141C17);
+  --drop-line: light-dark(#C9D8C4, #35503B);
+  --drop-hover: light-dark(#F6FAF3, #1A281E);
+  --shadow: 0 1px 2px light-dark(rgba(30, 42, 34, 0.04), rgba(0, 0, 0, 0.3)),
+            0 8px 24px light-dark(rgba(30, 42, 34, 0.06), rgba(0, 0, 0, 0.25));
+  --shadow-lg: 0 2px 4px light-dark(rgba(30, 42, 34, 0.04), rgba(0, 0, 0, 0.3)),
+               0 16px 40px light-dark(rgba(30, 42, 34, 0.09), rgba(0, 0, 0, 0.35));
 }
+
+/* Plotly colours its text and bars inline (light-mode values); follow the theme instead. */
+.js-plotly-plot .annotation-text,
+.js-plotly-plot .bartext,
+.js-plotly-plot .ytick text,
+.js-plotly-plot .xtick text { fill: var(--ink) !important; }
+.js-plotly-plot .point path[style*="rgb(47, 107, 58)"] { fill: light-dark(#2F6B3A, #5FAE6D) !important; }
+.js-plotly-plot .point path[style*="rgb(217, 210, 193)"] { fill: light-dark(#D9D2C1, #3A463E) !important; }
 
 /* ---------- Page frame ---------- */
 [data-testid="stMainBlockContainer"] {
@@ -25,7 +57,7 @@
   padding-bottom: 4rem;
 }
 #MainMenu, footer, [data-testid="stToolbarActions"], .stAppDeployButton { display: none !important; }
-[data-testid="stHeader"] { background: rgba(250, 247, 240, 0.92); backdrop-filter: blur(8px); }
+[data-testid="stHeader"] { background: var(--header-bg); backdrop-filter: blur(8px); }
 
 h1, h2, h3, h4 { letter-spacing: -0.01em; color: var(--ink); }
 h1 { font-size: 2.1rem !important; font-weight: 700 !important; }
@@ -53,7 +85,7 @@ a { color: var(--leaf) !important; }
 }
 .lc-card h3 { margin: 0 0 0.35rem 0; padding: 0; }
 .lc-card p { margin: 0; color: var(--muted); }
-.lc-card ul { margin: 0; padding-left: 1.2rem; color: #4A554E; }
+.lc-card ul { margin: 0; padding-left: 1.2rem; color: var(--body); }
 .lc-card li { margin-bottom: 0.55rem; }
 .lc-card li:last-child { margin-bottom: 0; }
 
@@ -117,14 +149,14 @@ a { color: var(--leaf) !important; }
 .lc-chip-none { background: var(--leaf-soft); color: var(--leaf); }
 .lc-chip-moderate { background: var(--amber-soft); color: var(--amber-text); }
 .lc-chip-severe { background: var(--red-soft); color: var(--red); }
-.lc-chip-uncertain { background: #ECE8DE; color: #56605A; }
+.lc-chip-uncertain { background: var(--grey-soft); color: var(--grey-text); }
 
 /* ---------- Result card (the focal point) ---------- */
 .lc-result {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 22px;
-  box-shadow: 0 2px 4px rgba(30, 42, 34, 0.04), 0 16px 40px rgba(30, 42, 34, 0.09);
+  box-shadow: var(--shadow-lg);
   padding: 1.6rem 1.7rem;
   position: relative;
   overflow: hidden;
@@ -142,7 +174,7 @@ a { color: var(--leaf) !important; }
 .lc-desc { color: var(--muted); margin: 0 0 1.15rem 0; font-size: 0.95rem; }
 .lc-conf-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.4rem; }
 .lc-conf-row b { color: var(--ink); font-size: 1rem; }
-.lc-bar { height: 10px; background: #EFEADF; border-radius: 999px; overflow: hidden; }
+.lc-bar { height: 10px; background: var(--track); border-radius: 999px; overflow: hidden; }
 .lc-bar > span { display: block; height: 100%; border-radius: 999px; background: var(--accent, var(--leaf)); }
 
 /* ---------- Callouts ---------- */
@@ -153,10 +185,10 @@ a { color: var(--leaf) !important; }
 }
 .lc-callout .lc-icon { font-size: 1.35rem; line-height: 1.2; }
 .lc-callout b { display: block; margin-bottom: 0.15rem; color: var(--ink); }
-.lc-callout p { margin: 0; color: #4A554E; font-size: 0.93rem; }
-.lc-callout-warn { background: var(--amber-soft); border-color: #F1D9A6; }
-.lc-callout-error { background: var(--red-soft); border-color: #EFC2B8; }
-.lc-callout-info { background: #EEF3EA; border-color: #D5E3D1; }
+.lc-callout p { margin: 0; color: var(--body); font-size: 0.93rem; }
+.lc-callout-warn { background: var(--amber-soft); border-color: var(--warn-line); }
+.lc-callout-error { background: var(--red-soft); border-color: var(--error-line); }
+.lc-callout-info { background: var(--info-bg); border-color: var(--info-line); }
 
 /* ---------- How-it-works steps ---------- */
 .lc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0.25rem 0 1rem 0; }
@@ -194,22 +226,61 @@ a { color: var(--leaf) !important; }
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 .stButton > button:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(47, 107, 58, 0.18); }
-[data-testid="stBaseButton-primary"] { background: var(--leaf) !important; border-color: var(--leaf) !important; color: #FFFFFF !important; }
-[data-testid="stBaseButton-primary"]:hover { background: var(--leaf-dark) !important; }
+[data-testid="stBaseButton-primary"] { background: var(--btn) !important; border-color: var(--btn) !important; color: #FFFFFF !important; }
+[data-testid="stBaseButton-primary"]:hover { background: var(--btn-hover) !important; border-color: var(--btn-hover) !important; }
 
 [data-testid="stFileUploaderDropzone"] {
-  background: #FDFBF6;
-  border: 2px dashed #C9D8C4;
+  background: var(--drop-bg);
+  border: 2px dashed var(--drop-line);
   border-radius: 16px;
   padding: 2rem 1rem;
 }
-[data-testid="stFileUploaderDropzone"]:hover { border-color: var(--leaf); background: #F6FAF3; }
+[data-testid="stFileUploaderDropzone"]:hover { border-color: var(--leaf); background: var(--drop-hover); }
 
 [data-testid="stTabs"] [data-baseweb="tab-list"] { gap: 0.25rem; }
 [data-testid="stTabs"] button[role="tab"] p { font-weight: 600; font-size: 0.95rem; }
 
 [data-testid="stImage"] img { border-radius: 14px; }
 .st-key-samples [data-testid="stImageCaption"] { height: 2.9em; line-height: 1.45; overflow: hidden; }  /* 2 lines, buttons stay aligned */
+
+/* ---------- Light/dark switch (theme_switch.js) ---------- */
+/* The st.html block that runs the script would otherwise leave an empty row at the top. */
+[data-testid="stElementContainer"]:has(> [data-testid="stHtml"] > script:only-child) { display: none; }
+.lc-theme-switch {
+  position: fixed; top: 0.85rem; right: 1.25rem; z-index: 999991;
+  width: 60px; height: 32px; padding: 3px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--leaf-soft);
+  cursor: pointer;
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+  view-transition-name: lc-theme-switch;   /* keep the switch out of the circle reveal */
+}
+.lc-theme-switch:hover { border-color: var(--leaf); }
+.lc-theme-switch:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; }
+.lc-theme-knob {
+  position: relative; display: block; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--surface); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.lc-theme-switch[aria-checked="true"] .lc-theme-knob { transform: translateX(28px); }
+.lc-sun, .lc-moon {
+  position: absolute; inset: 4px;
+  -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
+  transition: opacity 0.3s ease, transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.lc-sun {
+  background: var(--amber);
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black' stroke='black' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='4.2'/%3E%3Cpath d='M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6'/%3E%3C/svg%3E");
+}
+.lc-moon {
+  background: var(--leaf);
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 14.6A8.5 8.5 0 0 1 9.4 4a8.5 8.5 0 1 0 10.6 10.6z'/%3E%3C/svg%3E");
+}
+.lc-theme-switch[aria-checked="true"] .lc-sun { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+.lc-theme-switch[aria-checked="false"] .lc-moon { opacity: 0; transform: rotate(90deg) scale(0.5); }
+
+/* The circle reveal: the new theme grows over the old one (clip-path animated from JS). */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
@@ -227,4 +298,5 @@ a { color: var(--leaf) !important; }
   .lc-disease { font-size: 1.4rem; }
   [class*="st-key-card"], .lc-card, .lc-result { padding: 1.1rem 1.1rem; }
   .lc-result { min-height: 0; }
+  .lc-theme-switch { right: 0.75rem; }
 }

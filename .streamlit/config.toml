@@ -1,20 +1,34 @@
-# LeafCare AI theme: deep leaf green, warm off-white, soft amber accent.
+# LeafCare AI theme: deep leaf green, warm off-white, soft amber accent (plus a dark mode).
 
 [theme]
-base = "light"
+# Shared by both modes. The app follows the visitor's system light/dark setting.
+baseRadius = "12px"
+buttonRadius = "999px"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Poppins:https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+
+[theme.light]
 primaryColor = "#2F6B3A"
 backgroundColor = "#FAF7F0"
 secondaryBackgroundColor = "#F1ECE0"
 textColor = "#1E2A22"
 linkColor = "#2F6B3A"
 borderColor = "#E6DFCF"
-baseRadius = "12px"
-buttonRadius = "999px"
-font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-headingFont = "Poppins:https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
 greenColor = "#2F6B3A"
 orangeColor = "#E0A33B"
 redColor = "#C2412D"
+
+# Dark mode: deep forest background, same leaf green / amber accents lifted for contrast.
+[theme.dark]
+primaryColor = "#4E9A5C"
+backgroundColor = "#0F1612"
+secondaryBackgroundColor = "#18211B"
+textColor = "#E6ECE5"
+linkColor = "#7CC68A"
+borderColor = "#2C3830"
+greenColor = "#6FBF7E"
+orangeColor = "#E8B155"
+redColor = "#E77A66"
 
 [client]
 toolbarMode = "minimal"   # hide the developer menu / deploy button
