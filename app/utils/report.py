@@ -1,4 +1,4 @@
-"""Shareable versions of a diagnosis: a WhatsApp message and a downloadable one-page report.
+"""Shareable versions of a diagnosis: a message (plain or for WhatsApp) and a downloadable one-page report.
 
 The report is a self-contained HTML page rather than a PDF: browsers render every script we
 translate into (Devanagari, Bengali, Telugu, Tamil) with the fonts they already have, and the
@@ -36,17 +36,26 @@ def headline(crop: str, disease: str, confidence: float, uncertain: bool) -> str
     return f"{label}: {crop} · {disease} ({format_confidence(confidence)})"
 
 
-def whatsapp_url(crop: str, disease: str, entry: dict, confidence: float, uncertain: bool, helpline: bool) -> str:
-    """A wa.me link that opens WhatsApp with the diagnosis and treatment ready to send."""
-    lines = ["🌿 *LeafCare AI*", f"*{headline(crop, disease, confidence, uncertain)}*", "", entry["description"]]
+def share_text(crop: str, disease: str, entry: dict, confidence: float, uncertain: bool, helpline: bool,
+               whatsapp: bool = False) -> str:
+    """The diagnosis and treatment as a message. `whatsapp` adds WhatsApp's *bold* and _italic_ markers."""
+    bold = (lambda text: f"*{text}*") if whatsapp else str
+    italic = (lambda text: f"_{text}_") if whatsapp else str
+    lines = [f"🌿 {bold('LeafCare AI')}", bold(headline(crop, disease, confidence, uncertain)), "", entry["description"]]
     if not entry["is_healthy"]:
-        lines += ["", f"*{t('advice.organic')}*", *(f"• {item}" for item in entry["treatment_organic"]),
-                  "", f"*{t('advice.chemical')}*", *(f"• {item}" for item in entry["treatment_chemical"])]
-    lines += ["", f"_{t('advice.disclaimer')}_"]
+        lines += ["", bold(t("advice.organic")), *(f"• {item}" for item in entry["treatment_organic"]),
+                  "", bold(t("advice.chemical")), *(f"• {item}" for item in entry["treatment_chemical"])]
+    lines += ["", italic(t("advice.disclaimer"))]
     if helpline:
         lines.append(f"{t('helpline.title')}: {HELPLINE}")
     lines += ["", f"{t('share.checked_with')}: {APP_URL}"]
-    return "https://wa.me/?text=" + quote("\n".join(lines))
+    return "\n".join(lines)
+
+
+def whatsapp_url(crop: str, disease: str, entry: dict, confidence: float, uncertain: bool, helpline: bool) -> str:
+    """A wa.me link that opens WhatsApp with the diagnosis and treatment ready to send."""
+    return "https://wa.me/?text=" + quote(share_text(crop, disease, entry, confidence, uncertain, helpline,
+                                                    whatsapp=True))
 
 
 def file_name(class_name: str) -> str:

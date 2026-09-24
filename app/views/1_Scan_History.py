@@ -45,6 +45,8 @@ for scan in history:
             """)
 
 st.write("")
-if st.button(t("history.clear"), icon=":material/delete:"):
-    st.session_state.history = []
-    st.rerun()
+with st.popover(t("history.clear"), icon=":material/delete:"):  # a confirm step: clearing can't be undone
+    st.write(t("history.clear_confirm"))
+    if st.button(t("history.clear_yes"), icon=":material/delete:", type="primary"):
+        st.session_state.history = []
+        st.rerun()

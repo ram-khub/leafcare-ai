@@ -48,6 +48,8 @@
   "result.diagnosis": "निदान",
   "result.possible": "संभावित मेल",
   "result.confidence": "मॉडल का विश्वास",
+  "result.confidence_help_label": "इस संख्या का क्या मतलब है?",
+  "result.confidence_help": "यह बताता है कि मॉडल बाकी 37 स्थितियों की तुलना में कितना आश्वस्त है; यह सही होने की मापी गई संभावना नहीं है। मॉडल बहुत आश्वस्त होकर भी गलत हो सकता है, खासकर उन फ़ोटो पर जो उसके प्रशिक्षण चित्रों से अलग हों, इसलिए 99% से ऊपर को >99% दिखाया जाता है।",
   "severity.none": "स्वस्थ",
   "severity.moderate": "मध्यम जोखिम",
   "severity.severe": "गंभीर जोखिम",
@@ -58,6 +60,7 @@
   "home.gradcam_caption": "लाल और पीले हिस्सों ने अनुमान को सबसे ज़्यादा प्रभावित किया; नीले हिस्सों का असर सबसे कम था। अगर गर्म हिस्से पत्ती की बजाय पृष्ठभूमि पर हैं, तो नई फ़ोटो लें।",
   "home.closest_match": "सबसे नज़दीकी मेल की जानकारी: {name} (अपुष्ट)",
   "home.next": "आगे क्या करें",
+  "home.new_scan": "दूसरी पत्ती जाँचें",
 
   "advice.symptoms": "लक्षण",
   "advice.treatment": "उपचार",
@@ -82,6 +85,8 @@
   "history.uncertain": "अनिश्चित",
   "history.meta": "विश्वास {confidence} · स्कैन का समय {time}",
   "history.clear": "इतिहास मिटाएँ",
+  "history.clear_confirm": "इस सत्र के सभी स्कैन हटाएँ? इसे वापस नहीं किया जा सकता।",
+  "history.clear_yes": "हाँ, हटाएँ",
 
   "about.eyebrow": "यह कैसे काम करता है",
   "about.title": "मॉडल के बारे में",
@@ -183,6 +188,9 @@
 
   "share.title": "यह परिणाम सहेजें या साझा करें",
   "share.whatsapp": "WhatsApp पर भेजें",
+  "share.copy": "टेक्स्ट कॉपी करें",
+  "share.copied": "कॉपी हो गया",
+  "share.copy_failed": "कॉपी नहीं हो सका",
   "share.download": "रिपोर्ट डाउनलोड करें",
   "share.download_help": "आपकी फ़ोटो और सलाह वाली एक पेज की रिपोर्ट। इसे किसी भी ब्राउज़र में खोलें या PDF के रूप में प्रिंट करें।",
   "share.checked_with": "LeafCare AI से जाँचा गया",

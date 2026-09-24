@@ -48,6 +48,8 @@
   "result.diagnosis": "রোগনির্ণয়",
   "result.possible": "সম্ভাব্য মিল",
   "result.confidence": "মডেলের আস্থা",
+  "result.confidence_help_label": "এই সংখ্যার মানে কী?",
+  "result.confidence_help": "অন্য 37টি অবস্থার তুলনায় মডেল কতটা নিশ্চিত, এটি তা দেখায়; সঠিক হওয়ার মাপা সম্ভাবনা নয়। মডেল খুব নিশ্চিত হয়েও ভুল হতে পারে, বিশেষ করে প্রশিক্ষণের ছবির থেকে আলাদা ছবিতে, তাই 99%-এর বেশি হলে >99% দেখানো হয়।",
   "severity.none": "সুস্থ",
   "severity.moderate": "মাঝারি ঝুঁকি",
   "severity.severe": "গুরুতর ঝুঁকি",
@@ -58,6 +60,7 @@
   "home.gradcam_caption": "লাল ও হলুদ অংশ অনুমানে সবচেয়ে বেশি প্রভাব ফেলেছে; নীল অংশের প্রভাব সবচেয়ে কম। উষ্ণ অংশগুলো যদি পাতার বদলে পটভূমিতে থাকে, তাহলে নতুন ছবি তুলুন।",
   "home.closest_match": "সবচেয়ে কাছের মিলের তথ্য: {name} (অনিশ্চিত)",
   "home.next": "এরপর কী করবেন",
+  "home.new_scan": "আরেকটি পাতা পরীক্ষা করুন",
 
   "advice.symptoms": "লক্ষণ",
   "advice.treatment": "চিকিৎসা",
@@ -82,6 +85,8 @@
   "history.uncertain": "অনিশ্চিত",
   "history.meta": "আস্থা {confidence} · স্ক্যানের সময় {time}",
   "history.clear": "ইতিহাস মুছুন",
+  "history.clear_confirm": "এই সেশনের সব স্ক্যান মুছে ফেলবেন? এটি আর ফেরানো যাবে না।",
+  "history.clear_yes": "হ্যাঁ, মুছুন",
 
   "about.eyebrow": "এটি কীভাবে কাজ করে",
   "about.title": "মডেল সম্পর্কে",
@@ -183,6 +188,9 @@
 
   "share.title": "ফলাফলটি সংরক্ষণ বা শেয়ার করুন",
   "share.whatsapp": "WhatsApp-এ শেয়ার করুন",
+  "share.copy": "লেখা কপি করুন",
+  "share.copied": "কপি হয়েছে",
+  "share.copy_failed": "কপি করা যায়নি",
   "share.download": "রিপোর্ট ডাউনলোড করুন",
   "share.download_help": "আপনার ছবি ও পরামর্শসহ এক পাতার রিপোর্ট। যেকোনো ব্রাউজারে খুলুন বা PDF হিসেবে প্রিন্ট করুন।",
   "share.checked_with": "LeafCare AI দিয়ে পরীক্ষা করা",

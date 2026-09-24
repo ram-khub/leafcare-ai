@@ -48,6 +48,8 @@
   "result.diagnosis": "निदान",
   "result.possible": "संभाव्य जुळणी",
   "result.confidence": "मॉडेलचा विश्वास",
+  "result.confidence_help_label": "या संख्येचा अर्थ काय?",
+  "result.confidence_help": "इतर 37 स्थितींच्या तुलनेत मॉडेलला किती खात्री आहे हे यातून दिसते; बरोबर असण्याची मोजलेली शक्यता नव्हे. मॉडेल खूप खात्रीने असूनही चुकू शकते, विशेषतः प्रशिक्षणातील चित्रांपेक्षा वेगळ्या फोटोंवर, म्हणून 99% पेक्षा जास्त असल्यास >99% दाखवले जाते.",
   "severity.none": "निरोगी",
   "severity.moderate": "मध्यम धोका",
   "severity.severe": "गंभीर धोका",
@@ -58,6 +60,7 @@
   "home.gradcam_caption": "लाल आणि पिवळ्या भागांचा अंदाजावर सर्वाधिक प्रभाव पडला; निळ्या भागांचा सर्वात कमी. जर उष्ण भाग पानाऐवजी पार्श्वभूमीवर असतील, तर नवीन फोटो घ्या.",
   "home.closest_match": "सर्वात जवळच्या जुळणीची माहिती: {name} (अपुष्ट)",
   "home.next": "पुढे काय करायचे",
+  "home.new_scan": "दुसरे पान तपासा",
 
   "advice.symptoms": "लक्षणे",
   "advice.treatment": "उपचार",
@@ -82,6 +85,8 @@
   "history.uncertain": "अनिश्चित",
   "history.meta": "विश्वास {confidence} · स्कॅनची वेळ {time}",
   "history.clear": "इतिहास पुसा",
+  "history.clear_confirm": "या सत्रातील सर्व स्कॅन काढायचे? हे परत आणता येणार नाही.",
+  "history.clear_yes": "होय, काढा",
 
   "about.eyebrow": "हे कसे काम करते",
   "about.title": "मॉडेलविषयी",
@@ -183,6 +188,9 @@
 
   "share.title": "हा निकाल जतन करा किंवा शेअर करा",
   "share.whatsapp": "WhatsApp वर शेअर करा",
+  "share.copy": "मजकूर कॉपी करा",
+  "share.copied": "कॉपी झाले",
+  "share.copy_failed": "कॉपी करता आले नाही",
   "share.download": "अहवाल डाउनलोड करा",
   "share.download_help": "तुमचा फोटो आणि सल्ला असलेला एका पानाचा अहवाल. कोणत्याही ब्राउझरमध्ये उघडा किंवा PDF म्हणून प्रिंट करा.",
   "share.checked_with": "LeafCare AI ने तपासले",

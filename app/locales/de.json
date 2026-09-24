@@ -48,6 +48,8 @@
   "result.diagnosis": "Diagnose",
   "result.possible": "Mögliche Übereinstimmung",
   "result.confidence": "Sicherheit des Modells",
+  "result.confidence_help_label": "Was bedeutet diese Zahl?",
+  "result.confidence_help": "Zeigt, wie sicher sich das Modell im Vergleich zu den anderen 37 Zuständen ist, nicht die gemessene Wahrscheinlichkeit, richtig zu liegen. Es kann sehr sicher und trotzdem falsch sein, besonders bei Fotos, die anders aussehen als seine Trainingsbilder. Deshalb wird alles über 99 % als >99% angezeigt.",
   "severity.none": "Gesund",
   "severity.moderate": "Mittleres Risiko",
   "severity.severe": "Hohes Risiko",
@@ -58,6 +60,7 @@
   "home.gradcam_caption": "Rote und gelbe Bereiche haben die Vorhersage am stärksten beeinflusst, blaue am wenigsten. Liegen die Hotspots auf dem Hintergrund statt auf dem Blatt, versuche ein neues Foto.",
   "home.closest_match": "Informationen zur nächsten Übereinstimmung: {name} (unbestätigt)",
   "home.next": "Was jetzt zu tun ist",
+  "home.new_scan": "Weiteres Blatt prüfen",
 
   "advice.symptoms": "Symptome",
   "advice.treatment": "Behandlung",
@@ -82,6 +85,8 @@
   "history.uncertain": "Unsicher",
   "history.meta": "Sicherheit {confidence} · Analysiert um {time}",
   "history.clear": "Verlauf löschen",
+  "history.clear_confirm": "Alle Scans dieser Sitzung löschen? Das lässt sich nicht rückgängig machen.",
+  "history.clear_yes": "Ja, löschen",
 
   "about.eyebrow": "So funktioniert es",
   "about.title": "Über das Modell",
@@ -183,6 +188,9 @@
 
   "share.title": "Ergebnis speichern oder teilen",
   "share.whatsapp": "Per WhatsApp teilen",
+  "share.copy": "Text kopieren",
+  "share.copied": "Kopiert",
+  "share.copy_failed": "Kopieren fehlgeschlagen",
   "share.download": "Bericht herunterladen",
   "share.download_help": "Ein einseitiger Bericht mit deinem Foto und den Ratschlägen. In jedem Browser öffnen oder als PDF drucken.",
   "share.checked_with": "Geprüft mit LeafCare AI",

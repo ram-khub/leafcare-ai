@@ -71,3 +71,13 @@ def test_confidence_never_shows_100_percent(confidence, shown):
     from utils.ui import format_confidence
 
     assert format_confidence(confidence) == shown
+
+
+def test_copy_text_is_plain_and_whatsapp_text_is_formatted(in_language):
+    in_language("en")
+    entry = i18n.knowledge_base("en")["Tomato___Late_blight"]
+    plain = report.share_text("Tomato", "Late blight", entry, 0.9, uncertain=False, helpline=False)
+    formatted = report.share_text("Tomato", "Late blight", entry, 0.9, uncertain=False, helpline=False, whatsapp=True)
+    assert "*" not in plain and "_" not in plain
+    assert "*LeafCare AI*" in formatted
+    assert entry["treatment_chemical"][0] in plain and report.APP_URL in plain

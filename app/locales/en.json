@@ -48,6 +48,8 @@
   "result.diagnosis": "Diagnosis",
   "result.possible": "Possible match",
   "result.confidence": "Model confidence",
+  "result.confidence_help_label": "What does this number mean?",
+  "result.confidence_help": "How sure the model is compared with the other 37 conditions, not a measured chance of being right. It can be very sure and still wrong, especially on photos unlike its training images, so anything above 99% is shown as >99%.",
   "severity.none": "Healthy",
   "severity.moderate": "Moderate risk",
   "severity.severe": "Severe risk",
@@ -58,6 +60,7 @@
   "home.gradcam_caption": "Red and yellow areas influenced the prediction most; blue areas mattered least. If the hot spots sit on the background rather than the leaf, try a new photo.",
   "home.closest_match": "Information about the closest match: {name} (unconfirmed)",
   "home.next": "What to do next",
+  "home.new_scan": "Scan another leaf",
 
   "advice.symptoms": "Symptoms",
   "advice.treatment": "Treatment",
@@ -82,6 +85,8 @@
   "history.uncertain": "Uncertain",
   "history.meta": "Confidence {confidence} · Scanned at {time}",
   "history.clear": "Clear history",
+  "history.clear_confirm": "Remove every scan from this session? This can't be undone.",
+  "history.clear_yes": "Yes, clear",
 
   "about.eyebrow": "How it works",
   "about.title": "About the model",
@@ -183,6 +188,9 @@
 
   "share.title": "Save or share this result",
   "share.whatsapp": "Share on WhatsApp",
+  "share.copy": "Copy text",
+  "share.copied": "Copied",
+  "share.copy_failed": "Couldn't copy",
   "share.download": "Download report",
   "share.download_help": "A one-page report with your photo and the advice. Open it in any browser, or print it to PDF.",
   "share.checked_with": "Checked with LeafCare AI",

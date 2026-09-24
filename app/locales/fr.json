@@ -48,6 +48,8 @@
   "result.diagnosis": "Diagnostic",
   "result.possible": "Correspondance possible",
   "result.confidence": "Confiance du modèle",
+  "result.confidence_help_label": "Que signifie ce chiffre ?",
+  "result.confidence_help": "Indique à quel point le modèle est sûr de lui par rapport aux 37 autres affections, et non une probabilité mesurée d'avoir raison. Il peut être très sûr et pourtant se tromper, surtout sur des photos différentes de ses images d'entraînement ; au-delà de 99 %, on affiche donc >99%.",
   "severity.none": "Saine",
   "severity.moderate": "Risque modéré",
   "severity.severe": "Risque élevé",
@@ -58,6 +60,7 @@
   "home.gradcam_caption": "Les zones rouges et jaunes ont le plus influencé la prédiction ; les zones bleues, le moins. Si les points chauds sont sur le fond plutôt que sur la feuille, essayez une autre photo.",
   "home.closest_match": "Informations sur la correspondance la plus proche : {name} (non confirmée)",
   "home.next": "Que faire ensuite",
+  "home.new_scan": "Analyser une autre feuille",
 
   "advice.symptoms": "Symptômes",
   "advice.treatment": "Traitement",
@@ -82,6 +85,8 @@
   "history.uncertain": "Incertaines",
   "history.meta": "Confiance {confidence} · Analysée à {time}",
   "history.clear": "Effacer l'historique",
+  "history.clear_confirm": "Supprimer toutes les analyses de cette session ? Impossible d'annuler.",
+  "history.clear_yes": "Oui, supprimer",
 
   "about.eyebrow": "Comment ça marche",
   "about.title": "À propos du modèle",
@@ -183,6 +188,9 @@
 
   "share.title": "Enregistrer ou partager ce résultat",
   "share.whatsapp": "Partager sur WhatsApp",
+  "share.copy": "Copier le texte",
+  "share.copied": "Copié",
+  "share.copy_failed": "Copie impossible",
   "share.download": "Télécharger le rapport",
   "share.download_help": "Un rapport d'une page avec votre photo et les conseils. Ouvrez-le dans n'importe quel navigateur ou imprimez-le en PDF.",
   "share.checked_with": "Vérifié avec LeafCare AI",

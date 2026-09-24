@@ -37,10 +37,11 @@ def inject_css() -> None:
 
 
 def page_scripts() -> None:
-    """Add the light/dark switch and the read-aloud handler (call once per run, from Home.py)."""
+    """Add the light/dark switch and the handlers for Listen, Copy text and "?" tips (call once per run, from Home.py)."""
     labels = json.dumps({"toLight": t("theme.to_light"), "toDark": t("theme.to_dark"), "name": t("theme.label")},
                         ensure_ascii=False)
-    scripts = "\n".join((ASSETS / name).read_text() for name in ("theme_switch.js", "read_aloud.js"))
+    scripts = "\n".join((ASSETS / name).read_text()
+                        for name in ("theme_switch.js", "read_aloud.js", "copy_text.js", "help_tips.js"))
     st.html(f"<script>window.__lcThemeLabels = {labels};\n{scripts}</script>", unsafe_allow_javascript=True)
 
 
@@ -104,6 +105,22 @@ def listen_box(parts: list[str]) -> str:
       </div>"""
 
 
+def copy_button(text: str) -> str:
+    """HTML for the Copy text button: copy_text.js puts `text` on the clipboard when it is clicked."""
+    return f"""
+      <button type="button" class="lc-copy" data-text="{escape(text)}" data-copy="{escape(t('share.copy'))}"
+              data-copied="{escape(t('share.copied'))}" data-failed="{escape(t('share.copy_failed'))}">
+        <span class="lc-copy-icon"></span><span class="lc-copy-label">{escape(t('share.copy'))}</span>
+      </button>"""
+
+
+def help_tip(text: str) -> str:
+    """HTML for a small "?" button that shows `text` on hover, or on tap via help_tips.js."""
+    return (f'<button type="button" class="lc-help" aria-expanded="false" '
+            f'aria-label="{escape(t("result.confidence_help_label"))}">?</button>'
+            f'<span class="lc-tip" role="tooltip">{escape(text)}</span>')
+
+
 def result_card(crop: str, disease: str, severity: str, confidence: float,
                 description: str, uncertain: bool, spoken: list[str]) -> None:
     """The main diagnosis card: crop, disease, status chip, confidence bar and a Listen button for `spoken`."""
@@ -118,7 +135,7 @@ def result_card(crop: str, disease: str, severity: str, confidence: float,
       </div>
       <div class="lc-disease">{escape(disease)}</div>
       <p class="lc-desc">{escape(description)}</p>
-      <div class="lc-conf-row"><span>{escape(t("result.confidence"))}</span><b>{escape(format_confidence(confidence))}</b></div>
+      <div class="lc-conf-row"><span>{escape(t("result.confidence"))} {help_tip(t("result.confidence_help"))}</span><b>{escape(format_confidence(confidence))}</b></div>
       <div class="lc-bar"><span style="width: {pct:.1f}%"></span></div>
       {listen_box(spoken)}
     </div>

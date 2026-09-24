@@ -16,6 +16,29 @@ def test_diagnose_page_with_sample_image():
     assert len(app.session_state["history"]) == 1  # the scan was recorded
 
 
+def test_scan_another_leaf_clears_the_photo():
+    app = AppTest.from_file("../app/Home.py", default_timeout=60).run()
+    app.session_state["input_mode"] = ":material/eco: Try a sample"
+    app.run()
+    app.button[0].click().run()  # "Use this" on the first sample
+    next(b for b in app.button if b.label == "Scan another leaf").click().run()
+    assert not app.exception
+    assert "sample" not in app.session_state
+    assert not any(b.label == "Scan another leaf" for b in app.button)  # back to Step 1, no result shown
+
+
+def test_clear_history_needs_confirmation():
+    app = AppTest.from_file("../app/Home.py", default_timeout=60).run()
+    app.session_state["input_mode"] = ":material/eco: Try a sample"
+    app.run()
+    app.button[0].click().run()
+    app.switch_page("views/1_Scan_History.py").run()
+    assert len(app.session_state["history"]) == 1  # opening the page (and the popover) clears nothing
+    next(b for b in app.button if b.label == "Yes, clear").click().run()
+    assert not app.exception
+    assert app.session_state["history"] == []
+
+
 @pytest.mark.parametrize("page", PAGES)
 def test_other_pages_render(page):
     app = AppTest.from_file("../app/Home.py", default_timeout=60).run()
@@ -23,7 +46,7 @@ def test_other_pages_render(page):
     assert not app.exception
 
 
-@pytest.mark.parametrize("asset", ["styles.css", "theme_switch.js", "read_aloud.js"])
+@pytest.mark.parametrize("asset", ["styles.css", "theme_switch.js", "read_aloud.js", "copy_text.js", "help_tips.js"])
 def test_injected_assets_survive_sanitiser(asset):
     """st.html sanitises with DOMPurify, which silently drops a style/script block containing tag-like text."""
     import re

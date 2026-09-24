@@ -107,6 +107,7 @@ def pick_sample() -> tuple[bytes, str] | None:
 
 def get_input_image() -> tuple[bytes, str] | None:
     """Show the three input options and return (image bytes, source label) if one was provided."""
+    round_ = st.session_state.get("input_round", 0)  # bumped by "Scan another leaf" to empty the photo inputs
     mode = st.segmented_control(
         t("input.mode_label"), [UPLOAD, CAMERA, SAMPLE],
         format_func=lambda mode: f"{INPUT_LABELS[mode][0]} {t(INPUT_LABELS[mode][1])}",
@@ -115,11 +116,11 @@ def get_input_image() -> tuple[bytes, str] | None:
     if mode == UPLOAD:
         file = st.file_uploader(
             t("input.upload_label"), type=["jpg", "jpeg", "png", "webp"], label_visibility="collapsed",
-            help=t("input.upload_help"), key="upload",  # a key keeps the file when the language changes
+            help=t("input.upload_help"), key=f"upload_{round_}",  # a key keeps the file when the language changes
         )
         return (file.getvalue(), file.name) if file else None
     if mode == CAMERA:
-        shot = st.camera_input(t("input.camera_label"), label_visibility="collapsed", key="camera")
+        shot = st.camera_input(t("input.camera_label"), label_visibility="collapsed", key=f"camera_{round_}")
         return (shot.getvalue(), t("input.camera_source")) if shot else None
     return pick_sample()
 
@@ -146,6 +147,15 @@ def record_scan(image: Image.Image, image_bytes: bytes, prediction: Prediction, 
 
 def bullet_list(items: list[str]) -> None:
     st.markdown("\n".join(f"- {item}" for item in items))
+
+
+def new_scan_button() -> None:
+    """Clear the current photo so the next one can be added straight away."""
+    if st.button(t("home.new_scan"), icon=":material/restart_alt:", type="primary"):
+        st.session_state.input_round = st.session_state.get("input_round", 0) + 1  # new keys: empty inputs
+        for key in ("sample", "leaf_override"):
+            st.session_state.pop(key, None)
+        st.rerun()
 
 
 def spoken_summary(entry: dict, crop: str, disease: str, uncertain: bool) -> list[str]:
@@ -206,6 +216,8 @@ def share_buttons(image: Image.Image, overlay: Image.Image, source: str, predict
     with st.container(horizontal=True, key="share"):
         st.link_button(t("share.whatsapp"), icon=":material/share:", url=report.whatsapp_url(
             crop, disease, entry, prediction.confidence, uncertain, helpline))
+        st.html(ui.copy_button(report.share_text(crop, disease, entry, prediction.confidence, uncertain, helpline)),
+                width="content")
         st.download_button(
             t("share.download"), icon=":material/download:", help=t("share.download_help"), on_click="ignore",
             data=report.build_report(image, overlay, source, crop, disease, entry, prediction.confidence,
@@ -305,6 +317,8 @@ def diagnose_page() -> None:
 
     st.write("")
     share_buttons(image, overlay, source, prediction, entry, crop, disease, uncertain)
+    st.write("")
+    new_scan_button()
 
 
 # ---------------------------------------------------------------- app frame + navigation
