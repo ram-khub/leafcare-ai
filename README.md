@@ -96,7 +96,7 @@ Figures saved by the notebook in `reports/figures/`: `training_curves.png`, `con
 leafcare-ai/
 ├── app/
 │   ├── Home.py                  # entry point: navigation + Diagnose page
-│   ├── pages/                   # Scan History, About the Model, SDG Impact
+│   ├── views/                   # Scan History, About the Model, SDG Impact, Feedback
 │   ├── utils/                   # preprocessing, predict, gradcam, ui components
 │   └── assets/                  # styles.css, logo.svg, sample_images/
 ├── .streamlit/config.toml       # theme

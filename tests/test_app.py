@@ -3,7 +3,7 @@
 import pytest
 from streamlit.testing.v1 import AppTest
 
-PAGES = ["pages/1_Scan_History.py", "pages/2_About_the_Model.py", "pages/3_SDG_Impact.py"]
+PAGES = ["views/1_Scan_History.py", "views/2_About_the_Model.py", "views/3_SDG_Impact.py", "views/4_Feedback.py"]
 
 
 def test_diagnose_page_with_sample_image():
@@ -31,3 +31,13 @@ def test_injected_assets_survive_sanitiser(asset):
     from utils.ui import ASSETS
 
     assert not re.search(r"<[/\w!]", (ASSETS / asset).read_text())
+
+
+def test_feedback_form_confirms():
+    # Clearing the box is done by the browser (clear_on_submit), which AppTest doesn't simulate.
+    app = AppTest.from_file("../app/Home.py", default_timeout=60).run()
+    app.switch_page("views/4_Feedback.py").run()
+    app.text_area[0].input("The heatmap is great").run()
+    app.button[0].click().run()
+    assert not app.exception
+    assert any("Feedback received" in el.body for el in app.get("html"))

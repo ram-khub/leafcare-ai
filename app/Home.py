@@ -290,9 +290,10 @@ st.session_state.setdefault("history", [])
 navigation = st.navigation(
     [
         st.Page(diagnose_page, title="Diagnose", icon=":material/eco:", default=True),
-        st.Page("pages/1_Scan_History.py", title="Scan History", icon=":material/history:"),
-        st.Page("pages/2_About_the_Model.py", title="About the Model", icon=":material/neurology:"),
-        st.Page("pages/3_SDG_Impact.py", title="SDG Impact", icon=":material/public:"),
+        st.Page("views/1_Scan_History.py", title="Scan History", icon=":material/history:"),
+        st.Page("views/2_About_the_Model.py", title="About the Model", icon=":material/neurology:"),
+        st.Page("views/3_SDG_Impact.py", title="SDG Impact", icon=":material/public:"),
+        st.Page("views/4_Feedback.py", title="Feedback", icon=":material/feedback:"),
     ],
     position="top",
 )
