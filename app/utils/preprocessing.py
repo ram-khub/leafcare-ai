@@ -21,7 +21,14 @@ MIN_IMAGE_SIDE = 64     # smaller uploads carry too little detail to diagnose
 
 
 class ImageError(ValueError):
-    """Raised when an uploaded file can't be used; the message is user-friendly."""
+    """Raised when an uploaded file can't be used; the message is user-friendly English.
+
+    `reason` and `values` let the app show the same message in the visitor's language (locale key error.<reason>).
+    """
+
+    def __init__(self, message: str, reason: str, **values):
+        super().__init__(message)
+        self.reason, self.values = reason, values
 
 
 # --- shared preprocessing (must be identical in app/utils/preprocessing.py and notebooks/train_model.ipynb) ---
@@ -39,7 +46,7 @@ def load_image(data: bytes) -> Image.Image:
         image.load()  # force a full decode so truncated/corrupt files fail here
     except (UnidentifiedImageError, OSError, ValueError) as err:
         raise ImageError(
-            "We couldn't read that file. Please upload a JPG or PNG photo of a leaf."
+            "We couldn't read that file. Please upload a JPG or PNG photo of a leaf.", "unreadable"
         ) from err
 
     image = ImageOps.exif_transpose(image)  # respect phone camera rotation
@@ -47,7 +54,8 @@ def load_image(data: bytes) -> Image.Image:
     if min(image.size) < MIN_IMAGE_SIDE:
         raise ImageError(
             f"That image is very small ({image.width}x{image.height} px). "
-            f"Please use a photo at least {MIN_IMAGE_SIDE} px on each side."
+            f"Please use a photo at least {MIN_IMAGE_SIDE} px on each side.",
+            "too_small", width=image.width, height=image.height, min_side=MIN_IMAGE_SIDE,
         )
 
     # Flatten transparency onto white and convert greyscale/CMYK/etc. to RGB.

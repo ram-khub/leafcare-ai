@@ -26,6 +26,9 @@ LANGUAGES = {
     "fr": "Français",
     "de": "Deutsch",
 }
+# Language code -> BCP 47 tag for the read-aloud voice (Indian English where the device has it).
+SPEECH_TAGS = {"en": "en-IN", "hi": "hi-IN", "bn": "bn-IN", "mr": "mr-IN", "te": "te-IN", "ta": "ta-IN",
+               "es": "es-ES", "fr": "fr-FR", "de": "de-DE"}
 # Indic scripts: letter-spacing splits their letter clusters and they have no upper case.
 INDIC_LANGUAGES = {"hi", "bn", "mr", "te", "ta"}
 TRANSLATED_FIELDS = ("crop", "disease", "description", "symptoms", "causes",
@@ -59,6 +62,12 @@ def t(key: str, **values) -> str:
     """The interface string `key` in the current language, with {placeholders} filled in."""
     text = _strings(current()).get(key) or _strings("en")[key]
     return text.format(**values) if values else text
+
+
+def likely_in_india() -> bool:
+    """True when the visitor is probably in India: an Indian language, an -IN browser locale or an IST clock."""
+    locale = (st.context.locale or "").upper()
+    return current() in INDIC_LANGUAGES or locale.endswith("-IN") or st.context.timezone in {"Asia/Kolkata", "Asia/Calcutta"}
 
 
 def _initial_language() -> str:

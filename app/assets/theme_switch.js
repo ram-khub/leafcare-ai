@@ -6,6 +6,8 @@
 // visitor's choice and fires "afterprint"; our own CSS follows via data-lc-theme on the html element.
 // The change is animated with a View Transition: a circle grows out of the switch.
 //
+// Labels come from window.__lcThemeLabels, which ui.py sets in the visitor's language just before this file.
+//
 // Keep this file free of markup in strings: st.html sanitises with DOMPurify, which drops a
 // script whose text contains anything tag-like. Elements are built with createElement; the sun and moon
 // icons are CSS masks in styles.css.
@@ -33,12 +35,15 @@
   };
 
   let button;
+  const labels = () => window.__lcThemeLabels
+    || { toLight: "Switch to light mode", toDark: "Switch to dark mode", name: "Dark mode" };
 
   function render() {
     const dark = isDark();
     if (choice) root.dataset.lcTheme = choice; else delete root.dataset.lcTheme;
     button.setAttribute("aria-checked", String(dark));
-    button.title = dark ? "Switch to light mode" : "Switch to dark mode";
+    button.title = dark ? labels().toLight : labels().toDark;
+    button.setAttribute("aria-label", labels().name);
   }
 
   // Resolves once Streamlit has restyled with the new theme (or after 600 ms, whichever is first).
@@ -85,12 +90,11 @@
   }
 
   function mount() {
-    if (button && document.body.contains(button)) return;
+    if (button && document.body.contains(button)) { render(); return; }  // re-run: pick up new labels
     button = document.createElement("button");
     button.type = "button";
     button.className = "lc-theme-switch";
     button.setAttribute("role", "switch");
-    button.setAttribute("aria-label", "Dark mode");
     const knob = document.createElement("span");
     knob.className = "lc-theme-knob";
     for (const icon of ["lc-sun", "lc-moon"]) {

@@ -5,13 +5,14 @@ Text coming from data is escaped with html.escape before being inserted.
 """
 
 import base64
+import json
 from html import escape
 from pathlib import Path
 
 import plotly.graph_objects as go
 import streamlit as st
 
-from utils.i18n import t
+from utils.i18n import SPEECH_TAGS, current, t
 
 ASSETS = Path(__file__).resolve().parents[1] / "assets"
 LOGO_PATH = ASSETS / "logo.svg"
@@ -27,9 +28,12 @@ def inject_css() -> None:
     st.html(f"<style>{(ASSETS / 'styles.css').read_text()}</style>")
 
 
-def theme_switch() -> None:
-    """Add the animated light/dark switch to the top-right corner (call once per run, from Home.py)."""
-    st.html(f"<script>{(ASSETS / 'theme_switch.js').read_text()}</script>", unsafe_allow_javascript=True)
+def page_scripts() -> None:
+    """Add the light/dark switch and the read-aloud handler (call once per run, from Home.py)."""
+    labels = json.dumps({"toLight": t("theme.to_light"), "toDark": t("theme.to_dark"), "name": t("theme.label")},
+                        ensure_ascii=False)
+    scripts = "\n".join((ASSETS / name).read_text() for name in ("theme_switch.js", "read_aloud.js"))
+    st.html(f"<script>window.__lcThemeLabels = {labels};\n{scripts}</script>", unsafe_allow_javascript=True)
 
 
 @st.cache_data
@@ -68,9 +72,19 @@ def chip(severity: str, uncertain: bool = False) -> str:
     return f'<span class="lc-chip lc-chip-{severity}">{escape(t("severity." + severity))}</span>'
 
 
+def listen_button(parts: list[str]) -> str:
+    """HTML for the Listen button: read_aloud.js speaks `parts` in the current language when it is clicked."""
+    return f"""
+      <button type="button" class="lc-listen" data-lang="{SPEECH_TAGS[current()]}"
+              data-parts="{escape(json.dumps(parts, ensure_ascii=False))}" data-listen="{escape(t('listen.button'))}"
+              data-stop="{escape(t('listen.stop'))}" data-no-voice="{escape(t('listen.no_voice'))}">
+        <span class="lc-listen-icon"></span><span class="lc-listen-label">{escape(t('listen.button'))}</span>
+      </button>"""
+
+
 def result_card(crop: str, disease: str, severity: str, confidence: float,
-                description: str, uncertain: bool) -> None:
-    """The main diagnosis card: crop, disease, status chip and confidence bar."""
+                description: str, uncertain: bool, spoken: list[str]) -> None:
+    """The main diagnosis card: crop, disease, status chip, confidence bar and a Listen button for `spoken`."""
     accent = GREY if uncertain else SEVERITY_COLORS[severity]
     label = escape(t("result.possible" if uncertain else "result.diagnosis"))
     pct = confidence * 100
@@ -84,6 +98,7 @@ def result_card(crop: str, disease: str, severity: str, confidence: float,
       <p class="lc-desc">{escape(description)}</p>
       <div class="lc-conf-row"><span>{escape(t("result.confidence"))}</span><b>{pct:.1f}%</b></div>
       <div class="lc-bar"><span style="width: {pct:.1f}%"></span></div>
+      {listen_button(spoken)}
     </div>
     """)
 
@@ -94,6 +109,18 @@ def callout(kind: str, icon: str, title: str, body: str) -> None:
     <div class="lc-callout lc-callout-{kind}">
       <div class="lc-icon">{icon}</div>
       <div><b>{escape(title)}</b><p>{escape(body)}</p></div>
+    </div>
+    """)
+
+
+def helpline() -> None:
+    """The free Kisan Call Centre number, as a tap-to-call card (shown to visitors who are probably in India)."""
+    st.html(f"""
+    <div class="lc-helpline">
+      <div class="lc-icon">📞</div>
+      <div><b>{escape(t("helpline.title"))}</b>
+        <p>{escape(t("helpline.body"))}</p></div>
+      <a href="tel:18001801551">1800-180-1551</a>
     </div>
     """)
 

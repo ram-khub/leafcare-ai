@@ -159,5 +159,30 @@
   "feedback.message_placeholder": "काय आवडले, काय नाही, तुम्हाला काय पाहायला आवडेल…",
   "feedback.send": "अभिप्राय पाठवा",
   "feedback.received_title": "अभिप्राय मिळाला",
-  "feedback.received_body": "LeafCare AI सुधारण्यासाठी वेळ काढल्याबद्दल धन्यवाद."
+  "feedback.received_body": "LeafCare AI सुधारण्यासाठी वेळ काढल्याबद्दल धन्यवाद.",
+
+  "home.loading_model": "AI मॉडेल लोड होत आहे…",
+
+  "error.unreadable": "ही फाइल वाचता आली नाही. कृपया पानाचा JPG किंवा PNG फोटो अपलोड करा.",
+  "error.too_small": "हे चित्र खूप लहान आहे ({width}×{height} px). कृपया प्रत्येक बाजूला किमान {min_side} px असलेला फोटो वापरा.",
+
+  "theme.to_light": "लाइट मोडवर जा",
+  "theme.to_dark": "डार्क मोडवर जा",
+  "theme.label": "डार्क मोड",
+
+  "listen.button": "ऐका",
+  "listen.stop": "थांबवा",
+  "listen.no_voice": "या डिव्हाइसवर या भाषेचा आवाज नाही",
+
+  "helpline.title": "मदत हवी आहे? कृषी तज्ज्ञांना मोफत कॉल करा",
+  "helpline.body": "किसान कॉल सेंटर (भारत सरकार): दररोज सकाळी 6 ते रात्री 10, तुमच्या भाषेत.",
+
+  "share.title": "हा निकाल जतन करा किंवा शेअर करा",
+  "share.whatsapp": "WhatsApp वर शेअर करा",
+  "share.download": "अहवाल डाउनलोड करा",
+  "share.download_help": "तुमचा फोटो आणि सल्ला असलेला एका पानाचा अहवाल. कोणत्याही ब्राउझरमध्ये उघडा किंवा PDF म्हणून प्रिंट करा.",
+  "share.checked_with": "LeafCare AI ने तपासले",
+
+  "report.title": "LeafCare AI अहवाल",
+  "report.created": "तयार केले: {time}"
 }

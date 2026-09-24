@@ -159,5 +159,30 @@
   "feedback.message_placeholder": "Qué funcionó, qué no, qué te gustaría ver…",
   "feedback.send": "Enviar comentario",
   "feedback.received_title": "Comentario recibido",
-  "feedback.received_body": "Gracias por dedicar tu tiempo a mejorar LeafCare AI."
+  "feedback.received_body": "Gracias por dedicar tu tiempo a mejorar LeafCare AI.",
+
+  "home.loading_model": "Cargando el modelo de IA…",
+
+  "error.unreadable": "No pudimos leer ese archivo. Sube una foto JPG o PNG de una hoja.",
+  "error.too_small": "La imagen es muy pequeña ({width}×{height} px). Usa una foto de al menos {min_side} px por lado.",
+
+  "theme.to_light": "Cambiar a modo claro",
+  "theme.to_dark": "Cambiar a modo oscuro",
+  "theme.label": "Modo oscuro",
+
+  "listen.button": "Escuchar",
+  "listen.stop": "Detener",
+  "listen.no_voice": "Este dispositivo no tiene voz para este idioma",
+
+  "helpline.title": "¿Necesitas ayuda? Llama gratis a un experto agrícola",
+  "helpline.body": "Kisan Call Centre (Gobierno de la India): todos los días, de 6:00 a 22:00, en tu idioma.",
+
+  "share.title": "Guarda o comparte este resultado",
+  "share.whatsapp": "Compartir por WhatsApp",
+  "share.download": "Descargar informe",
+  "share.download_help": "Un informe de una página con tu foto y los consejos. Ábrelo en cualquier navegador o imprímelo en PDF.",
+  "share.checked_with": "Revisado con LeafCare AI",
+
+  "report.title": "Informe de LeafCare AI",
+  "report.created": "Creado el {time}"
 }

@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 import streamlit as st
 from PIL import Image, ImageOps
 
-from utils import i18n, ui
+from utils import i18n, report, ui
 from utils.gradcam import make_gradcam_heatmap, overlay_heatmap
 from utils.i18n import t
 from utils.predict import (
@@ -35,7 +35,7 @@ INPUT_LABELS = {UPLOAD: (":material/upload:", "input.upload"), CAMERA: (":materi
 
 # ---------------------------------------------------------------- cached resources
 
-@st.cache_resource(show_spinner="Loading the AI model…")
+@st.cache_resource(show_spinner=False)  # the translated spinner is in diagnose_page()
 def get_model():
     return load_model()
 
@@ -148,6 +148,18 @@ def bullet_list(items: list[str]) -> None:
     st.markdown("\n".join(f"- {item}" for item in items))
 
 
+def spoken_summary(entry: dict, crop: str, disease: str, uncertain: bool) -> list[str]:
+    """What the Listen button reads out: the diagnosis, what it means and what to do."""
+    parts = [t("uncertain.title")] if uncertain else []
+    parts += [f"{t('result.possible' if uncertain else 'result.diagnosis')}: {crop}, {disease}.", entry["description"]]
+    if entry["is_healthy"]:
+        parts.append(t("advice.healthy_treatment"))
+    else:
+        parts += [f"{t('advice.organic')}:", *entry["treatment_organic"],
+                  f"{t('advice.chemical')}:", *entry["treatment_chemical"]]
+    return parts + [t("advice.disclaimer")]
+
+
 def show_advice(entry: dict) -> None:
     """Symptoms / Treatment / Prevention tabs plus source and disclaimer."""
     symptoms_tab, treatment_tab, prevention_tab = st.tabs(
@@ -182,6 +194,24 @@ def show_advice(entry: dict) -> None:
       <b>{escape(t("advice.disclaimer"))}</b>{translated}
     </div>
     """)
+    if i18n.likely_in_india():
+        ui.helpline()
+
+
+def share_buttons(image: Image.Image, overlay: Image.Image, source: str, prediction: Prediction,
+                  entry: dict, crop: str, disease: str, uncertain: bool) -> None:
+    """Send the result on WhatsApp or save it as a report."""
+    helpline = i18n.likely_in_india()
+    ui.section_label(t("share.title"))
+    with st.container(horizontal=True, key="share"):
+        st.link_button(t("share.whatsapp"), icon=":material/share:", url=report.whatsapp_url(
+            crop, disease, entry, prediction.confidence, uncertain, helpline))
+        st.download_button(
+            t("share.download"), icon=":material/download:", help=t("share.download_help"), on_click="ignore",
+            data=report.build_report(image, overlay, source, crop, disease, entry, prediction.confidence,
+                                     uncertain, helpline),
+            file_name=report.file_name(prediction.class_name), mime="text/html",
+        )
 
 
 # ---------------------------------------------------------------- the Diagnose page
@@ -190,7 +220,8 @@ def diagnose_page() -> None:
     ui.hero("LeafCare AI", t("hero.tagline"))
 
     try:
-        model = get_model()
+        with st.spinner(t("home.loading_model")):
+            model = get_model()
     except FileNotFoundError as err:
         ui.callout("error", "⚠️", t("home.model_missing"), str(err))
         return
@@ -217,7 +248,7 @@ def diagnose_page() -> None:
         with st.spinner(t("home.analysing")):
             prediction, overlay = analyse(image_bytes)
     except ImageError as err:
-        ui.callout("error", "⚠️", t("error.bad_image"), str(err))
+        ui.callout("error", "⚠️", t("error.bad_image"), t(f"error.{err.reason}", **err.values))
         return
     except ValueError as err:  # e.g. model and class list don't match
         ui.callout("error", "⚠️", t("error.model"), str(err))
@@ -244,7 +275,8 @@ def diagnose_page() -> None:
 
     result_col, chart_col = st.columns([1.35, 1], gap="medium")
     with result_col:
-        ui.result_card(crop, disease, entry["severity"], prediction.confidence, entry["description"], uncertain)
+        ui.result_card(crop, disease, entry["severity"], prediction.confidence, entry["description"], uncertain,
+                       spoken_summary(entry, crop, disease, uncertain))
     with chart_col, st.container(key="card_top3"):
         ui.section_label(t("home.top3"))
         labels = [" · ".join(display_names(name)) for name, _ in prediction.top_k]
@@ -271,13 +303,16 @@ def diagnose_page() -> None:
             ui.section_label(t("home.next"))
             show_advice(entry)
 
+    st.write("")
+    share_buttons(image, overlay, source, prediction, entry, crop, disease, uncertain)
+
 
 # ---------------------------------------------------------------- app frame + navigation
 
 st.set_page_config(page_title="LeafCare AI", page_icon="🌿", layout="wide")
 ui.inject_css()
-ui.theme_switch()
-i18n.language_picker()
+i18n.language_picker()  # first: it settles the language everything below is shown in
+ui.page_scripts()
 st.logo(str(ui.LOGO_PATH), size="large")
 st.session_state.setdefault("history", [])
 

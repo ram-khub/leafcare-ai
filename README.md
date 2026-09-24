@@ -7,6 +7,9 @@ your camera) and the app shows:
 - the model's **confidence** and its **top-3** predictions
 - a **Grad-CAM heatmap** showing which part of the leaf the model based its decision on
 - short, sourced **symptoms / treatment / prevention** advice
+- a **Listen** button that reads the diagnosis and treatment aloud in the chosen language (using the browser's built-in voices)
+- **Share on WhatsApp** and **Download report** (a one-page HTML report with the photo, heatmap and advice that prints to PDF)
+- for visitors in India, the free **Kisan Call Centre** helpline (1800-180-1551) as a tap-to-call card
 
 The interface and advice are available in **9 languages**: English, Hindi, Bengali, Marathi, Telugu, Tamil, Spanish, French and German (`app/locales/`, `data/i18n/`). The translations are machine-generated, and the app says so next to the advice.
 

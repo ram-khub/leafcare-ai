@@ -159,5 +159,30 @@
   "feedback.message_placeholder": "What worked, what didn't, what you'd like to see…",
   "feedback.send": "Send feedback",
   "feedback.received_title": "Feedback received",
-  "feedback.received_body": "Thanks for taking the time to help improve LeafCare AI."
+  "feedback.received_body": "Thanks for taking the time to help improve LeafCare AI.",
+
+  "home.loading_model": "Loading the AI model…",
+
+  "error.unreadable": "We couldn't read that file. Please upload a JPG or PNG photo of a leaf.",
+  "error.too_small": "That image is very small ({width}×{height} px). Please use a photo at least {min_side} px on each side.",
+
+  "theme.to_light": "Switch to light mode",
+  "theme.to_dark": "Switch to dark mode",
+  "theme.label": "Dark mode",
+
+  "listen.button": "Listen",
+  "listen.stop": "Stop",
+  "listen.no_voice": "No voice for this language on this device",
+
+  "helpline.title": "Need help? Call a farm expert for free",
+  "helpline.body": "Kisan Call Centre (Government of India): every day, 6 am – 10 pm, in your language.",
+
+  "share.title": "Save or share this result",
+  "share.whatsapp": "Share on WhatsApp",
+  "share.download": "Download report",
+  "share.download_help": "A one-page report with your photo and the advice. Open it in any browser, or print it to PDF.",
+  "share.checked_with": "Checked with LeafCare AI",
+
+  "report.title": "LeafCare AI report",
+  "report.created": "Created {time}"
 }

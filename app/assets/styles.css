@@ -177,6 +177,31 @@ a { color: var(--leaf) !important; }
 .lc-bar { height: 10px; background: var(--track); border-radius: 999px; overflow: hidden; }
 .lc-bar > span { display: block; height: 100%; border-radius: 999px; background: var(--accent, var(--leaf)); }
 
+/* Listen button (read_aloud.js) at the bottom of the result card */
+.lc-listen {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 0.45rem;
+  margin-top: 1.1rem; padding: 0.45rem 0.95rem 0.45rem 0.8rem;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--leaf-soft);
+  color: var(--leaf-dark); font: 600 0.9rem "Inter", sans-serif; cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.12s ease;
+}
+.lc-listen:hover { transform: translateY(-1px); }
+.lc-listen:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; }
+.lc-listen-icon {
+  width: 18px; height: 18px; flex: none; background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat;
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 5 6 9H3v6h3l5 4z' fill='black'/%3E%3Cpath d='M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13'/%3E%3C/svg%3E");
+}
+.lc-listen.lc-speaking { background: var(--btn); border-color: var(--btn); color: #FFFFFF; }
+.lc-listen.lc-speaking .lc-listen-icon {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='6' y='6' width='12' height='12' rx='2'/%3E%3C/svg%3E");
+  animation: lc-pulse 1.1s ease-in-out infinite;
+}
+.lc-listen.lc-no-voice { background: var(--amber-soft); border-color: var(--warn-line); color: var(--amber-text); }
+.lc-no-speech .lc-listen { display: none; }  /* browser without speech synthesis */
+@keyframes lc-pulse { 50% { opacity: 0.45; } }
+@media (prefers-reduced-motion: reduce) { .lc-listen.lc-speaking .lc-listen-icon { animation: none; } }
+
 /* ---------- Callouts ---------- */
 .lc-callout {
   display: flex; gap: 0.85rem; align-items: flex-start;
@@ -189,6 +214,22 @@ a { color: var(--leaf) !important; }
 .lc-callout-warn { background: var(--amber-soft); border-color: var(--warn-line); }
 .lc-callout-error { background: var(--red-soft); border-color: var(--error-line); }
 .lc-callout-info { background: var(--info-bg); border-color: var(--info-line); }
+
+/* Kisan Call Centre card under the advice (ui.helpline) */
+.lc-helpline {
+  display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap;
+  margin-top: 1rem; padding: 0.9rem 1.1rem; border-radius: 16px;
+  background: var(--info-bg); border: 1px solid var(--info-line);
+}
+.lc-helpline .lc-icon { font-size: 1.35rem; }
+.lc-helpline > div:not(.lc-icon) { flex: 1 1 14rem; }
+.lc-helpline b { display: block; color: var(--ink); }
+.lc-helpline p { margin: 0; color: var(--body); font-size: 0.9rem; }
+.lc-helpline a {
+  padding: 0.5rem 1rem; border-radius: 999px; background: var(--btn); color: #FFFFFF !important;
+  font-weight: 700; text-decoration: none; white-space: nowrap;
+}
+.lc-helpline a:hover { background: var(--btn-hover); }
 
 /* ---------- How-it-works steps ---------- */
 .lc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 0.25rem 0 1rem 0; }

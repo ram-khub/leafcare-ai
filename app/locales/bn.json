@@ -159,5 +159,30 @@
   "feedback.message_placeholder": "কী ভালো লেগেছে, কী লাগেনি, আপনি কী দেখতে চান…",
   "feedback.send": "মতামত পাঠান",
   "feedback.received_title": "মতামত পাওয়া গেছে",
-  "feedback.received_body": "LeafCare AI-কে আরও ভালো করতে সাহায্যের জন্য সময় দেওয়ার জন্য ধন্যবাদ।"
+  "feedback.received_body": "LeafCare AI-কে আরও ভালো করতে সাহায্যের জন্য সময় দেওয়ার জন্য ধন্যবাদ।",
+
+  "home.loading_model": "AI মডেল লোড হচ্ছে…",
+
+  "error.unreadable": "আমরা ফাইলটি পড়তে পারিনি। অনুগ্রহ করে পাতার একটি JPG বা PNG ছবি আপলোড করুন।",
+  "error.too_small": "ছবিটি খুব ছোট ({width}×{height} px)। অনুগ্রহ করে প্রতিটি দিকে অন্তত {min_side} px-এর ছবি ব্যবহার করুন।",
+
+  "theme.to_light": "লাইট মোডে যান",
+  "theme.to_dark": "ডার্ক মোডে যান",
+  "theme.label": "ডার্ক মোড",
+
+  "listen.button": "শুনুন",
+  "listen.stop": "থামান",
+  "listen.no_voice": "এই ডিভাইসে এই ভাষার কণ্ঠ নেই",
+
+  "helpline.title": "সাহায্য দরকার? বিনামূল্যে কৃষি বিশেষজ্ঞকে ফোন করুন",
+  "helpline.body": "কিষাণ কল সেন্টার (ভারত সরকার): প্রতিদিন সকাল ৬টা থেকে রাত ১০টা, আপনার ভাষায়।",
+
+  "share.title": "ফলাফলটি সংরক্ষণ বা শেয়ার করুন",
+  "share.whatsapp": "WhatsApp-এ শেয়ার করুন",
+  "share.download": "রিপোর্ট ডাউনলোড করুন",
+  "share.download_help": "আপনার ছবি ও পরামর্শসহ এক পাতার রিপোর্ট। যেকোনো ব্রাউজারে খুলুন বা PDF হিসেবে প্রিন্ট করুন।",
+  "share.checked_with": "LeafCare AI দিয়ে পরীক্ষা করা",
+
+  "report.title": "LeafCare AI রিপোর্ট",
+  "report.created": "তৈরি: {time}"
 }

@@ -159,5 +159,30 @@
   "feedback.message_placeholder": "ఏది బాగుంది, ఏది బాలేదు, మీరు ఏమి చూడాలనుకుంటున్నారు…",
   "feedback.send": "అభిప్రాయం పంపండి",
   "feedback.received_title": "అభిప్రాయం అందింది",
-  "feedback.received_body": "LeafCare AI ని మెరుగుపరచడంలో సహాయం చేయడానికి సమయం కేటాయించినందుకు ధన్యవాదాలు."
+  "feedback.received_body": "LeafCare AI ని మెరుగుపరచడంలో సహాయం చేయడానికి సమయం కేటాయించినందుకు ధన్యవాదాలు.",
+
+  "home.loading_model": "AI మోడల్ లోడ్ అవుతోంది…",
+
+  "error.unreadable": "ఈ ఫైల్‌ను చదవలేకపోయాం. దయచేసి ఆకు యొక్క JPG లేదా PNG ఫోటోను అప్‌లోడ్ చేయండి.",
+  "error.too_small": "ఈ చిత్రం చాలా చిన్నది ({width}×{height} px). దయచేసి ప్రతి వైపు కనీసం {min_side} px ఉన్న ఫోటోను ఉపయోగించండి.",
+
+  "theme.to_light": "లైట్ మోడ్‌కు మారండి",
+  "theme.to_dark": "డార్క్ మోడ్‌కు మారండి",
+  "theme.label": "డార్క్ మోడ్",
+
+  "listen.button": "వినండి",
+  "listen.stop": "ఆపండి",
+  "listen.no_voice": "ఈ పరికరంలో ఈ భాషకు గొంతు లేదు",
+
+  "helpline.title": "సహాయం కావాలా? వ్యవసాయ నిపుణుడికి ఉచితంగా కాల్ చేయండి",
+  "helpline.body": "కిసాన్ కాల్ సెంటర్ (భారత ప్రభుత్వం): ప్రతిరోజూ ఉదయం 6 నుండి రాత్రి 10 వరకు, మీ భాషలో.",
+
+  "share.title": "ఈ ఫలితాన్ని సేవ్ చేయండి లేదా షేర్ చేయండి",
+  "share.whatsapp": "WhatsAppలో షేర్ చేయండి",
+  "share.download": "నివేదికను డౌన్‌లోడ్ చేయండి",
+  "share.download_help": "మీ ఫోటో మరియు సలహాతో ఒక పేజీ నివేదిక. ఏ బ్రౌజర్‌లోనైనా తెరవండి, లేదా PDFగా ప్రింట్ చేయండి.",
+  "share.checked_with": "LeafCare AI తో పరీక్షించబడింది",
+
+  "report.title": "LeafCare AI నివేదిక",
+  "report.created": "రూపొందించినది: {time}"
 }
