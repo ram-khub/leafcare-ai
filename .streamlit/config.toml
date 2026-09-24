@@ -22,7 +22,7 @@ redColor = "#C2412D"
 [theme.dark]
 primaryColor = "#4E9A5C"
 backgroundColor = "#0F1612"
-secondaryBackgroundColor = "#18211B"
+secondaryBackgroundColor = "#232E27"   # inputs; a shade above the #18211B cards
 textColor = "#E6ECE5"
 linkColor = "#7CC68A"
 borderColor = "#2C3830"

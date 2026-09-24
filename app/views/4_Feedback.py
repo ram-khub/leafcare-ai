@@ -12,6 +12,11 @@ ui.page_header(
 
 with st.container(key="card_feedback"):
     with st.form("feedback", clear_on_submit=True, border=False):
+        name_col, email_col = st.columns(2)
+        name_col.text_input("Name (optional)", placeholder="Your name")
+        email_col.text_input("Email (optional)", placeholder="you@example.com",
+                             help="Only if you'd like a reply.")
+        st.selectbox("Topic", ["General feedback", "Wrong diagnosis", "Bug or problem", "Feature idea"])
         st.text_area("Your feedback", placeholder="What worked, what didn't, what you'd like to see…", height=160)
         sent = st.form_submit_button("Send feedback", type="primary", icon=":material/send:")
 
