@@ -2,7 +2,10 @@
 
 How it works (Selvaraju et al., 2017):
 1. Take the feature maps of the last convolutional layer ("top_conv" in EfficientNetB0).
-2. Compute the gradient of the predicted class score with respect to those maps.
+2. Compute the gradient of the predicted class score with respect to those maps. The score is the
+   raw one from before the softmax, as in the paper. The softmax probability of a confident
+   prediction barely moves, so its gradient mostly shows what separates the class from the
+   runner-up (for Tomato late blight: tomato leaf shape vs potato), not the disease itself.
 3. Average each map's gradient to get its importance weight, then take the
    weighted sum of the maps. Keep positive values only and scale to 0-1.
 """
@@ -15,16 +18,16 @@ from PIL import Image
 
 LAST_CONV_LAYER = "top_conv"
 
-_gradcam_models: dict[int, keras.Model] = {}  # cache: model id -> gradient model
+_gradcam_models: dict[tuple[int, str], keras.Model] = {}  # cache: (model id, layer) -> gradient model
 
 
 def _gradcam_model(model: keras.Model, layer_name: str) -> keras.Model:
-    """A model that returns (last conv feature maps, predictions) in one pass."""
-    key = id(model)
+    """A model that returns (last conv feature maps, the input of the final Dense layer) in one pass."""
+    key = (id(model), layer_name)
     if key not in _gradcam_models:
         _gradcam_models[key] = keras.Model(
-            inputs=model.inputs,
-            outputs=[model.get_layer(layer_name).output, model.output],
+            inputs=model.input,  # a single tensor, like the model itself (a list here makes Keras warn)
+            outputs=[model.get_layer(layer_name).output, model.layers[-1].input],
         )
     return _gradcam_models[key]
 
@@ -37,11 +40,13 @@ def make_gradcam_heatmap(
     `model_input` is one preprocessed image of shape (224, 224, 3).
     """
     grad_model = _gradcam_model(model, layer_name)
+    head = model.layers[-1]  # Dense(num_classes, softmax)
     batch = tf.convert_to_tensor(model_input[np.newaxis, ...])
 
     with tf.GradientTape() as tape:
-        conv_maps, preds = grad_model(batch, training=False)
-        class_score = preds[:, class_index]
+        conv_maps, features = grad_model(batch, training=False)
+        logits = tf.matmul(features, head.kernel) + head.bias  # the final layer without its softmax
+        class_score = logits[:, class_index]
 
     grads = tape.gradient(class_score, conv_maps)            # (1, h, w, channels)
     weights = tf.reduce_mean(grads, axis=(0, 1, 2))          # (channels,)

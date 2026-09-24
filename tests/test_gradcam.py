@@ -15,3 +15,16 @@ def test_overlay_keeps_original_size(leaf_image):
     overlay = overlay_heatmap(leaf_image, heatmap)
     assert overlay.size == leaf_image.size
     assert overlay.mode == "RGB"
+
+
+def test_heatmap_uses_the_score_before_softmax(model, leaf_image):
+    """The raw scores rebuilt from the final Dense layer must match the model's own output after softmax."""
+    import tensorflow as tf
+
+    from utils.gradcam import LAST_CONV_LAYER, _gradcam_model
+
+    batch = image_to_model_input(leaf_image)[np.newaxis, ...]
+    _, features = _gradcam_model(model, LAST_CONV_LAYER)(batch, training=False)
+    head = model.layers[-1]
+    logits = tf.matmul(features, head.kernel) + head.bias
+    np.testing.assert_allclose(tf.nn.softmax(logits).numpy(), model(batch, training=False).numpy(), atol=1e-5)
