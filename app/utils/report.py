@@ -15,6 +15,7 @@ from urllib.parse import quote
 from PIL import Image, ImageOps
 
 from utils.i18n import current, t
+from utils.ui import format_confidence
 
 APP_URL = "https://leafcareai.streamlit.app"
 HELPLINE = "1800-180-1551"
@@ -32,7 +33,7 @@ def _items(items: list[str]) -> str:
 
 def headline(crop: str, disease: str, confidence: float, uncertain: bool) -> str:
     label = t("result.possible" if uncertain else "result.diagnosis")
-    return f"{label}: {crop} · {disease} ({confidence:.0%})"
+    return f"{label}: {crop} · {disease} ({format_confidence(confidence)})"
 
 
 def whatsapp_url(crop: str, disease: str, entry: dict, confidence: float, uncertain: bool, helpline: bool) -> str:
@@ -100,7 +101,7 @@ def build_report(image: Image.Image, overlay: Image.Image, source: str, crop: st
   <p class="muted">{escape(t("result.possible" if uncertain else "result.diagnosis"))} · {escape(crop)}</p>
   <h1>{escape(disease)}</h1>
   <p><span class="chip">{escape(severity)}</span>
-     <span class="muted">{escape(t("result.confidence"))}: <b>{confidence:.1%}</b></span></p>
+     <span class="muted">{escape(t("result.confidence"))}: <b>{escape(format_confidence(confidence))}</b></span></p>
   <p>{escape(entry["description"])}</p>
   <div class="images">
     <figure><img src="{_data_uri(image)}" alt=""><figcaption>{escape(t("home.your_photo", source=source))}</figcaption></figure>

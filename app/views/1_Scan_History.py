@@ -40,7 +40,7 @@ for scan in history:
             <div>
               {ui.chip(scan["severity"], scan["uncertain"])}
               <p class="lc-history-title">{escape(crop)} · {escape(disease)}</p>
-              <div class="lc-history-meta">{escape(t("history.meta", confidence=f"{scan['confidence']:.1%}", time=scan["time"]))}</div>
+              <div class="lc-history-meta">{escape(t("history.meta", confidence=ui.format_confidence(scan['confidence']), time=scan["time"]))}</div>
             </div>
             """)
 

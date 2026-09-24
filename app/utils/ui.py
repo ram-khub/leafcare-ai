@@ -21,6 +21,14 @@ LOGO_PATH = ASSETS / "logo.svg"
 LEAF, AMBER, RED, GREY, TRACK = "#2F6B3A", "#E0A33B", "#C2412D", "#9AA39C", "#D9D2C1"
 # CSS variables (not hex) so the result card follows light/dark mode.
 SEVERITY_COLORS = {"none": "var(--leaf)", "moderate": "var(--amber)", "severe": "var(--red)"}
+# The model's score is how sure it is compared with the other classes, not a measured chance of being right,
+# and it is often near 100% even on unfamiliar photos. So we never print "100%".
+CONFIDENCE_CAP = 0.99
+
+
+def format_confidence(confidence: float) -> str:
+    """'87.3%', or '>99%' for anything above CONFIDENCE_CAP."""
+    return f">{CONFIDENCE_CAP:.0%}" if confidence > CONFIDENCE_CAP else f"{confidence:.1%}"
 
 
 def inject_css() -> None:
@@ -96,7 +104,7 @@ def result_card(crop: str, disease: str, severity: str, confidence: float,
       </div>
       <div class="lc-disease">{escape(disease)}</div>
       <p class="lc-desc">{escape(description)}</p>
-      <div class="lc-conf-row"><span>{escape(t("result.confidence"))}</span><b>{pct:.1f}%</b></div>
+      <div class="lc-conf-row"><span>{escape(t("result.confidence"))}</span><b>{escape(format_confidence(confidence))}</b></div>
       <div class="lc-bar"><span style="width: {pct:.1f}%"></span></div>
       {listen_button(spoken)}
     </div>
@@ -167,7 +175,7 @@ def top_k_chart(labels: list[str], probs: list[float], uncertain: bool) -> go.Fi
         y=labels,
         orientation="h",
         marker=dict(color=[top_color] + [TRACK] * (len(probs) - 1), cornerradius=6),
-        text=[f"{p:.1%}" for p in probs],
+        text=[format_confidence(p) for p in probs],
         textposition="outside",
         cliponaxis=False,
         hovertemplate="%{y}: %{x:.1f}%<extra></extra>",
