@@ -5,7 +5,7 @@
 baseRadius = "12px"
 buttonRadius = "999px"
 font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-# Headings use the body font; the script font (Kalam) is only for the hero logo, loaded in styles.css.
+# Headings use the body font; the script font (Kalam) is only for the hero logo and page titles, loaded in styles.css.
 headingFont = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 
 [theme.light]

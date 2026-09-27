@@ -1,6 +1,6 @@
 /* LeafCare AI custom styles. Injected once per page by utils/ui.py:inject_css(). */
 
-/* Kalam is used only for the "LeafCare AI" logo in the hero header. */
+/* Kalam is used only for the "LeafCare AI" logo in the hero header and the page titles (ui.page_header). */
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap");
 
 /* Colours come in light/dark pairs via light-dark(), which follows `color-scheme`.
@@ -139,7 +139,7 @@ a { color: var(--leaf) !important; }
 .lc-page-header .lc-eyebrow {
   color: var(--leaf); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
 }
-.lc-page-header h1 { margin: 0.2rem 0 0.35rem 0 !important; padding: 0 !important; }
+.lc-page-header h1 { font-family: "Kalam", cursive !important; margin: 0.2rem 0 0.35rem 0 !important; padding: 0 !important; }
 .lc-page-header p { color: var(--muted); margin: 0; max-width: 720px; }
 
 /* ---------- Chips ---------- */
