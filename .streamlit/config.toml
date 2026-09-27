@@ -5,8 +5,8 @@
 baseRadius = "12px"
 buttonRadius = "999px"
 font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-# Kalam covers Latin and Devanagari (Hindi, Marathi); Bengali, Telugu and Tamil headings use the device's own font.
-headingFont = "Kalam:https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
+# Headings use the body font; the script font (Kalam) is only for the hero logo, loaded in styles.css.
+headingFont = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 
 [theme.light]
 primaryColor = "#2F6B3A"

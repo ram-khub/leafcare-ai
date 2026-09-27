@@ -24,11 +24,17 @@ SEVERITY_COLORS = {"none": "var(--leaf)", "moderate": "var(--amber)", "severe": 
 # The model's score is how sure it is compared with the other classes, not a measured chance of being right,
 # and it is often near 100% even on unfamiliar photos. So we never print "100%".
 CONFIDENCE_CAP = 0.99
+# Below this, one decimal place would round to a misleading "0.0%".
+CONFIDENCE_FLOOR = 0.001
 
 
 def format_confidence(confidence: float) -> str:
-    """'87.3%', or '>99%' for anything above CONFIDENCE_CAP."""
-    return f">{CONFIDENCE_CAP:.0%}" if confidence > CONFIDENCE_CAP else f"{confidence:.1%}"
+    """'87.3%', '>99%' above CONFIDENCE_CAP, or '<0.1%' below CONFIDENCE_FLOOR."""
+    if confidence > CONFIDENCE_CAP:
+        return f">{CONFIDENCE_CAP:.0%}"
+    if confidence < CONFIDENCE_FLOOR:
+        return f"<{CONFIDENCE_FLOOR:.1%}"
+    return f"{confidence:.1%}"
 
 
 def inject_css() -> None:
@@ -213,7 +219,7 @@ def top_k_chart(labels: list[str], probs: list[float], uncertain: bool) -> go.Fi
         text=[format_confidence(p) for p in probs],
         textposition="outside",
         cliponaxis=False,
-        hovertemplate="%{y}: %{x:.1f}%<extra></extra>",
+        hovertemplate="%{y}: %{text}<extra></extra>",
     ))
     # Labels sit above each bar (instead of on the y-axis) so long names never get clipped.
     for label in labels:

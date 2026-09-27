@@ -66,7 +66,7 @@ def test_image_errors_have_translations(in_language, data):
         assert i18n.t(f"error.{caught.value.reason}", **caught.value.values)
 
 
-@pytest.mark.parametrize("confidence, shown", [(1.0, ">99%"), (0.9996, ">99%"), (0.99, "99.0%"), (0.873, "87.3%")])
+@pytest.mark.parametrize("confidence, shown", [(1.0, ">99%"), (0.9996, ">99%"), (0.99, "99.0%"), (0.873, "87.3%"), (0.001, "0.1%"), (0.0004, "<0.1%"), (0.0, "<0.1%")])
 def test_confidence_never_shows_100_percent(confidence, shown):
     from utils.ui import format_confidence
 

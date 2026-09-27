@@ -1,5 +1,8 @@
 /* LeafCare AI custom styles. Injected once per page by utils/ui.py:inject_css(). */
 
+/* Kalam is used only for the "LeafCare AI" logo in the hero header. */
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap");
+
 /* Colours come in light/dark pairs via light-dark(), which follows `color-scheme`.
    By default that tracks the visitor's system setting; the theme switch (theme_switch.js)
    pins it by setting data-lc-theme on the html element, and moves Streamlit's own theme with it. */
@@ -136,7 +139,7 @@ a { color: var(--leaf) !important; }
 .lc-page-header .lc-eyebrow {
   color: var(--leaf); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
 }
-.lc-page-header h1 { font-family: "Kalam", cursive !important; margin: 0.2rem 0 0.35rem 0 !important; padding: 0 !important; }
+.lc-page-header h1 { margin: 0.2rem 0 0.35rem 0 !important; padding: 0 !important; }
 .lc-page-header p { color: var(--muted); margin: 0; max-width: 720px; }
 
 /* ---------- Chips ---------- */
@@ -170,7 +173,7 @@ a { color: var(--leaf) !important; }
 }
 .lc-result-top { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
 .lc-crop { color: var(--muted); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
-.lc-disease { font-family: "Kalam", cursive; font-size: 1.75rem; font-weight: 600; color: var(--ink); line-height: 1.25; margin: 0.55rem 0 0.4rem 0; }
+.lc-disease { font-family: "Inter", sans-serif; font-size: 1.65rem; font-weight: 700; color: var(--ink); line-height: 1.25; margin: 0.55rem 0 0.4rem 0; }
 .lc-desc { color: var(--muted); margin: 0 0 1.15rem 0; font-size: 0.95rem; }
 .lc-conf-row { position: relative; display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.4rem; }
 
@@ -195,7 +198,7 @@ a { color: var(--leaf) !important; }
 .lc-help:hover + .lc-tip, .lc-help.lc-open + .lc-tip { visibility: visible; opacity: 1; transform: none; }
 .lc-conf-row b { color: var(--ink); font-size: 1rem; }
 .lc-bar { height: 10px; background: var(--track); border-radius: 999px; overflow: hidden; }
-.lc-bar > span { display: block; height: 100%; border-radius: 999px; background: var(--accent, var(--leaf)); }
+.lc-bar > span { display: block; height: 100%; border-radius: 999px; background: var(--leaf); }
 
 /* Listen button (read_aloud.js) at the bottom of the result card */
 .lc-listen-box { margin-top: 1.1rem; }
@@ -305,7 +308,7 @@ a { color: var(--leaf) !important; }
 .lc-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.25rem; }
 .lc-stat { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.15rem; box-shadow: var(--shadow); }
 .lc-stat span { color: var(--muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-.lc-stat b { display: block; font-family: "Kalam", cursive; font-size: 1.6rem; color: var(--ink); margin-top: 0.15rem; }
+.lc-stat b { display: block; font-weight: 700; font-size: 1.6rem; color: var(--ink); margin-top: 0.15rem; }
 
 /* ---------- Architecture flow ---------- */
 .lc-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.5rem 0 0.25rem 0; }
