@@ -37,12 +37,16 @@ def inject_css() -> None:
 
 
 def page_scripts() -> None:
-    """Add the light/dark switch and the handlers for Listen, Copy text and "?" tips (call once per run, from Home.py)."""
+    """Add the light/dark switch, the Listen, Copy text and "?" handlers and the connection notices (once per run)."""
     labels = json.dumps({"toLight": t("theme.to_light"), "toDark": t("theme.to_dark"), "name": t("theme.label")},
                         ensure_ascii=False)
+    net = json.dumps({"offlineTitle": t("net.offline_title"), "offlineBody": t("net.offline_body"),
+                      "backOnline": t("net.back_online"), "slowTitle": t("net.slow_title"),
+                      "slowBody": t("net.slow_body"), "reload": t("net.reload")}, ensure_ascii=False)
     scripts = "\n".join((ASSETS / name).read_text()
-                        for name in ("theme_switch.js", "read_aloud.js", "copy_text.js", "help_tips.js"))
-    st.html(f"<script>window.__lcThemeLabels = {labels};\n{scripts}</script>", unsafe_allow_javascript=True)
+                        for name in ("theme_switch.js", "read_aloud.js", "copy_text.js", "help_tips.js", "net_status.js"))
+    st.html(f"<script>window.__lcThemeLabels = {labels};\nwindow.__lcNetLabels = {net};\n{scripts}</script>",
+            unsafe_allow_javascript=True)
 
 
 @st.cache_data

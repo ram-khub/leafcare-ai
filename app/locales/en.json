@@ -167,6 +167,12 @@
   "feedback.received_body": "Thanks for taking the time to help improve LeafCare AI.",
 
   "home.loading_model": "Loading the AI model…",
+  "net.offline_title": "You're offline",
+  "net.offline_body": "Reconnect to the internet to analyse a leaf. Advice already on screen stays readable.",
+  "net.back_online": "Back online",
+  "net.slow_title": "This is taking longer than usual",
+  "net.slow_body": "Check your internet connection. If nothing changes, reload the page (this clears your scan history).",
+  "net.reload": "Reload",
 
   "error.unreadable": "We couldn't read that file. Please upload a JPG or PNG photo of a leaf.",
   "error.too_small": "That image is very small ({width}×{height} px). Please use a photo at least {min_side} px on each side.",

@@ -167,6 +167,12 @@
   "feedback.received_body": "Gracias por dedicar tu tiempo a mejorar LeafCare AI.",
 
   "home.loading_model": "Cargando el modelo de IA…",
+  "net.offline_title": "Sin conexión",
+  "net.offline_body": "Vuelve a conectarte a internet para analizar una hoja. Los consejos en pantalla siguen visibles.",
+  "net.back_online": "Conexión restablecida",
+  "net.slow_title": "Esto está tardando más de lo normal",
+  "net.slow_body": "Comprueba tu conexión a internet. Si nada cambia, recarga la página (se borrará tu historial de análisis).",
+  "net.reload": "Recargar",
 
   "error.unreadable": "No pudimos leer ese archivo. Sube una foto JPG o PNG de una hoja.",
   "error.too_small": "La imagen es muy pequeña ({width}×{height} px). Usa una foto de al menos {min_side} px por lado.",

@@ -167,6 +167,12 @@
   "feedback.received_body": "Danke, dass du dir die Zeit nimmst, LeafCare AI zu verbessern.",
 
   "home.loading_model": "KI-Modell wird geladen…",
+  "net.offline_title": "Du bist offline",
+  "net.offline_body": "Verbinde dich wieder mit dem Internet, um ein Blatt zu prüfen. Die angezeigten Ratschläge bleiben lesbar.",
+  "net.back_online": "Wieder online",
+  "net.slow_title": "Das dauert länger als üblich",
+  "net.slow_body": "Prüfe deine Internetverbindung. Wenn sich nichts ändert, lade die Seite neu (dabei wird der Scan-Verlauf gelöscht).",
+  "net.reload": "Neu laden",
 
   "error.unreadable": "Diese Datei konnten wir nicht lesen. Bitte lade ein JPG- oder PNG-Foto eines Blattes hoch.",
   "error.too_small": "Das Bild ist sehr klein ({width}×{height} px). Bitte verwende ein Foto mit mindestens {min_side} px pro Seite.",

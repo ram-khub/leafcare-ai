@@ -411,3 +411,28 @@ a { color: var(--leaf) !important; }
   .lc-theme-switch { right: 0.75rem; }
   .st-key-lang_picker { right: 5.1rem; width: 7.5rem; }
 }
+
+/* ---------- Connection notices (net_status.js) ---------- */
+.lc-net {
+  position: fixed; top: 4.5rem; left: 50%; z-index: 1000001;
+  width: min(34rem, calc(100% - 32px)); box-sizing: border-box;
+  display: flex; align-items: center; gap: 0.9rem;
+  padding: 0.8rem 1rem; border-radius: 14px; border: 1px solid var(--warn-line);
+  background: var(--amber-soft); color: var(--body); box-shadow: var(--shadow);
+  font-size: 0.9rem; line-height: 1.4;
+  opacity: 0; visibility: hidden; transform: translate(-50%, -8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.lc-net.lc-net-open { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.lc-net[data-kind="online"] { background: var(--info-bg); border-color: var(--info-line); }
+.lc-net div { flex: 1; min-width: 0; }
+.lc-net b { display: block; color: var(--ink); }
+.lc-net span { display: block; }
+.lc-net-reload {
+  flex: none; font: 500 0.875rem "Inter", sans-serif; cursor: pointer;
+  padding: 0.45rem 0.9rem; border-radius: 999px;
+  border: 1px solid var(--warn-line); background: var(--surface); color: var(--ink);
+}
+.lc-net-reload:hover { border-color: var(--amber); }
+.lc-offline .st-key-card_input { opacity: 0.5; pointer-events: none; filter: grayscale(0.4); transition: opacity 0.2s; }
+@media (prefers-reduced-motion: reduce) { .lc-net { transition: none; } }

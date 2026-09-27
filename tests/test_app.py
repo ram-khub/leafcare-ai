@@ -46,7 +46,8 @@ def test_other_pages_render(page):
     assert not app.exception
 
 
-@pytest.mark.parametrize("asset", ["styles.css", "theme_switch.js", "read_aloud.js", "copy_text.js", "help_tips.js"])
+@pytest.mark.parametrize("asset", ["styles.css", "theme_switch.js", "read_aloud.js", "copy_text.js", "help_tips.js",
+                                   "net_status.js"])
 def test_injected_assets_survive_sanitiser(asset):
     """st.html sanitises with DOMPurify, which silently drops a style/script block containing tag-like text."""
     import re
